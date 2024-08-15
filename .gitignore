@@ -1,6 +1,10 @@
+# Application
+companion/
+
 # MacOS
 .DS_Store
 
 # NodeJS
+build/
 node_modules/
 .env
