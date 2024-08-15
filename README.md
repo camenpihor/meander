@@ -6,18 +6,17 @@
 
 ## Tooling
 
-  - **Frontend Framework:** React
-  - **Programming Language:** TypeScript
-  - **State Management:** Context API
-  - **Mapping Library:** React-Leaflet
-  - **Version Control:** Git
-  - **Database:** Firebase Firestore
+- **Frontend Framework:** React
+- **Programming Language:** TypeScript
+- **State Management:** Context API
+- **Mapping Library:** React-Leaflet
+- **Version Control:** Git
+- **Database:** Firebase Firestore
 
 ## Tasks
 
 1. **Set Up Boilerplate:**
    - `npx create-react-app meander --template typescript`
-
 
 2. **Design Database:**
    - Create Firebase Firestore
