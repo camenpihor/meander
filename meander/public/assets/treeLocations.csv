@@ -1198,6 +1198,7 @@ tree_id,latin_name,common_name,is_native,date_added,latitude,longitude,source
 867,pyrus calleryana,callery pear,False,2017-06-16,42.382776701,-71.0932819407,somerville treekeeper
 867,pyrus calleryana,callery pear,False,2017-06-16,42.382821733,-71.0934038701,somerville treekeeper
 863,prunus serrulata,japanese cherry,False,2017-06-16,42.3831315245,-71.0942946116,somerville treekeeper
+863,prunus serrulata,japanese cherry,False,2017-06-16,42.3831021025,-71.0852562237,somerville treekeeper
 20,acer rubrum,red maple,True,2017-06-16,42.3834346509393,-71.0950054,somerville treekeeper
 638,quercus rubra,northern red oak,True,2017-06-16,42.383614478,-71.0951623292,somerville treekeeper
 852,zelkova serrata,japanese zelkova,False,2017-06-20,42.3806263209393,-71.09685475,somerville treekeeper
@@ -3864,7 +3865,6 @@ tree_id,latin_name,common_name,is_native,date_added,latitude,longitude,source
 551,prunus americana,american plum,True,2017-06-14,42.3833528609393,-71.08511057,somerville treekeeper
 316,fraxinus americana,white ash,True,2017-06-14,42.3832315709394,-71.08505891,somerville treekeeper
 326,fraxinus pennsylvanica,green ash,True,2017-06-16,42.3830723809393,-71.08517308,somerville treekeeper
-863,prunus serrulata,japanese cherry,False,2017-06-16,42.3831021025,-71.0852562237,somerville treekeeper
 867,pyrus calleryana,callery pear,False,2017-06-14,42.3832300409393,-71.08542866,somerville treekeeper
 863,prunus serrulata,japanese cherry,False,2017-06-16,42.3828445509393,-71.08532864,somerville treekeeper
 863,prunus serrulata,japanese cherry,False,2017-06-16,42.3829020009393,-71.08528036,somerville treekeeper
