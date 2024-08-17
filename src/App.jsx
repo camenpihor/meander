@@ -6,7 +6,7 @@ import { debounce } from "lodash";
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 const fetchTreeData = async () => {
-  const response = await fetch("/assets/treeLocations.csv");
+  const response = await fetch(`${process.env.PUBLIC_URL}/assets/treeLocations.csv`);
   const csvData = await response.text();
   const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
   const geojsonData = {
@@ -150,7 +150,7 @@ const App = () => {
     setTimeout(() => {
       popupRef.current
         .setLngLat(coordinates)
-        .setText(`${commonName}\n(${coordinates[0].toFixed(3)}, ${coordinates[1].toFixed(3)})`)
+        .setText(commonName)
         .addTo(mapRef.current);
     }, 100);
   };
