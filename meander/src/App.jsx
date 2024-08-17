@@ -84,10 +84,20 @@ const App = () => {
             filter: ["!", ["has", "point_count"]],
             paint: {
               "circle-color": "#11b4da",
-              "circle-radius": 12,
+              "circle-radius": 15,
             },
           });
 
+          map.on("touchstart", "unclustered-point", (event) => {
+            const coordinates = event.features[0].geometry.coordinates.slice();
+            const commonName = event.features[0].properties.common_name;
+            setTimeout(() => {
+              popupRef.current
+              .setLngLat(coordinates)
+              .setText(commonName)
+              .addTo(map);
+            }, 100);
+          });
           map.on("mouseenter", "unclustered-point", (event) => {
             const coordinates = event.features[0].geometry.coordinates.slice();
             const commonName = event.features[0].properties.common_name;
@@ -95,6 +105,9 @@ const App = () => {
               .setLngLat(coordinates)
               .setText(commonName)
               .addTo(map);
+          });
+          map.on("touchend", "unclustered-point", () => {
+            popupRef.current.remove();
           });
           map.on("mouseleave", "unclustered-point", () => {
             popupRef.current.remove();
