@@ -128,20 +128,23 @@ const App = () => {
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
 
-  const highlightTree = async (tree) => {
-    if (mapRef.current && tree) {
+  const highlightTree = async (treeName) => {
+    if (mapRef.current && treeName) {
       const allClusters = mapRef.current.queryRenderedFeatures({ layers: ["clusters"] });
       const clusterIdsToHighlight = [];
 
       for (const cluster of allClusters) {
         const clusterId = cluster.properties.cluster_id;
         const leaves = await getClusterFeatures(mapRef.current, clusterId);
-        if (leaves.some((leaf) => leaf.properties.common_name === tree)) {
+        if (leaves.some((leaf) => leaf.properties.common_name === treeName)) {
           clusterIdsToHighlight.push(clusterId);
         }
       }
-      mapRef.current.setFilter("highlighted-point", ["in", "common_name", tree]);
+      mapRef.current.setFilter("highlighted-point", ["in", "common_name", treeName]);
       mapRef.current.setFilter("highlighted-cluster", ["in", "cluster_id", ...clusterIdsToHighlight]);
+    } else {
+      mapRef.current.setFilter("highlighted-point", ["in", "common_name", ""]);
+      mapRef.current.setFilter("highlighted-cluster", ["in", "cluster_id", ""]);
     }
   };
 
@@ -160,12 +163,20 @@ const App = () => {
     popupRef.current.remove();
   };
 
-  const updateMap = useCallback(async (tree) => {
+  const updateMap = useCallback(async (treeName) => {
     if (mapRef.current) {
-      await highlightTree(tree);
+      await highlightTree(treeName);
       await updateVisibleTrees(mapRef.current, setVisibleTrees);
     }
   }, []);
+
+  const handleTreeListClick = (treeName) => {
+    if (treeName === highlightedTree) {
+      treeName = null
+    }
+    setHighlightedTree(treeName);
+    highlightTree(treeName);
+  };
 
   useEffect(() => {
     const map = new mapboxgl.Map({
@@ -197,6 +208,12 @@ const App = () => {
       map.on("mouseleave", "unclustered-point", removeTreePopup);
       map.on("touchstart", "unclustered-point", createTreePopup);
       map.on("touchend", "unclustered-point", removeTreePopup);
+      map.on("mouseenter", "unclustered-point", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", "unclustered-point", () => {
+        map.getCanvas().style.cursor = "";
+      });
     });
 
     return () => {
@@ -229,10 +246,7 @@ const App = () => {
               <li
                 key={index}
                 className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
-                onClick={() => {
-                  setHighlightedTree(name);
-                  highlightTree(name);
-                }}
+                onClick={() => handleTreeListClick(name) }
               >
                 <strong>{name}</strong> ({trees.length} trees)
               </li>
