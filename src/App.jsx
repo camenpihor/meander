@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import mapboxgl from "mapbox-gl";
 import Papa from "papaparse";
 import { debounce } from "lodash";
+import "./App.css";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -185,7 +186,7 @@ const App = () => {
     map.addControl(geolocateControl, "bottom-right");
 
     map.on("load", async () => {
-      // geolocateControl.trigger();
+      geolocateControl.trigger();
       fetchTreeData().then(geojsonData => {
         addTreeLayers(map, geojsonData)
         map.once("idle", async () => {
