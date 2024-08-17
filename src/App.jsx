@@ -206,7 +206,7 @@ const App = () => {
       showAccuracyCircle: false,
       showUserHeading: true,
     });
-    map.addControl(geolocateControl, "bottom-right");
+    map.addControl(geolocateControl, "top-right");
 
     map.on("load", async () => {
       geolocateControl.trigger();
