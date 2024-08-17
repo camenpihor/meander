@@ -127,6 +127,9 @@ const App = () => {
   );
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
+  const [isTreeListVisible, setIsTreeListVisible] = useState(false);
+  const [isHamburgerVisible, setIsHamburgerVisible] = useState(true);
+  const [isHamburgerFadingOut, setIsHamburgerFadingOut] = useState(false);
 
   const highlightTree = async (treeName) => {
     if (mapRef.current && treeName) {
@@ -178,6 +181,15 @@ const App = () => {
     highlightTree(treeName);
   };
 
+  const toggleTreeList = () => {
+    setIsHamburgerFadingOut(!isHamburgerFadingOut);
+    setIsTreeListVisible(!isTreeListVisible);
+    setTimeout(() => {
+      setIsHamburgerVisible(!isHamburgerVisible);
+      setIsHamburgerFadingOut(isHamburgerFadingOut);
+    }, 500)
+  };
+
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
@@ -214,6 +226,11 @@ const App = () => {
       map.on("mouseleave", "unclustered-point", () => {
         map.getCanvas().style.cursor = "";
       });
+      map.on("touchstart", () => {
+        setIsTreeListVisible(false);
+        setIsHamburgerVisible(true);
+        setIsHamburgerFadingOut(false);
+      });
     });
 
     return () => {
@@ -237,23 +254,32 @@ const App = () => {
 
   return (
     <div>
-      <div ref={mapContainerRef} style={{ width: "100vw", height: "100vh" }} />
-      {Object.keys(visibleTrees).length > 0 && (
-        <div className="absolute top-0 left-0 bg-white p-4 m-4 shadow-lg max-h-screen overflow-y-auto">
-          <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
-          <ul>
-            {visibleTrees.map(([name, trees], index) => (
-              <li
-                key={index}
-                className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
-                onClick={() => handleTreeListClick(name) }
-              >
-                <strong>{name}</strong> ({trees.length} trees)
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div ref={mapContainerRef} className="w-screen h-screen" />
+      {isHamburgerVisible && (
+        <button
+          className={`fixed top-4 left-4 bg-white border border-gray-300 p-2 rounded md:hidden z-50 transition-opacity duration-500 ${isHamburgerFadingOut ? 'opacity-0' : 'opacity-100'}`}
+          onClick={toggleTreeList}
+        >
+          ☰
+        </button>
       )}
+
+      <div
+        className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? 'translate-x-0' : '-translate-x-[120%]'} md:translate-x-0 md:block`}
+      >
+        <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
+        <ul>
+          {visibleTrees.map(([name, trees], index) => (
+            <li
+              key={index}
+              className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
+              onClick={() => handleTreeListClick(name)}
+            >
+              <strong>{name}</strong> ({trees.length} trees)
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
