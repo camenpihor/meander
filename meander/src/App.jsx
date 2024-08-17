@@ -11,13 +11,16 @@ const fetchTreeData = async () => {
   const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
   const geojsonData = {
     type: "FeatureCollection",
-    features: parsedData.map(({ longitude, latitude, common_name }) => ({
+    features: parsedData.map(({ longitude, latitude, common_name }, index) => ({
       type: "Feature",
       geometry: {
         type: "Point",
         coordinates: [parseFloat(longitude), parseFloat(latitude)],
       },
-      properties: { common_name },
+      properties: {
+        common_name,
+        index
+      },
     })),
   };
   return geojsonData;
@@ -90,8 +93,13 @@ const getClusterFeatures = (map, clusterId) => {
 };
 
 const updateVisibleTrees = async (map, setVisibleTrees) => {
-  const clusters = map.queryRenderedFeatures({ layers: ["unclustered-point", "clusters"] });
-  const groupedTrees = await clusters.reduce(async (groupsPromise, cluster) => {
+  let trees = map.queryRenderedFeatures({layers: ["unclustered-point"]});
+  trees = Array
+    .from(new Set(trees.map(feature => feature.properties.index)))
+    .map(index => trees.find(feature => feature.properties.index === index));
+  const clusters = map.queryRenderedFeatures({layers: ["clusters"]});
+
+  const groupedTrees = await trees.concat(clusters).reduce(async (groupsPromise, cluster) => {
     const groups = await groupsPromise;
     const features = cluster.properties.cluster ? await getClusterFeatures(map, cluster.properties.cluster_id) : [cluster];
     features.forEach(({ properties: { common_name } }) => {
