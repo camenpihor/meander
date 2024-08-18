@@ -6,25 +6,42 @@ import "./App.css";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
-const fetchTreeData = async () => {
-  const response = await fetch(`${process.env.PUBLIC_URL}/assets/treeLocations.csv`);
+const fetchTreeLocations = async () => {
+  const response = await fetch(`${process.env.PUBLIC_URL}/assets/tree_locations.csv`);
   const csvData = await response.text();
   const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
   const geojsonData = {
     type: "FeatureCollection",
-    features: parsedData.map(({ longitude, latitude, common_name }, index) => ({
-      type: "Feature",
-      geometry: {
-        type: "Point",
-        coordinates: [parseFloat(longitude), parseFloat(latitude)],
-      },
-      properties: {
-        common_name,
-        index
-      },
-    })),
+    features: parsedData
+      .filter(row => row.date_removed === null || row.date_removed.trim() === "")
+      .map(({ location_id, tree_id, latin_name, common_name, is_native, longitude, latitude, source }) => ({
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [parseFloat(longitude), parseFloat(latitude)],
+        },
+        properties: {
+          location_id,
+          tree_id,
+          latin_name,
+          source,
+          common_name,
+          is_native,
+        },
+      })),
   };
   return geojsonData;
+};
+
+const fetchTreeInfo = async () => {
+  const response = await fetch(`${process.env.PUBLIC_URL}/assets/tree_information.csv`);
+  const csvData = await response.text();
+  const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
+  const treeInfo = parsedData.reduce((accumulator, row) => {
+      accumulator[row.tree_id] = row;
+      return accumulator;
+  }, {});
+  return treeInfo;
 };
 
 const addTreeLayers = (map, geojsonData) => {
@@ -125,6 +142,8 @@ const App = () => {
       className: "text-medium",
     })
   );
+  const [treeLocations, setTreeLocations] = useState([]);
+  const [treeInfo, setTreeInfo] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
   const [isTreeListVisible, setIsTreeListVisible] = useState(false);
@@ -151,20 +170,19 @@ const App = () => {
     }
   };
 
-  const createTreePopup = (event) => {
-    const coordinates = event.features[0].geometry.coordinates.slice();
-    const commonName = event.features[0].properties.common_name;
-    setTimeout(() => {
-      popupRef.current
-        .setLngLat(coordinates)
-        .setText(commonName)
-        .addTo(mapRef.current);
-    }, 100);
-  };
-
-  const removeTreePopup = () => {
-    popupRef.current.remove();
-  };
+  function createPopupContent(tree, properties) {
+    return `
+      <div class="font-sans text-sm leading-tight">
+        <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
+        <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
+        <div class="my-4 pb-2" />
+        <p>${properties.is_native === 'True' ? 'Native' : 'Non-Native'}</p>
+        <p>${tree.iucn_red_list_assessment}</p>
+        </div>
+        <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">${properties.source}</div>
+      </div>
+    `;
+  }
 
   const updateMap = useCallback(async (treeName) => {
     if (mapRef.current) {
@@ -191,6 +209,11 @@ const App = () => {
   };
 
   useEffect(() => {
+    fetchTreeInfo().then(data => setTreeInfo(data));
+    fetchTreeLocations().then(data => setTreeLocations(data));
+  }, []);
+
+  useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
@@ -208,18 +231,12 @@ const App = () => {
     });
     map.addControl(geolocateControl, "top-right");
 
-    map.on("load", async () => {
+    map.on("load", () => {
       geolocateControl.trigger();
-      fetchTreeData().then(geojsonData => {
-        addTreeLayers(map, geojsonData)
-        map.once("idle", async () => {
-          await updateVisibleTrees(map, setVisibleTrees);
-        });
+      addTreeLayers(map, treeLocations)
+      map.once("idle", async () => {
+        await updateVisibleTrees(map, setVisibleTrees);
       });
-      map.on("mouseenter", "unclustered-point", createTreePopup);
-      map.on("mouseleave", "unclustered-point", removeTreePopup);
-      map.on("touchstart", "unclustered-point", createTreePopup);
-      map.on("touchend", "unclustered-point", removeTreePopup);
       map.on("mouseenter", "unclustered-point", () => {
         map.getCanvas().style.cursor = "pointer";
       });
@@ -236,7 +253,31 @@ const App = () => {
     return () => {
       map.remove();
     };
-  }, []);
+  }, [treeLocations]);
+
+  useEffect(() => {
+    const createTreePopup = (event) => {
+      const coordinates = event.features[0].geometry.coordinates.slice();
+      const locationProperties = event.features[0].properties;
+      const tree = treeInfo[locationProperties.tree_id]
+      const popupContent = createPopupContent(tree, locationProperties);
+      setTimeout(() => {
+        popupRef.current
+          .setLngLat(coordinates)
+          .setHTML(popupContent)
+          .addTo(mapRef.current);
+      }, 100);
+    };
+
+    const removeTreePopup = () => {
+      popupRef.current.remove();
+    };
+
+    mapRef.current.on("mouseenter", "unclustered-point", createTreePopup);
+    mapRef.current.on("mouseleave", "unclustered-point", removeTreePopup);
+    mapRef.current.on("touchstart", "unclustered-point", createTreePopup);
+    mapRef.current.on("touchend", "unclustered-point", removeTreePopup);
+  }, [treeInfo])
 
   useEffect(() => {
     const debouncedUpdateMap = debounce(() => updateMap(highlightedTree), 300);
