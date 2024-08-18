@@ -10,13 +10,18 @@ const NORMAL_MODE = 0;
 const ADD_MODE = 1;
 const DELETE_MODE = 2;
 
-const fetchTreeLocations = async () => {
-  const response = await fetch(`${process.env.PUBLIC_URL}/assets/tree_locations.csv`);
+const readCSV = async (filepath) => {
+  const response = await fetch(filepath);
   const csvData = await response.text();
   const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
+  return parsedData
+}
+
+const fetchTreeLocations = async () => {
+  const data = await readCSV(`${process.env.PUBLIC_URL}/assets/tree_locations.csv`);
   const geojsonData = {
     type: "FeatureCollection",
-    features: parsedData
+    features: data
       .filter(row => row.date_removed === null || row.date_removed.trim() === "")
       .map(({ location_id, tree_id, latin_name, common_name, is_native, longitude, latitude, source }) => ({
         type: "Feature",
@@ -38,14 +43,18 @@ const fetchTreeLocations = async () => {
 };
 
 const fetchTreeInfo = async () => {
-  const response = await fetch(`${process.env.PUBLIC_URL}/assets/tree_information.csv`);
-  const csvData = await response.text();
-  const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
-  const treeInfo = parsedData.reduce((accumulator, row) => {
+  const data = await readCSV(`${process.env.PUBLIC_URL}/assets/tree_information.csv`);
+  const treeInfo = data.reduce((accumulator, row) => {
       accumulator[row.tree_id] = row;
       return accumulator;
   }, {});
   return treeInfo;
+};
+
+const sendRemoveLocation = async (locationId) => {
+};
+
+const sendAddLocation = async (tree) => {
 };
 
 const addTreeLayers = (map, geojsonData) => {
@@ -117,8 +126,8 @@ const getClusterFeatures = (map, clusterId) => {
 const updateVisibleTrees = async (map, setVisibleTrees) => {
   let trees = map.queryRenderedFeatures({layers: ["unclustered-point"]});
   trees = Array
-    .from(new Set(trees.map(feature => feature.properties.index)))
-    .map(index => trees.find(feature => feature.properties.index === index));
+    .from(new Set(trees.map(feature => feature.properties.location_id)))
+    .map(location_id => trees.find(feature => feature.properties.location_id === location_id));
   const clusters = map.queryRenderedFeatures({layers: ["clusters"]});
 
   const groupedTrees = await trees.concat(clusters).reduce(async (groupsPromise, cluster) => {
@@ -157,13 +166,21 @@ const App = () => {
   const [isHamburgerFadingOut, setIsHamburgerFadingOut] = useState(false);
   const [mapMode, setMapMode] = useState(0);
 
-  const addTree = (event) => {
-    console.log("adding tree", event)
+  const addTree = async (event) => {
+    await sendAddLocation({
+      latin_name: "latin name",
+      common_name: "common name",
+      is_native: false,
+      latitude: "latitude",
+      longitude: "longitude",
+    });
+    fetchTreeLocations().then(data => setTreeLocations(data));
     setMapMode(NORMAL_MODE)
   }
 
-  const removeTree = (event) => {
-    console.log("removing tree",  event.features[0].properties);
+  const removeTree = async (event) => {
+    await sendRemoveLocation(event.features[0].properties.location_id);
+    fetchTreeLocations().then(data => setTreeLocations(data));
     setMapMode(NORMAL_MODE)
   }
 
@@ -187,20 +204,6 @@ const App = () => {
     }
   };
 
-  function createPopupContent(tree, properties) {
-    return `
-      <div class="font-sans text-sm leading-tight">
-        <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
-        <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
-        <div class="my-4 pb-2" />
-        <p>${properties.is_native === 'True' ? 'Native' : 'Non-Native'}</p>
-        <p>${tree.iucn_red_list_assessment}</p>
-        </div>
-        <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">${properties.source}</div>
-      </div>
-    `;
-  }
-
   const updateMap = useCallback(async (treeName) => {
     if (mapRef.current) {
       await highlightTree(treeName);
@@ -216,6 +219,20 @@ const App = () => {
     highlightTree(treeName);
   };
 
+  function createPopupContent(tree, properties) {
+    return `
+      <div class="font-sans text-sm leading-tight">
+        <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
+        <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
+        <div class="my-4 pb-2" />
+        <p>${properties.is_native === 'True' ? 'Native' : 'Non-Native'}</p>
+        <p>${tree.iucn_red_list_assessment}</p>
+        </div>
+        <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">${properties.source}</div>
+      </div>
+    `;
+  }
+
   const toggleTreeList = () => {
     setIsHamburgerFadingOut(!isHamburgerFadingOut);
     setIsTreeListVisible(!isTreeListVisible);
@@ -227,18 +244,11 @@ const App = () => {
 
   const updateMapMode = (toMode) => {
     if (mapMode === toMode) {
-      console.log("unsetting mode");
       setMapMode(NORMAL_MODE);
     } else {
-      console.log("setting mode", toMode)
       setMapMode(toMode);
     }
   }
-
-  useEffect(() => {
-    fetchTreeInfo().then(data => setTreeInfo(data));
-    fetchTreeLocations().then(data => setTreeLocations(data));
-  }, []);
 
   useEffect(() => {
     const map = new mapboxgl.Map({
@@ -259,14 +269,18 @@ const App = () => {
     map.addControl(geolocateControl, "top-right");
     document.querySelector('.mapboxgl-ctrl-top-right').appendChild(additionalMapBoxButtonsRef.current);
 
-    map.on("load", () => {
+    map.on("load", async () => {
       geolocateControl.trigger();
-      addTreeLayers(map, treeLocations)
+      const locations = await fetchTreeLocations();
+      const trees = await fetchTreeInfo();
+      setTreeLocations(locations);
+      setTreeInfo(trees);
+      addTreeLayers(map, locations);
       map.once("idle", async () => {
         await updateVisibleTrees(map, setVisibleTrees);
       });
-      mapRef.current.on("mouseenter", "unclustered-point", () => {mapRef.current.getCanvas().style.cursor = "pointer"});
-      mapRef.current.on("mouseleave", "unclustered-point", () => {mapRef.current.getCanvas().style.cursor = ""});
+      map.on("mouseenter", "unclustered-point", () => {map.getCanvas().style.cursor = "pointer"});
+      map.on("mouseleave", "unclustered-point", () => {map.getCanvas().style.cursor = ""});
       map.on("touchstart", () => {
         setIsTreeListVisible(false);
         setIsHamburgerVisible(true);
@@ -277,7 +291,13 @@ const App = () => {
     return () => {
       map.remove();
     };
-  }, [treeLocations]);
+  }, []);
+
+  useEffect(() => {
+    if (mapRef.current && mapRef.current.getSource("trees") && treeLocations.length) {
+      mapRef.current.getSource("trees").setData(treeLocations);
+    }
+  }, [treeLocations])
 
   useEffect(() => {
     const createTreePopup = (event) => {
