@@ -129,7 +129,6 @@ const updateVisibleTrees = async (map, setVisibleTrees) => {
     .from(new Set(trees.map(feature => feature.properties.location_id)))
     .map(location_id => trees.find(feature => feature.properties.location_id === location_id));
   const clusters = map.queryRenderedFeatures({layers: ["clusters"]});
-
   const groupedTrees = await trees.concat(clusters).reduce(async (groupsPromise, cluster) => {
     const groups = await groupsPromise;
     const features = cluster.properties.cluster ? await getClusterFeatures(map, cluster.properties.cluster_id) : [cluster];
@@ -301,33 +300,40 @@ const App = () => {
 
   useEffect(() => {
     const createTreePopup = (event) => {
+      if (!event.features) return;
+      console.log("createTreePopup");
       const coordinates = event.features[0].geometry.coordinates.slice();
       const locationProperties = event.features[0].properties;
       const tree = treeInfo[locationProperties.tree_id]
       const popupContent = createPopupContent(tree, locationProperties);
-      setTimeout(() => {
-        setCurrentPopupLocation(locationProperties.location_id);
-        popupRef.current
-          .setLngLat(coordinates)
-          .setHTML(popupContent)
-          .addTo(mapRef.current);
-      }, 100);
+      setCurrentPopupLocation(locationProperties.location_id);
+      popupRef.current
+        .setLngLat(coordinates)
+        .setHTML(popupContent)
+        .addTo(mapRef.current);
     };
 
     const removeTreePopup = () => {
-      setCurrentPopupLocation(null);
       popupRef.current.remove();
+      setCurrentPopupLocation(null);
     };
 
     const handlePointMovement = (event) => {
+      if (!event.features) return;
       const newLocation = event.features[0].properties.location_id;
       if (currentPopupLocation !== newLocation) {
         createTreePopup(event);
       }
     };
 
+    const handlePointLeave = () => {
+      setTimeout(() => {
+        removeTreePopup();
+      }, 50);
+    };
+
     mapRef.current.on("mousemove", "unclustered-point", handlePointMovement);
-    mapRef.current.on("mouseleave", "unclustered-point", removeTreePopup);
+    mapRef.current.on("mouseleave", "unclustered-point", handlePointLeave);
     mapRef.current.on("touchstart", "unclustered-point", createTreePopup);
     mapRef.current.on("touchend", "unclustered-point", removeTreePopup);
 
