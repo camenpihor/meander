@@ -301,7 +301,6 @@ const App = () => {
   useEffect(() => {
     const createTreePopup = (event) => {
       if (!event.features) return;
-      console.log("createTreePopup");
       const coordinates = event.features[0].geometry.coordinates.slice();
       const locationProperties = event.features[0].properties;
       const tree = treeInfo[locationProperties.tree_id]
