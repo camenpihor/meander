@@ -17,29 +17,38 @@ const readCSV = async (filepath) => {
   return parsedData
 }
 
-const fetchTreeLocations = async () => {
-  const data = await readCSV(`${process.env.PUBLIC_URL}/assets/tree_locations.csv`);
-  const geojsonData = {
-    type: "FeatureCollection",
-    features: data
-      .filter(row => row.date_removed === null || row.date_removed.trim() === "")
-      .map(({ location_id, tree_id, latin_name, common_name, is_native, longitude, latitude, source }) => ({
-        type: "Feature",
-        geometry: {
-          type: "Point",
-          coordinates: [parseFloat(longitude), parseFloat(latitude)],
-        },
-        properties: {
-          location_id,
-          tree_id,
-          latin_name,
-          source,
-          common_name,
-          is_native,
-        },
-      })),
-  };
-  return geojsonData;
+const treeToFeature = (tree) => ({
+  type: "Feature",
+  geometry: {
+    type: "Point",
+    coordinates: [parseFloat(tree.longitude), parseFloat(tree.latitude)],
+  },
+  properties: {
+    location_id: tree.location_id,
+    tree_id: tree.tree_id,
+    latin_name: tree.latin_name,
+    source: tree.source,
+    common_name: tree.common_name,
+    is_native: tree.is_native,
+  },
+});
+
+export const fetchTreeLocations = async () => {
+  try {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const trees = await response.json();
+    const geojsonData = {
+      type: "FeatureCollection",
+      features: trees.map(treeToFeature),
+    };
+    return geojsonData
+  } catch (error) {
+    console.error("Error fetching trees:", error);
+    throw error;
+  }
 };
 
 const fetchTreeInfo = async () => {
@@ -51,10 +60,44 @@ const fetchTreeInfo = async () => {
   return treeInfo;
 };
 
-const sendRemoveLocation = async (locationId) => {
+export const sendRemoveLocation = async (locationId, removedBy) => {
+  try {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees/remove/${locationId}`, {
+      method: "PUT",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ removed_by: removedBy }),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(`Error removing tree with location_id ${locationId}:`, error);
+    throw error;
+  }
 };
 
-const sendAddLocation = async (tree) => {
+export const sendAddLocation = async (treeData) => {
+  try {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(treeData),
+    });
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error("Error adding new tree:", error);
+    throw error;
+  }
 };
 
 const addTreeLayers = (map, geojsonData) => {
@@ -164,22 +207,89 @@ const App = () => {
   const [isHamburgerVisible, setIsHamburgerVisible] = useState(true);
   const [isHamburgerFadingOut, setIsHamburgerFadingOut] = useState(false);
   const [mapMode, setMapMode] = useState(0);
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [newTree, setNewTree] = useState({
+    latin_name: "",
+    common_name: "",
+    is_native: false,
+    latitude: "",
+    longitude: "",
+    source: ""
+  });
+  const [filteredCommonNames, setFilteredCommonNames] = useState([])
 
-  const addTree = async (event) => {
-    await sendAddLocation({
-      latin_name: "latin name",
-      common_name: "common name",
-      is_native: false,
-      latitude: "latitude",
-      longitude: "longitude",
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setNewTree({
+      ...newTree,
+      [name]: type === "checkbox" ? checked : value
     });
-    fetchTreeLocations().then(data => setTreeLocations(data));
-    setMapMode(NORMAL_MODE)
+
+    if (name === "common_name") {
+      const filtered = Object.values(treeInfo)
+        .map(tree => tree.common_name)
+        .filter(commonName => commonName.toLowerCase().includes(value.toLowerCase()));
+      setFilteredCommonNames(filtered);
+    }
+  };
+
+  const handleCommonNameSelect = (commonName) => {
+    const selectedTree = Object.values(treeInfo).find(tree => tree.common_name === commonName);
+    setNewTree({
+      ...newTree,
+      common_name: selectedTree.common_name,
+      latin_name: selectedTree.latin_name,
+      tree_id: selectedTree.tree_id
+    });
+    setFilteredCommonNames([]);
+  };
+
+  const handleAddTreeSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const treeData = {
+        ...newTree,
+        latitude: parseFloat(newTree.latitude),
+        longitude: parseFloat(newTree.longitude),
+        date_added: new Date().toISOString(),
+      };
+      const addedTree = await sendAddLocation(treeData);
+      setTreeLocations({
+          ...treeLocations,
+          features: [...treeLocations.features, treeToFeature(addedTree)]
+      });
+      setIsFormVisible(false);
+      setMapMode(NORMAL_MODE);
+    } catch (error) {
+      console.error("Error adding new tree:", error);
+    }
+  };
+
+  const addTree = (event) => {
+    const coordinates = event.lngLat;
+    setNewTree({
+      ...newTree,
+      latitude: coordinates.lat,
+      longitude: coordinates.lng,
+    });
+    setIsFormVisible(true);
   }
 
   const removeTree = async (event) => {
-    await sendRemoveLocation(event.features[0].properties.location_id);
-    fetchTreeLocations().then(data => setTreeLocations(data));
+    const locationId = event.features[0].properties.location_id
+    const removedBy = window.prompt("Please enter your name to confirm removal:");
+    if (!removedBy) {
+        alert("Removal canceled.");
+        return;
+    }
+    await sendRemoveLocation(locationId, removedBy);
+    const updatedFeatures = treeLocations.features.filter(
+        feature => feature.properties.location_id !== locationId
+    );
+    setTreeLocations({
+        ...treeLocations,
+        features: updatedFeatures
+    });
     setMapMode(NORMAL_MODE)
   }
 
@@ -224,7 +334,7 @@ const App = () => {
         <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
         <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
         <div class="my-4 pb-2" />
-        <p>${properties.is_native === 'True' ? 'Native' : 'Non-Native'}</p>
+        <p>${properties.is_native === "True" ? "Native" : "Non-Native"}</p>
         <p>${tree.iucn_red_list_assessment}</p>
         </div>
         <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">${properties.source}</div>
@@ -266,12 +376,12 @@ const App = () => {
       showUserHeading: true,
     });
     map.addControl(geolocateControl, "top-right");
-    document.querySelector('.mapboxgl-ctrl-top-right').appendChild(additionalMapBoxButtonsRef.current);
+    document.querySelector(".mapboxgl-ctrl-top-right").appendChild(additionalMapBoxButtonsRef.current);
 
     map.on("load", async () => {
       geolocateControl.trigger();
-      const locations = await fetchTreeLocations();
       const trees = await fetchTreeInfo();
+      const locations = await fetchTreeLocations();
       setTreeLocations(locations);
       setTreeInfo(trees);
       addTreeLayers(map, locations);
@@ -293,7 +403,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (mapRef.current && mapRef.current.getSource("trees") && treeLocations.length) {
+    if (mapRef.current && mapRef.current.getSource("trees") && treeLocations) {
       mapRef.current.getSource("trees").setData(treeLocations);
     }
   }, [treeLocations])
@@ -393,6 +503,65 @@ const App = () => {
           Adding Tree...
         </div>
       )}
+      {mapMode === ADD_MODE && isFormVisible && (
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded shadow-lg z-50">
+          <form onSubmit={handleAddTreeSubmit}>
+            <div>
+              <label>
+                Common Name:
+                <input
+                  type="text"
+                  name="common_name"
+                  value={newTree.common_name}
+                  onChange={handleInputChange}
+                  required
+                  autoComplete="off"
+                />
+                {filteredCommonNames.length > 0 && (
+                  <ul className="bg-white border border-gray-300 rounded mt-2 max-h-48 overflow-y-auto">
+                    {filteredCommonNames.map((commonName, index) => (
+                      <li
+                        key={index}
+                        className="cursor-pointer hover:bg-gray-200 p-2"
+                        onClick={() => handleCommonNameSelect(commonName)}
+                      >
+                        {commonName}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </label>
+            </div>
+            <div>
+              <label>
+                Is Native:
+                <input
+                  type="checkbox"
+                  name="is_native"
+                  checked={newTree.is_native}
+                  onChange={handleInputChange}
+                />
+              </label>
+            </div>
+            <div>
+              <label>
+                Source Attribution:
+                <input
+                  type="text"
+                  name="source"
+                  value={newTree.source}
+                  onChange={handleInputChange}
+                  required
+                  autoComplete="off"
+                />
+              </label>
+            </div>
+            <button type="submit" className="bg-green-500 text-white p-2 rounded">
+              Add Tree
+            </button>
+          </form>
+        </div>
+      )}
       {mapMode === DELETE_MODE && (
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-lg text-white bg-orange-500 p-2 rounded">
           Removing Tree...
@@ -400,7 +569,7 @@ const App = () => {
       )}
       {isHamburgerVisible && (
         <button
-          className={`fixed top-4 left-4 bg-white border border-gray-300 p-2 rounded md:hidden z-50 transition-opacity duration-500 ${isHamburgerFadingOut ? 'opacity-0' : 'opacity-100'}`}
+          className={`fixed top-4 left-4 bg-white border border-gray-300 p-2 rounded md:hidden z-50 transition-opacity duration-500 ${isHamburgerFadingOut ? "opacity-0" : "opacity-100"}`}
           onClick={toggleTreeList}
         >
           ☰
@@ -408,7 +577,7 @@ const App = () => {
       )}
 
       <div
-        className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? 'translate-x-0' : '-translate-x-[120%]'}`}
+        className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0" : "-translate-x-[120%]"}`}
       >
         <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
         <ul>

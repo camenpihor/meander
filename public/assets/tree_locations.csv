@@ -1,4 +1,4 @@
-location_id,tree_id,latin_name,common_name,is_native,date_added,latitude,longitude,source,date_removed
+location_id,tree_id,latin_name,common_name,is_native,date_added,latitude,longitude,source,removed_by
 1,551,prunus americana,american plum,True,2018-10-30,42.3914873178,-71.1129742565,somerville treekeeper,
 2,849,tilia cordata,littleleaf linden,False,2018-10-30,42.3914310282,-71.1130061847,somerville treekeeper,
 3,849,tilia cordata,littleleaf linden,False,2018-11-07,42.3917338409394,-71.1131652,somerville treekeeper,
