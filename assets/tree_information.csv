@@ -11,7 +11,7 @@ tree_id,family,latin_name,common_name,state_distributions,iucn_red_list_assessme
 10,fabaceae,acacia rigidula,blackbrush acacia,['tx'],least concern,False
 11,sapindaceae,acer circinatum,vine maple,"['ak', 'ca', 'or', 'wa']",least concern,False
 12,sapindaceae,acer floridanum,southern sugar maple,"['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-13,sapindaceae,acer glabrum,rocky mountain maple,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
+13,sapindaceae,acer glabrum ,rocky mountain maple,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
 14,sapindaceae,acer grandidentatum,bigtooth maple,"['az', 'co', 'id', 'nm', 'nv', 'ok', 'tx', 'ut', 'wa', 'wy']",least concern,False
 15,sapindaceae,acer leucoderme,chalk maple,"['al', 'ar', 'dc', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx']",least concern,False
 16,sapindaceae,acer macrophyllum,bigleaf maple,"['ca', 'or', 'wa']",least concern,False
