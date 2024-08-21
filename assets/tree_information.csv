@@ -1,4 +1,4 @@
-tree_id,family,latin_name,common_name,state_distributions,iucn_red_list_assessment,planted
+tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessment,planted
 1,pinaceae,abies amabilis,pacific silver fir,"['ak', 'ca', 'or', 'wa']",least concern,False
 2,pinaceae,abies balsamea,balsam fir,"['ct', 'ia', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv']",least concern,False
 3,pinaceae,abies bracteata,santa lucia fir,['ca'],near threatened,False
