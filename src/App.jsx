@@ -3,6 +3,7 @@ import mapboxgl from "mapbox-gl";
 import Papa from "papaparse";
 import { debounce } from "lodash";
 import "./App.css";
+import NewTreeForm from "./components/NewTreeForm";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -80,14 +81,23 @@ export const sendRemoveLocation = async (locationId, removedBy) => {
   }
 };
 
-export const sendAddLocation = async (treeData) => {
+export const sendAddLocation = async ({ tree_id, latin_name, common_name, latitude, longitude, source, is_native }) => {
   try {
     const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
       },
-      body: JSON.stringify(treeData),
+      body: JSON.stringify({
+        tree_id: tree_id,
+        latin_name: latin_name,
+        common_name: common_name,
+        latitude: latitude,
+        longitude: longitude,
+        source: source,
+        is_native: is_native,
+        date_added: new Date().toISOString()
+      }),
     });
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -203,57 +213,28 @@ const App = () => {
   const [treeInfo, setTreeInfo] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
-  const [isTreeListVisible, setIsTreeListVisible] = useState(false);
-  const [isHamburgerVisible, setIsHamburgerVisible] = useState(true);
-  const [isHamburgerFadingOut, setIsHamburgerFadingOut] = useState(false);
   const [mapMode, setMapMode] = useState(0);
+  const [isTreeListVisible, setIsTreeListVisible] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [newTree, setNewTree] = useState({
-    latin_name: "",
-    common_name: "",
-    is_native: false,
-    latitude: "",
-    longitude: "",
-    source: ""
-  });
-  const [filteredCommonNames, setFilteredCommonNames] = useState([])
+  const [newTreeCoordinates, setNewTreeCoordinates] = useState([]);
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setNewTree({
-      ...newTree,
-      [name]: type === "checkbox" ? checked : value
-    });
+  const handleAddTreeCancel = () => {
+    setNewTreeCoordinates([]);
+    setIsFormVisible(false);
+    setMapMode(NORMAL_MODE);
+  }
 
-    if (name === "common_name") {
-      const filtered = Object.values(treeInfo)
-        .map(tree => tree.common_name)
-        .filter(commonName => commonName.toLowerCase().includes(value.toLowerCase()));
-      setFilteredCommonNames(filtered);
-    }
-  };
-
-  const handleCommonNameSelect = (commonName) => {
-    const selectedTree = Object.values(treeInfo).find(tree => tree.common_name === commonName);
-    setNewTree({
-      ...newTree,
-      common_name: selectedTree.common_name,
-      latin_name: selectedTree.latin_name,
-      tree_id: selectedTree.tree_id
-    });
-    setFilteredCommonNames([]);
-  };
-
-  const handleAddTreeSubmit = async (event) => {
-    event.preventDefault();
+  const handleAddTreeSubmit = async (newTree) => {
     try {
-      const treeData = {
-        ...newTree,
-        latitude: parseFloat(newTree.latitude),
-        longitude: parseFloat(newTree.longitude),
-        date_added: new Date().toISOString(),
-      };
-      const addedTree = await sendAddLocation(treeData);
+      const addedTree = await sendAddLocation({
+        tree_id: newTree.tree_id,
+        latin_name: newTree.latin_name,
+        common_name: newTree.common_name,
+        latitude: newTree.latitude,
+        longitude: newTree.longitude,
+        source: newTree.source,
+        is_native: newTree.is_native,
+      });
       setTreeLocations({
           ...treeLocations,
           features: [...treeLocations.features, treeToFeature(addedTree)]
@@ -266,12 +247,7 @@ const App = () => {
   };
 
   const addTree = (event) => {
-    const coordinates = event.lngLat;
-    setNewTree({
-      ...newTree,
-      latitude: coordinates.lat,
-      longitude: coordinates.lng,
-    });
+    setNewTreeCoordinates(event.lngLat);
     setIsFormVisible(true);
   }
 
@@ -342,15 +318,6 @@ const App = () => {
     `;
   }
 
-  const toggleTreeList = () => {
-    setIsHamburgerFadingOut(!isHamburgerFadingOut);
-    setIsTreeListVisible(!isTreeListVisible);
-    setTimeout(() => {
-      setIsHamburgerVisible(!isHamburgerVisible);
-      setIsHamburgerFadingOut(isHamburgerFadingOut);
-    }, 500)
-  };
-
   const updateMapMode = (toMode) => {
     if (mapMode === toMode) {
       setMapMode(NORMAL_MODE);
@@ -379,6 +346,7 @@ const App = () => {
     document.querySelector(".mapboxgl-ctrl-top-right").appendChild(additionalMapBoxButtonsRef.current);
 
     map.on("load", async () => {
+      setIsTreeListVisible(window.innerWidth > 768);
       geolocateControl.trigger();
       const trees = await fetchTreeInfo();
       const locations = await fetchTreeLocations();
@@ -392,8 +360,6 @@ const App = () => {
       map.on("mouseleave", "unclustered-point", () => {map.getCanvas().style.cursor = ""});
       map.on("touchstart", () => {
         setIsTreeListVisible(false);
-        setIsHamburgerVisible(true);
-        setIsHamburgerFadingOut(false);
       });
     });
 
@@ -504,62 +470,8 @@ const App = () => {
         </div>
       )}
       {mapMode === ADD_MODE && isFormVisible && (
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded shadow-lg z-50">
-          <form onSubmit={handleAddTreeSubmit}>
-            <div>
-              <label>
-                Common Name:
-                <input
-                  type="text"
-                  name="common_name"
-                  value={newTree.common_name}
-                  onChange={handleInputChange}
-                  required
-                  autoComplete="off"
-                />
-                {filteredCommonNames.length > 0 && (
-                  <ul className="bg-white border border-gray-300 rounded mt-2 max-h-48 overflow-y-auto">
-                    {filteredCommonNames.map((commonName, index) => (
-                      <li
-                        key={index}
-                        className="cursor-pointer hover:bg-gray-200 p-2"
-                        onClick={() => handleCommonNameSelect(commonName)}
-                      >
-                        {commonName}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </label>
-            </div>
-            <div>
-              <label>
-                Is Native:
-                <input
-                  type="checkbox"
-                  name="is_native"
-                  checked={newTree.is_native}
-                  onChange={handleInputChange}
-                />
-              </label>
-            </div>
-            <div>
-              <label>
-                Source Attribution:
-                <input
-                  type="text"
-                  name="source"
-                  value={newTree.source}
-                  onChange={handleInputChange}
-                  required
-                  autoComplete="off"
-                />
-              </label>
-            </div>
-            <button type="submit" className="bg-green-500 text-white p-2 rounded">
-              Add Tree
-            </button>
-          </form>
+        <div className="absolute top-0 left-0 w-full h-full z-50">
+          <NewTreeForm treeList={treeInfo} coordinates={newTreeCoordinates} onSubmit={handleAddTreeSubmit} onCancel={handleAddTreeCancel} />
         </div>
       )}
       {mapMode === DELETE_MODE && (
@@ -567,30 +479,27 @@ const App = () => {
           Removing Tree...
         </div>
       )}
-      {isHamburgerVisible && (
+      <div>
         <button
-          className={`fixed top-4 left-4 bg-white border border-gray-300 p-2 rounded md:hidden z-50 transition-opacity duration-500 ${isHamburgerFadingOut ? "opacity-0" : "opacity-100"}`}
-          onClick={toggleTreeList}
+          className={`fixed top-4 left-4 bg-white border border-gray-300 p-2 rounded transition-opacity md:hidden duration-500 ${isTreeListVisible ? "opacity-0" : "opacity-100"} z-30`}
+          onClick={() => {setIsTreeListVisible(true)}}
         >
           ☰
         </button>
-      )}
-
-      <div
-        className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0" : "-translate-x-[120%]"}`}
-      >
-        <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
-        <ul>
-          {visibleTrees.map(([name, trees], index) => (
-            <li
-              key={index}
-              className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
-              onClick={() => handleTreeListClick(name)}
-            >
-              <strong>{name}</strong> ({trees.length} trees)
-            </li>
-          ))}
-        </ul>
+        <div className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0": "-translate-x-[120%]" }`}>
+          <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
+          <ul>
+            {visibleTrees.map(([name, trees], index) => (
+              <li
+                key={index}
+                className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
+                onClick={() => handleTreeListClick(name)}
+              >
+                <strong>{name}</strong> ({trees.length} trees)
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       {/* Hidden buttons to be added to the map control later */}
