@@ -78,7 +78,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg h-full">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg">
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Common Name</label>
         <select
