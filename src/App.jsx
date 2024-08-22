@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import Papa from "papaparse";
 import { debounce } from "lodash";
@@ -218,6 +218,9 @@ const App = () => {
   const [isTreeListVisible, setIsTreeListVisible] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [newTreeCoordinates, setNewTreeCoordinates] = useState([]);
+  const [mapLoaded, setMapLoaded] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const [layersLoaded, setLayersLoaded] = useState(false);
 
   const handleAddTreeCancel = () => {
     setNewTreeCoordinates([]);
@@ -247,29 +250,6 @@ const App = () => {
     }
   };
 
-  const addTree = (event) => {
-    setNewTreeCoordinates(event.lngLat);
-    setIsFormVisible(true);
-  }
-
-  const removeTree = async (event) => {
-    const locationId = event.features[0].properties.location_id
-    const removedBy = window.prompt("Please enter your name to confirm removal:");
-    if (!removedBy) {
-        alert("Removal canceled.");
-        return;
-    }
-    await sendRemoveLocation(locationId, removedBy);
-    const updatedFeatures = treeLocations.features.filter(
-        feature => feature.properties.location_id !== locationId
-    );
-    setTreeLocations({
-        ...treeLocations,
-        features: updatedFeatures
-    });
-    setMapMode(NORMAL_MODE)
-  }
-
   const highlightTree = async (treeName) => {
     if (mapRef.current && treeName) {
       const allClusters = mapRef.current.queryRenderedFeatures({ layers: ["clusters"] });
@@ -290,13 +270,6 @@ const App = () => {
     }
   };
 
-  const updateMap = useCallback(async (treeName) => {
-    if (mapRef.current) {
-      await highlightTree(treeName);
-      await updateVisibleTrees(mapRef.current, setVisibleTrees);
-    }
-  }, []);
-
   const handleTreeListClick = (treeName) => {
     if (treeName === highlightedTree) {
       treeName = null
@@ -305,7 +278,7 @@ const App = () => {
     highlightTree(treeName);
   };
 
-  function createPopupContent(tree, properties) {
+  const createPopupContent = (tree, properties) => {
     return `
       <div class="font-sans text-sm leading-tight">
         <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
@@ -327,6 +300,14 @@ const App = () => {
     }
   }
 
+  const fetchData = async () => {
+    const locations = await fetchTreeLocations();
+    const info = await fetchTreeInfo();
+    setTreeLocations(locations);
+    setTreeInfo(info);
+    setDataLoaded(true)
+  };
+
   useEffect(() => {
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
@@ -337,44 +318,51 @@ const App = () => {
     });
     mapRef.current = map;
 
-    const geolocateControl = new mapboxgl.GeolocateControl({
-      positionOptions: { enableHighAccuracy: true },
-      trackUserLocation: true,
-      showAccuracyCircle: false,
-      showUserHeading: true,
-    });
-    map.addControl(geolocateControl, "top-right");
-    document.querySelector(".mapboxgl-ctrl-top-right").appendChild(additionalMapBoxButtonsRef.current);
-    document.querySelector(".mapboxgl-ctrl-top-left").appendChild(mapBoxButtonsTopLeftRef.current);
+    map.on("load", () => {
+      setMapLoaded(true);
 
-    map.on("load", async () => {
-      setIsTreeListVisible(window.innerWidth > 768);
-      geolocateControl.trigger();
-      const trees = await fetchTreeInfo();
-      const locations = await fetchTreeLocations();
-      setTreeLocations(locations);
-      setTreeInfo(trees);
-      addTreeLayers(map, locations);
-      map.once("idle", async () => {
-        await updateVisibleTrees(map, setVisibleTrees);
+      const geolocateControl = new mapboxgl.GeolocateControl({
+        positionOptions: { enableHighAccuracy: true },
+        trackUserLocation: true,
+        showAccuracyCircle: false,
+        showUserHeading: true,
       });
-      map.on("mouseenter", "unclustered-point", () => {map.getCanvas().style.cursor = "pointer"});
-      map.on("mouseleave", "unclustered-point", () => {map.getCanvas().style.cursor = ""});
-      map.on("touchstart", () => {
-        setIsTreeListVisible(false);
-      });
-    });
+      map.addControl(geolocateControl, "top-right");
 
+      document.querySelector(".mapboxgl-ctrl-top-right").appendChild(additionalMapBoxButtonsRef.current);
+      document.querySelector(".mapboxgl-ctrl-top-left").appendChild(mapBoxButtonsTopLeftRef.current);
+
+      map.on("mouseenter", "unclustered-point", () => { map.getCanvas().style.cursor = "pointer"} );
+      map.on("mouseleave", "unclustered-point", () => { map.getCanvas().style.cursor = ""} );
+      map.on("touchstart", () => { setIsTreeListVisible(false) });
+      setTimeout(() => {  // for some reason, the geolocate control isn't fully added by this time
+        geolocateControl.trigger();
+        }, 1000);
+    });
     return () => {
       map.remove();
     };
   }, []);
 
   useEffect(() => {
-    if (mapRef.current && mapRef.current.getSource("trees") && treeLocations) {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (mapLoaded && dataLoaded && treeLocations) {
+      addTreeLayers(mapRef.current, treeLocations);
+      mapRef.current.once("idle", async () => {
+        await updateVisibleTrees(mapRef.current, setVisibleTrees);
+        setLayersLoaded(true)
+      });
+    }
+  }, [mapLoaded, dataLoaded, treeLocations]);
+
+  useEffect(() => {
+    if (mapLoaded && dataLoaded && layersLoaded) {
       mapRef.current.getSource("trees").setData(treeLocations);
     }
-  }, [treeLocations])
+  }, [mapLoaded, dataLoaded, layersLoaded, treeLocations])
 
   useEffect(() => {
     const createTreePopup = (event) => {
@@ -423,8 +411,12 @@ const App = () => {
   }, [treeInfo, currentPopupLocation])
 
   useEffect(() => {
+    const updateMap = async (treeName) => {
+      await highlightTree(treeName);
+      await updateVisibleTrees(mapRef.current, setVisibleTrees);
+    };
     const debouncedUpdateMap = debounce(() => updateMap(highlightedTree), 300);
-    if (mapRef.current) {
+    if (mapLoaded) {
       mapRef.current.on("moveend", debouncedUpdateMap);
       mapRef.current.on("zoomend", debouncedUpdateMap);
     }
@@ -434,10 +426,33 @@ const App = () => {
         mapRef.current.off("zoomend", debouncedUpdateMap);
       }
     };
-  }, [highlightedTree, updateMap]);
+  }, [highlightedTree, mapLoaded]);
 
   useEffect(() => {
-    if (mapRef.current) {
+    const addTree = (event) => {
+      setNewTreeCoordinates(event.lngLat);
+      setIsFormVisible(true);
+    };
+
+    const removeTree = async (event) => {
+      const locationId = event.features[0].properties.location_id
+      const removedBy = window.prompt("Please enter your name to confirm removal:");
+      if (!removedBy) {
+          alert("Removal canceled.");
+          return;
+      }
+      await sendRemoveLocation(locationId, removedBy);
+      const updatedFeatures = treeLocations.features.filter(
+          feature => feature.properties.location_id !== locationId
+      );
+      setTreeLocations({
+          ...treeLocations,
+          features: updatedFeatures
+      });
+      setMapMode(NORMAL_MODE)
+    };
+
+    if (mapLoaded && layersLoaded) {
       if (mapMode === NORMAL_MODE) {
         setIsTreeListVisible(true);
       } else if (mapMode === ADD_MODE) {
@@ -458,7 +473,7 @@ const App = () => {
         mapRef.current.off("touchend", addTree);
       }
     };
-  }, [mapMode]);
+  }, [mapLoaded, layersLoaded, mapMode, treeLocations]);
 
   return (
     <div>
@@ -481,35 +496,33 @@ const App = () => {
           Removing Tree...
         </div>
       )}
-      <div>
-        <div className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0": "-translate-x-[120%]" }`}>
-          <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
-          <ul>
-            {visibleTrees.map(([name, trees], index) => (
-              <li
-                key={index}
-                className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
-                onClick={() => handleTreeListClick(name)}
-              >
-                <strong>{name}</strong> ({trees.length} trees)
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0": "-translate-x-[120%]" }`}>
+        <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
+        <ul>
+          {visibleTrees.map(([name, trees], index) => (
+            <li
+              key={index}
+              className={`text-sm text-gray-700 cursor-pointer hover:bg-blue-200 ${highlightedTree === name ? "bg-orange-300" : ""}`}
+              onClick={() => handleTreeListClick(name)}
+            >
+              <strong>{name}</strong> ({trees.length} trees)
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Hidden buttons to be added to the map control later */}
       <div
         ref={mapBoxButtonsTopLeftRef}
-        className="mapboxgl-ctrl mapboxgl-ctrl-group"
+        className="mapboxgl-ctrl mapboxgl-ctrl-group md:hidden"
         onClick={() => setIsTreeListVisible(true)}
       >
-        <button class="md:hidden relative z-30">
-          <div class="relative flex overflow-hidden items-center justify-center">
-            <div class="flex flex-col justify-between w-[1rem] h-[1rem] origin-center overflow-hidden">
-              <div class="bg-gray-800 h-[2px] origin-left" />
-              <div class="bg-gray-800 h-[2px] origin-left" />
-              <div class="bg-gray-800 h-[2px] origin-left" />
+        <button className="relative z-30">
+          <div className="relative flex overflow-hidden items-center justify-center">
+            <div className="flex flex-col justify-between w-[1rem] h-[1rem] origin-center overflow-hidden">
+              <div className="bg-gray-800 h-[2px] origin-left" />
+              <div className="bg-gray-800 h-[2px] origin-left" />
+              <div className="bg-gray-800 h-[2px] origin-left" />
             </div>
           </div>
         </button>
