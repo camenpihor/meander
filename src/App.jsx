@@ -1,114 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import Papa from "papaparse";
 import { debounce } from "lodash";
 import "./App.css";
 import NewTreeForm from "./components/NewTreeForm";
+import { fetchTreeInfo, fetchTreeLocations, sendAddLocation, sendRemoveLocation, treeToFeature } from "./api";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
-const NORMAL_MODE = 0;
-const ADD_MODE = 1;
-const DELETE_MODE = 2;
 
-const readCSV = async (filepath) => {
-  const response = await fetch(filepath);
-  const csvData = await response.text();
-  const parsedData = Papa.parse(csvData, { header: true, skipEmptyLines: true }).data;
-  return parsedData
-}
-
-const treeToFeature = (tree) => ({
-  type: "Feature",
-  geometry: {
-    type: "Point",
-    coordinates: [parseFloat(tree.longitude), parseFloat(tree.latitude)],
-  },
-  properties: {
-    location_id: tree.location_id,
-    tree_id: tree.tree_id,
-    latin_name: tree.latin_name,
-    source: tree.source,
-    common_name: tree.common_name,
-    is_native: tree.is_native,
-  },
-});
-
-export const fetchTreeLocations = async () => {
-  try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const trees = await response.json();
-    const geojsonData = {
-      type: "FeatureCollection",
-      features: trees.map(treeToFeature),
-    };
-    return geojsonData
-  } catch (error) {
-    console.error("Error fetching trees:", error);
-    throw error;
-  }
-};
-
-const fetchTreeInfo = async () => {
-  const data = await readCSV(`${process.env.PUBLIC_URL}/assets/tree_information.csv`);
-  const treeInfo = data.reduce((accumulator, row) => {
-      accumulator[row.tree_id] = row;
-      return accumulator;
-  }, {});
-  return treeInfo;
-};
-
-export const sendRemoveLocation = async (locationId, removedBy) => {
-  try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees/remove/${locationId}`, {
-      method: "PUT",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ removed_by: removedBy }),
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error(`Error removing tree with location_id ${locationId}:`, error);
-    throw error;
-  }
-};
-
-export const sendAddLocation = async ({ tree_id, latin_name, common_name, latitude, longitude, source, is_native }) => {
-  try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/trees`, {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        tree_id: tree_id,
-        latin_name: latin_name,
-        common_name: common_name,
-        latitude: latitude,
-        longitude: longitude,
-        source: source,
-        is_native: is_native,
-        date_added: new Date().toISOString()
-      }),
-    });
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error("Error adding new tree:", error);
-    throw error;
-  }
-};
 
 const addTreeLayers = (map, geojsonData) => {
   map.addSource("trees", {
@@ -200,21 +99,20 @@ const App = () => {
   const mapRef = useRef(null);
   const popupRef = useRef(
     new mapboxgl.Popup({
-      closeButton: false,
+      closeButton: true,
       closeOnClick: false,
       closeOnMove: true,
       offset: [0, -15],
       className: "text-medium",
     })
   );
-  const mapBoxButtonsTopLeftRef = useRef(null);
-  const additionalMapBoxButtonsRef = useRef(null);
+  const mapboxButtonsRef = useRef(null);
+  const longPressTimeoutRef = useRef(null);
   const [currentPopupLocation, setCurrentPopupLocation] = useState([]);
   const [treeLocations, setTreeLocations] = useState([]);
   const [treeInfo, setTreeInfo] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
-  const [mapMode, setMapMode] = useState(0);
   const [isTreeListVisible, setIsTreeListVisible] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [newTreeCoordinates, setNewTreeCoordinates] = useState([]);
@@ -225,7 +123,6 @@ const App = () => {
   const handleAddTreeCancel = () => {
     setNewTreeCoordinates([]);
     setIsFormVisible(false);
-    setMapMode(NORMAL_MODE);
   }
 
   const handleAddTreeSubmit = async (newTree) => {
@@ -244,7 +141,6 @@ const App = () => {
           features: [...treeLocations.features, treeToFeature(addedTree)]
       });
       setIsFormVisible(false);
-      setMapMode(NORMAL_MODE);
     } catch (error) {
       console.error("Error adding new tree:", error);
     }
@@ -278,28 +174,6 @@ const App = () => {
     highlightTree(treeName);
   };
 
-  const createPopupContent = (tree, properties) => {
-    return `
-      <div class="font-sans text-sm leading-tight">
-        <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
-        <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
-        <div class="my-4 pb-2" />
-        <p>${properties.is_native === "True" ? "Native" : "Non-Native"}</p>
-        <p>${tree.iucn_red_list_assessment}</p>
-        </div>
-        <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">${properties.source}</div>
-      </div>
-    `;
-  }
-
-  const updateMapMode = (toMode) => {
-    if (mapMode === toMode) {
-      setMapMode(NORMAL_MODE);
-    } else {
-      setMapMode(toMode);
-    }
-  }
-
   const fetchData = async () => {
     const locations = await fetchTreeLocations();
     const info = await fetchTreeInfo();
@@ -309,6 +183,14 @@ const App = () => {
   };
 
   useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape') {
+        popupRef.current.remove();
+        handleAddTreeCancel();
+      }
+    };
+    window.addEventListener('keydown', handleEscapeKey);
+
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
@@ -329,15 +211,13 @@ const App = () => {
       });
       map.addControl(geolocateControl, "top-right");
 
-      document.querySelector(".mapboxgl-ctrl-top-right").appendChild(additionalMapBoxButtonsRef.current);
-      document.querySelector(".mapboxgl-ctrl-top-left").appendChild(mapBoxButtonsTopLeftRef.current);
+      document.querySelector(".mapboxgl-ctrl-top-right").appendChild(mapboxButtonsRef.current);
 
       map.on("mouseenter", "unclustered-point", () => { map.getCanvas().style.cursor = "pointer"} );
       map.on("mouseleave", "unclustered-point", () => { map.getCanvas().style.cursor = ""} );
-      map.on("touchstart", () => { setIsTreeListVisible(false) });
       setTimeout(() => {  // for some reason, the geolocate control isn't fully added by this time
         geolocateControl.trigger();
-        }, 1000);
+      }, 1000);
     });
     return () => {
       map.remove();
@@ -359,56 +239,127 @@ const App = () => {
   }, [mapLoaded, dataLoaded, treeLocations]);
 
   useEffect(() => {
-    if (mapLoaded && dataLoaded && layersLoaded) {
-      mapRef.current.getSource("trees").setData(treeLocations);
-    }
-  }, [mapLoaded, dataLoaded, layersLoaded, treeLocations])
-
-  useEffect(() => {
-    const createTreePopup = (event) => {
-      if (!event.features) return;
-      const coordinates = event.features[0].geometry.coordinates.slice();
-      const locationProperties = event.features[0].properties;
-      const tree = treeInfo[locationProperties.tree_id]
-      const popupContent = createPopupContent(tree, locationProperties);
-      setCurrentPopupLocation(locationProperties.location_id);
-      popupRef.current
-        .setLngLat(coordinates)
-        .setHTML(popupContent)
-        .addTo(mapRef.current);
+    const handleLongPress = (event) => {
+      setNewTreeCoordinates(event.lngLat);
+      setIsFormVisible(true);
     };
 
-    const removeTreePopup = () => {
-      popupRef.current.remove();
-      setCurrentPopupLocation(null);
-    };
-
-    const handlePointMovement = (event) => {
-      if (!event.features) return;
-      const newLocation = event.features[0].properties.location_id;
-      if (currentPopupLocation !== newLocation) {
-        createTreePopup(event);
+    const startPress = (event) => {
+      const features = mapRef.current.queryRenderedFeatures(event.point, {
+        layers: ['unclustered-point', 'clusters'],
+      });
+      if (features.length === 0) {
+        popupRef.current.remove();
+        longPressTimeoutRef.current = setTimeout(() => handleLongPress(event), 1000);
       }
     };
 
-    const handlePointLeave = () => {
-      setTimeout(() => {
-        removeTreePopup();
-      }, 50);
+    const endPress = () => {
+      if (longPressTimeoutRef.current) {
+        clearTimeout(longPressTimeoutRef.current);
+        longPressTimeoutRef.current = null;
+      }
     };
 
-    mapRef.current.on("mousemove", "unclustered-point", handlePointMovement);
-    mapRef.current.on("mouseleave", "unclustered-point", handlePointLeave);
-    mapRef.current.on("touchstart", "unclustered-point", createTreePopup);
-    mapRef.current.on("touchend", "unclustered-point", removeTreePopup);
+    if (mapLoaded && dataLoaded && layersLoaded) {
+      mapRef.current.on("mousedown", startPress);
+      mapRef.current.on("mouseup", endPress);
+      mapRef.current.on("touchstart", startPress);
+      mapRef.current.on("touchend", endPress);
+      mapRef.current.on("touchcancel", endPress);
+    }
+    return () => {
+      mapRef.current.off("mousedown", startPress);
+      mapRef.current.off("mouseup", endPress);
+      mapRef.current.off("touchstart", startPress);
+      mapRef.current.off("touchend", endPress);
+      mapRef.current.off("touchcancel", endPress);
+    };
+  }, [mapLoaded, dataLoaded, layersLoaded])
+
+  useEffect(() => {
+    if (mapLoaded && dataLoaded && layersLoaded) {
+      mapRef.current.getSource("trees").setData(treeLocations);
+    }
+  }, [mapLoaded, dataLoaded, layersLoaded, treeLocations]);
+
+  useEffect(() => {
+    const removeTree = async (locationId) => {
+      const removedBy = window.prompt("Please enter your name to confirm removal:");
+      if (!removedBy) {
+          alert("Removal canceled.");
+          return;
+      }
+      await sendRemoveLocation(locationId, removedBy);
+      const updatedFeatures = treeLocations.features.filter(
+          feature => feature.properties.location_id !== locationId
+      );
+      setTreeLocations({
+        ...treeLocations,
+        features: updatedFeatures
+      });
+    };
+
+    const createPopupContent = (tree, properties) => {
+      return `
+        <div class="p-0">
+          <div class="font-sans text-sm leading-tight relative">
+            <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
+            <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
+            <div class="my-2 pb-2">
+              <p>${properties.is_native === "True" ? "Native" : "Non-Native"}</p>
+              <p>${tree.iucn_red_list_assessment}</p>
+            </div>
+          </div>
+          <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">
+            ${properties.source}
+          </div>
+        </div>
+      `;
+    }
+
+    const handlePopupButtonClose = (event, locationId) => {
+      event.stopPropagation();
+      event.preventDefault();
+      removeTree(locationId);
+    }
+
+    const createTreePopup = (event) => {
+      if (event.features && treeInfo) {
+        const coordinates = event.features[0].geometry.coordinates.slice();
+        const locationProperties = event.features[0].properties;
+        const tree = treeInfo[locationProperties.tree_id]
+        const popupContent = createPopupContent(tree, locationProperties);
+        setCurrentPopupLocation(locationProperties.location_id);
+        popupRef.current
+          .setLngLat(coordinates)
+          .setHTML(popupContent)
+          .addTo(mapRef.current);
+
+        const closeButton = popupRef.current._closeButton;
+        if (closeButton) {
+          closeButton.addEventListener('click', (event) => handlePopupButtonClose(event, locationProperties.location_id));
+        }
+        closeButton.className = "absolute top-0 right-0 mt-2 mr-2 text-gray-500 hover:text-gray-800 focus:outline-none bg-white rounded-full shadow-md w-6 h-6 flex items-center justify-center"
+      }
+      return () => {
+        const closeButton = popupRef.current._closeButton;
+        if (closeButton) {
+          closeButton.removeEventListener('click', handlePopupButtonClose);
+        }
+      }
+    };
+
+    if (mapLoaded && layersLoaded && treeInfo) {
+      mapRef.current.on("mousedown", "unclustered-point", createTreePopup);
+      mapRef.current.on("touchstart", "unclustered-point", createTreePopup);
+    }
 
     return () => {
-      mapRef.current.off("mousemove", "unclustered-point", handlePointMovement);
-      mapRef.current.off("mouseleave", "unclustered-point", removeTreePopup);
+      mapRef.current.off("mousedown", "unclustered-point", createTreePopup);
       mapRef.current.off("touchstart", "unclustered-point", createTreePopup);
-      mapRef.current.off("touchend", "unclustered-point", removeTreePopup);
     }
-  }, [treeInfo, currentPopupLocation])
+  }, [mapLoaded, layersLoaded, treeInfo, currentPopupLocation, treeLocations]);
 
   useEffect(() => {
     const updateMap = async (treeName) => {
@@ -428,74 +379,19 @@ const App = () => {
     };
   }, [highlightedTree, mapLoaded]);
 
-  useEffect(() => {
-    const addTree = (event) => {
-      setNewTreeCoordinates(event.lngLat);
-      setIsFormVisible(true);
-    };
-
-    const removeTree = async (event) => {
-      const locationId = event.features[0].properties.location_id
-      const removedBy = window.prompt("Please enter your name to confirm removal:");
-      if (!removedBy) {
-          alert("Removal canceled.");
-          return;
-      }
-      await sendRemoveLocation(locationId, removedBy);
-      const updatedFeatures = treeLocations.features.filter(
-          feature => feature.properties.location_id !== locationId
-      );
-      setTreeLocations({
-          ...treeLocations,
-          features: updatedFeatures
-      });
-      setMapMode(NORMAL_MODE)
-    };
-
-    if (mapLoaded && layersLoaded) {
-      if (mapMode === NORMAL_MODE) {
-        setIsTreeListVisible(true);
-      } else if (mapMode === ADD_MODE) {
-        setIsTreeListVisible(false);
-        mapRef.current.on("click", addTree);
-        mapRef.current.on("touchend", addTree);
-      } else if (mapMode === DELETE_MODE) {
-        setIsTreeListVisible(false);
-        mapRef.current.on("click", "unclustered-point", removeTree);
-        mapRef.current.on("touchend", "unclustered-point", removeTree);
-      }
-    }
-    return () => {
-      if (mapRef.current) {
-        mapRef.current.off("click", "unclustered-point", removeTree);
-        mapRef.current.off("touchend", "unclustered-point", removeTree);
-        mapRef.current.off("click", addTree);
-        mapRef.current.off("touchend", addTree);
-      }
-    };
-  }, [mapLoaded, layersLoaded, mapMode, treeLocations]);
-
   return (
     <div>
       <div ref={mapContainerRef} className="w-screen h-screen" />
-      {mapMode !== NORMAL_MODE && (
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 pointer-events-none"></div>
-      )}
-      {mapMode === ADD_MODE && (
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-lg text-white bg-orange-500 p-2 rounded">
-          Adding Tree...
-        </div>
-      )}
-      {mapMode === ADD_MODE && isFormVisible && (
-        <div className="absolute top-0 left-0 w-full h-full z-50">
-          <NewTreeForm treeList={treeInfo} coordinates={newTreeCoordinates} onSubmit={handleAddTreeSubmit} onCancel={handleAddTreeCancel} />
-        </div>
-      )}
-      {mapMode === DELETE_MODE && (
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-lg text-white bg-orange-500 p-2 rounded">
-          Removing Tree...
-        </div>
-      )}
+      <div>
+        {isFormVisible && (
+          <div>
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 pointer-events-none" />
+            <div className="absolute top-0 left-0 w-full h-full z-50">
+              <NewTreeForm treeList={treeInfo} coordinates={newTreeCoordinates} onSubmit={handleAddTreeSubmit} onCancel={handleAddTreeCancel} />
+            </div>
+          </div>
+        )}
+      </div>
       <div className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0": "-translate-x-[120%]" }`}>
         <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
         <ul>
@@ -513,26 +409,18 @@ const App = () => {
 
       {/* Hidden buttons to be added to the map control later */}
       <div
-        ref={mapBoxButtonsTopLeftRef}
-        className="mapboxgl-ctrl mapboxgl-ctrl-group md:hidden"
-        onClick={() => setIsTreeListVisible(true)}
+        ref={mapboxButtonsRef}
+        className={`mapboxgl-ctrl mapboxgl-ctrl-group`}
+        onClick={() => setIsTreeListVisible(!isTreeListVisible)}
       >
         <button className="relative z-30">
           <div className="relative flex overflow-hidden items-center justify-center">
             <div className="flex flex-col justify-between w-[1rem] h-[1rem] origin-center overflow-hidden">
-              <div className="bg-gray-800 h-[2px] origin-left" />
-              <div className="bg-gray-800 h-[2px] origin-left" />
-              <div className="bg-gray-800 h-[2px] origin-left" />
+              <div className={`${isTreeListVisible ? "bg-[rgb(45,166,222)]" : "bg-gray-800"} h-[3px] origin-left rounded`} aria-hidden="true"/>
+              <div className={`${isTreeListVisible ? "bg-[rgb(45,166,222)]" : "bg-gray-800"} h-[3px] origin-left rounded`} aria-hidden="true"/>
+              <div className={`${isTreeListVisible ? "bg-[rgb(45,166,222)]" : "bg-gray-800"} h-[3px] origin-left rounded`} aria-hidden="true"/>
             </div>
           </div>
-        </button>
-      </div>
-      <div ref={additionalMapBoxButtonsRef} className="mapboxgl-ctrl mapboxgl-ctrl-group">
-        <button className="mapboxgl-ctrl-zoom-in" title="Add Tree" onClick={() => updateMapMode(ADD_MODE)}>
-          <span className={`mapboxgl-ctrl-icon ${mapMode === ADD_MODE ? "bg-orange-300" : ""}`} aria-hidden="true" title="Zoom in"></span>
-        </button>
-        <button className="mapboxgl-ctrl-zoom-out" title="Remove Tree" onClick={() => updateMapMode(DELETE_MODE)}>
-          <span className={`mapboxgl-ctrl-icon ${mapMode === DELETE_MODE ? "bg-orange-300" : ""}`} aria-hidden="true" title="Zoom out"></span>
         </button>
       </div>
     </div>
