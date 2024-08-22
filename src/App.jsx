@@ -207,8 +207,9 @@ const App = () => {
       className: "text-medium",
     })
   );
-  const [currentPopupLocation, setCurrentPopupLocation] = useState([]);
+  const mapBoxButtonsTopLeftRef = useRef(null);
   const additionalMapBoxButtonsRef = useRef(null);
+  const [currentPopupLocation, setCurrentPopupLocation] = useState([]);
   const [treeLocations, setTreeLocations] = useState([]);
   const [treeInfo, setTreeInfo] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
@@ -344,6 +345,7 @@ const App = () => {
     });
     map.addControl(geolocateControl, "top-right");
     document.querySelector(".mapboxgl-ctrl-top-right").appendChild(additionalMapBoxButtonsRef.current);
+    document.querySelector(".mapboxgl-ctrl-top-left").appendChild(mapBoxButtonsTopLeftRef.current);
 
     map.on("load", async () => {
       setIsTreeListVisible(window.innerWidth > 768);
@@ -480,12 +482,6 @@ const App = () => {
         </div>
       )}
       <div>
-        <button
-          className={`fixed top-4 left-4 bg-white border border-gray-300 p-2 rounded transition-opacity md:hidden duration-500 ${isTreeListVisible ? "opacity-0" : "opacity-100"} z-30`}
-          onClick={() => {setIsTreeListVisible(true)}}
-        >
-          ☰
-        </button>
         <div className={`absolute top-0 left-0 bg-white p-4 shadow-lg max-h-screen overflow-y-auto z-40 transition-transform transform duration-500 ${isTreeListVisible ? "translate-x-0": "-translate-x-[120%]" }`}>
           <h3 className="text-lg font-bold mb-2">Visible Trees</h3>
           <ul>
@@ -503,6 +499,21 @@ const App = () => {
       </div>
 
       {/* Hidden buttons to be added to the map control later */}
+      <div
+        ref={mapBoxButtonsTopLeftRef}
+        className="mapboxgl-ctrl mapboxgl-ctrl-group"
+        onClick={() => setIsTreeListVisible(true)}
+      >
+        <button class="md:hidden relative z-30">
+          <div class="relative flex overflow-hidden items-center justify-center">
+            <div class="flex flex-col justify-between w-[1rem] h-[1rem] origin-center overflow-hidden">
+              <div class="bg-gray-800 h-[2px] origin-left" />
+              <div class="bg-gray-800 h-[2px] origin-left" />
+              <div class="bg-gray-800 h-[2px] origin-left" />
+            </div>
+          </div>
+        </button>
+      </div>
       <div ref={additionalMapBoxButtonsRef} className="mapboxgl-ctrl mapboxgl-ctrl-group">
         <button className="mapboxgl-ctrl-zoom-in" title="Add Tree" onClick={() => updateMapMode(ADD_MODE)}>
           <span className={`mapboxgl-ctrl-icon ${mapMode === ADD_MODE ? "bg-orange-300" : ""}`} aria-hidden="true" title="Zoom in"></span>
