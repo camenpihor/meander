@@ -106,6 +106,7 @@ const App = () => {
         trackUserLocation: true,
         showAccuracyCircle: false,
         showUserHeading: true,
+        fitBoundsOptions: {linear: true, maxZoom: 18},
       });
       const navigationControl = new mapboxgl.NavigationControl({showZoom: false})
       map.addControl(geolocateControl, "top-right");
