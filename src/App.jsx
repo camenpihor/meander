@@ -8,59 +8,6 @@ import { fetchTreeInfo, fetchTreeLocations, sendAddLocation, sendRemoveLocation,
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 
-const addTreeLayers = (map, geojsonData) => {
-  map.addSource("trees", {
-    type: "geojson",
-    data: geojsonData,
-    cluster: true,
-    clusterMaxZoom: 16,
-    clusterRadius: 50,
-  });
-
-  const layers = [
-    {
-      id: "clusters",
-      type: "circle",
-      source: "trees",
-      filter: ["has", "point_count"],
-      paint: { "circle-color": "#51bbd6", "circle-radius": 20 },
-    },
-    {
-      id: "highlighted-cluster",
-      type: "circle",
-      source: "trees",
-      filter: ["in", "cluster_id", ""],
-      paint: { "circle-color": "#FFD580", "circle-radius": 20 },
-    },
-    {
-      id: "cluster-count",
-      type: "symbol",
-      source: "trees",
-      filter: ["has", "point_count"],
-      layout: {
-        "text-field": "{point_count_abbreviated}",
-        "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-        "text-size": 12,
-      },
-    },
-    {
-      id: "unclustered-point",
-      type: "circle",
-      source: "trees",
-      filter: ["!", ["has", "point_count"]],
-      paint: { "circle-color": "#11b4da", "circle-radius": 15 },
-    },
-    {
-      id: "highlighted-point",
-      type: "circle",
-      source: "trees",
-      filter: ["in", "common_name", ""],
-      paint: { "circle-color": "#FFD580", "circle-radius": 15 },
-    },
-  ];
-  layers.forEach((layer) => map.addLayer(layer));
-};
-
 const getClusterFeatures = (map, clusterId) => {
   const source = map.getSource("trees");
   return new Promise((resolve, reject) => {
@@ -72,25 +19,6 @@ const getClusterFeatures = (map, clusterId) => {
       }
     });
   });
-};
-
-const updateVisibleTrees = async (map, setVisibleTrees) => {
-  let trees = map.queryRenderedFeatures({layers: ["unclustered-point"]});
-  trees = Array
-    .from(new Set(trees.map(feature => feature.properties.location_id)))
-    .map(location_id => trees.find(feature => feature.properties.location_id === location_id));
-  const clusters = map.queryRenderedFeatures({layers: ["clusters"]});
-  const groupedTrees = await trees.concat(clusters).reduce(async (groupsPromise, cluster) => {
-    const groups = await groupsPromise;
-    const features = cluster.properties.cluster ? await getClusterFeatures(map, cluster.properties.cluster_id) : [cluster];
-    features.forEach(({ properties: { common_name } }) => {
-      if (!groups[common_name]) groups[common_name] = [];
-      groups[common_name].push(cluster);
-    });
-    return groups;
-  }, Promise.resolve({}));
-
-  setVisibleTrees(Object.entries(groupedTrees).sort((a, b) => b[1].length - a[1].length));
 };
 
 const App = () => {
@@ -105,11 +33,11 @@ const App = () => {
       className: "text-medium",
     })
   );
+  const treeInfo = useRef(null);
   const mapboxButtonsRef = useRef(null);
   const lastTapTimeRef = useRef(0);
-  const [currentPopupLocation, setCurrentPopupLocation] = useState([]);
+
   const [treeLocations, setTreeLocations] = useState([]);
-  const [treeInfo, setTreeInfo] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
   const [isTreeListVisible, setIsTreeListVisible] = useState(false);
@@ -117,6 +45,7 @@ const App = () => {
   const [newTreeCoordinates, setNewTreeCoordinates] = useState([]);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [readyForLayers, setReadyForLayers] = useState(false);
   const [layersLoaded, setLayersLoaded] = useState(false);
 
   const handleAddTreeCancel = () => {
@@ -145,51 +74,15 @@ const App = () => {
     }
   };
 
-  const highlightTree = async (treeName) => {
-    if (mapRef.current && treeName) {
-      const allClusters = mapRef.current.queryRenderedFeatures({ layers: ["clusters"] });
-      const clusterIdsToHighlight = [];
-
-      for (const cluster of allClusters) {
-        const clusterId = cluster.properties.cluster_id;
-        const leaves = await getClusterFeatures(mapRef.current, clusterId);
-        if (leaves.some((leaf) => leaf.properties.common_name === treeName)) {
-          clusterIdsToHighlight.push(clusterId);
-        }
-      }
-      mapRef.current.setFilter("highlighted-point", ["in", "common_name", treeName]);
-      mapRef.current.setFilter("highlighted-cluster", ["in", "cluster_id", ...clusterIdsToHighlight]);
-    } else {
-      mapRef.current.setFilter("highlighted-point", ["in", "common_name", ""]);
-      mapRef.current.setFilter("highlighted-cluster", ["in", "cluster_id", ""]);
-    }
-  };
-
   const handleTreeListClick = (treeName) => {
     if (treeName === highlightedTree) {
       treeName = null
     }
     setHighlightedTree(treeName);
-    highlightTree(treeName);
   };
 
-  const fetchData = async () => {
-    const locations = await fetchTreeLocations();
-    const info = await fetchTreeInfo();
-    setTreeLocations(locations);
-    setTreeInfo(info);
-    setDataLoaded(true)
-  };
-
-  useEffect(() => {
-    const handleEscapeKey = (event) => {
-      if (event.key === 'Escape') {
-        popupRef.current.remove();
-        handleAddTreeCancel();
-      }
-    };
-    window.addEventListener('keydown', handleEscapeKey);
-
+  useEffect(() => { // load map
+    console.debug("mounting map...")
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: "mapbox://styles/mapbox/streets-v11",
@@ -205,6 +98,7 @@ const App = () => {
     mapRef.current = map;
 
     map.on("load", () => {
+      console.debug("map loaded")
       setMapLoaded(true);
 
       const geolocateControl = new mapboxgl.GeolocateControl({
@@ -214,47 +108,109 @@ const App = () => {
         showUserHeading: true,
       });
       map.addControl(geolocateControl, "top-right");
-
       document.querySelector(".mapboxgl-ctrl-top-right").appendChild(mapboxButtonsRef.current);
-
-      map.on("mouseenter", "unclustered-point", () => { map.getCanvas().style.cursor = "pointer"} );
-      map.on("mouseleave", "unclustered-point", () => { map.getCanvas().style.cursor = ""} );
-      setTimeout(() => {  // for some reason, the geolocate control isn't fully added by this time
-        geolocateControl.trigger();
-      }, 1000);
     });
     return () => {
+      console.debug("unmounting map...")
       map.remove();
+      setMapLoaded(false);
     };
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { // load data
+    console.debug("mounting data...")
+    const fetchData = async () => {
+      const locations = await fetchTreeLocations();
+      treeInfo.current = await fetchTreeInfo();
+      setTreeLocations(locations);
+      setDataLoaded(true)
+    };
     fetchData();
+    console.debug("data loaded")
+    return () => {
+      console.debug("unmounting data...")
+      setDataLoaded(false);
+    }
   }, []);
 
-  useEffect(() => {
-    if (mapLoaded && dataLoaded && treeLocations) {
-      addTreeLayers(mapRef.current, treeLocations);
-      mapRef.current.once("idle", async () => {
-        await updateVisibleTrees(mapRef.current, setVisibleTrees);
-        setLayersLoaded(true)
-      });
+  useEffect(() => { // see if we're ready for layers to be added to the map
+    if (mapLoaded && dataLoaded) {
+      console.debug("ready for layers")
+      setReadyForLayers(true);
     }
-  }, [mapLoaded, dataLoaded, treeLocations]);
+  }, [mapLoaded, dataLoaded]);
 
-  useEffect(() => {
-    const handleDoubleTouch = (event) => {
-      event.preventDefault();
-      setNewTreeCoordinates(event.lngLat);
-      setIsFormVisible(true);
-    };
 
+  useEffect(() => { // load layers
+    if (readyForLayers) {
+      console.debug("mounting layers...")
+      mapRef.current.addSource("trees", {
+        type: "geojson",
+        data: {type: "FeatureCollection", features: []},
+        cluster: true,
+        clusterMaxZoom: 16,
+        clusterRadius: 50,
+      });
+      const layers = [
+        {
+          id: "clusters",
+          type: "circle",
+          source: "trees",
+          filter: ["has", "point_count"],
+          paint: { "circle-color": "#51bbd6", "circle-radius": 20 },
+        },
+        {
+          id: "highlighted-cluster",
+          type: "circle",
+          source: "trees",
+          filter: ["in", "cluster_id", ""],
+          paint: { "circle-color": "#FFD580", "circle-radius": 20 },
+        },
+        {
+          id: "cluster-count",
+          type: "symbol",
+          source: "trees",
+          filter: ["has", "point_count"],
+          layout: {
+            "text-field": "{point_count_abbreviated}",
+            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+            "text-size": 12,
+          },
+        },
+        {
+          id: "unclustered-point",
+          type: "circle",
+          source: "trees",
+          filter: ["!", ["has", "point_count"]],
+          paint: { "circle-color": "#11b4da", "circle-radius": 15 },
+        },
+        {
+          id: "highlighted-point",
+          type: "circle",
+          source: "trees",
+          filter: ["in", "common_name", ""],
+          paint: { "circle-color": "#FFD580", "circle-radius": 15 },
+        },
+      ];
+      layers.forEach((layer) => mapRef.current.addLayer(layer));
+      console.debug("layers loaded")
+      setLayersLoaded(true);
+    }
+  }, [readyForLayers]);
+
+  useEffect(() => { // map event handlers
     const clickedOnFeature = (point) => {
       const features = mapRef.current.queryRenderedFeatures(point, {
         layers: ['unclustered-point', 'clusters'],
       });
       return features.length > 0
-    }
+    };
+
+    const handleDoubleTouch = (event) => {
+      event.preventDefault();
+      setNewTreeCoordinates(event.lngLat);
+      setIsFormVisible(true);
+    };
 
     const handleMapClick = (event) => {
       if (!clickedOnFeature) {
@@ -274,25 +230,43 @@ const App = () => {
       }
     };
 
-    if (mapLoaded && dataLoaded && layersLoaded) {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape') {
+        popupRef.current.remove();
+        setNewTreeCoordinates([]);
+        setIsFormVisible(false);
+      }
+    };
+
+    if (layersLoaded) {
+      console.debug("mounting map event handlers...")
+      window.addEventListener('keydown', handleEscapeKey);
+      mapRef.current.on("mouseenter", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = "pointer"} );
+      mapRef.current.on("mouseleave", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = ""} );
       mapRef.current.on("mousedown", handleMapClick);
       mapRef.current.on("touchstart", handleMapTouch);
       mapRef.current.on("dblclick", handleDoubleTouch);
     }
     return () => {
-      mapRef.current.off("mousedown", handleMapTouch);
-      mapRef.current.off("touchstart", handleMapTouch);
-      mapRef.current.off("dblclick", handleDoubleTouch);
+      if (mapRef.current && layersLoaded) {
+        console.debug("unmounting map event handlers...")
+        mapRef.current.off("mouseenter", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = "pointer"} );
+        mapRef.current.off("mouseleave", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = ""} );
+        mapRef.current.off("mousedown", handleMapTouch);
+        mapRef.current.off("touchstart", handleMapTouch);
+        mapRef.current.off("dblclick", handleDoubleTouch);
+      }
     };
-  }, [mapLoaded, dataLoaded, layersLoaded])
+  }, [layersLoaded])
 
-  useEffect(() => {
-    if (mapLoaded && dataLoaded && layersLoaded) {
+  useEffect(() => { // data-change listener
+    if (layersLoaded) {
+      console.debug("updating map source data...")
       mapRef.current.getSource("trees").setData(treeLocations);
     }
-  }, [mapLoaded, dataLoaded, layersLoaded, treeLocations]);
+  }, [layersLoaded, treeLocations]);
 
-  useEffect(() => {
+  useEffect(() => { // popup event handlers (which include removing trees, sadly)
     const removeTree = async (locationId) => {
       const removedBy = window.prompt("Please enter your name to confirm removal:");
       if (!removedBy) {
@@ -325,21 +299,20 @@ const App = () => {
           </div>
         </div>
       `;
-    }
+    };
 
     const handlePopupButtonClose = (event, locationId) => {
       event.stopPropagation();
       event.preventDefault();
       removeTree(locationId);
-    }
+    };
 
     const createTreePopup = (event) => {
-      if (event.features && treeInfo) {
+      if (event.features) {
         const coordinates = event.features[0].geometry.coordinates.slice();
         const locationProperties = event.features[0].properties;
         const tree = treeInfo[locationProperties.tree_id]
         const popupContent = createPopupContent(tree, locationProperties);
-        setCurrentPopupLocation(locationProperties.location_id);
         popupRef.current
           .setLngLat(coordinates)
           .setHTML(popupContent)
@@ -359,34 +332,89 @@ const App = () => {
       }
     };
 
-    if (mapLoaded && layersLoaded && treeInfo) {
+    if (layersLoaded) {
+      console.debug("mounting popup event handlers (may be due to treeLocations change)...")
       mapRef.current.on("mousedown", "unclustered-point", createTreePopup);
       mapRef.current.on("touchstart", "unclustered-point", createTreePopup);
     }
 
     return () => {
-      mapRef.current.off("mousedown", "unclustered-point", createTreePopup);
-      mapRef.current.off("touchstart", "unclustered-point", createTreePopup);
+      if (mapRef.current && layersLoaded) {
+        console.debug("unmounting popup event handlers...")
+        mapRef.current.off("mousedown", "unclustered-point", createTreePopup);
+        mapRef.current.off("touchstart", "unclustered-point", createTreePopup);
+      }
     }
-  }, [mapLoaded, layersLoaded, treeInfo, currentPopupLocation, treeLocations]);
+  }, [layersLoaded, treeLocations]);
 
-  useEffect(() => {
-    const updateMap = async (treeName) => {
-      await highlightTree(treeName);
-      await updateVisibleTrees(mapRef.current, setVisibleTrees);
+  useEffect(() => { // visible trees event handlers
+    const updateVisibleTrees = async () => {
+      let trees = mapRef.current.queryRenderedFeatures({layers: ["unclustered-point"]});
+      trees = Array
+        .from(new Set(trees.map(feature => feature.properties.location_id)))
+        .map(location_id => trees.find(feature => feature.properties.location_id === location_id));
+      const clusters = mapRef.current.queryRenderedFeatures({layers: ["clusters"]});
+      const groupedTrees = await trees.concat(clusters).reduce(async (groupsPromise, cluster) => {
+        const groups = await groupsPromise;
+        const features = cluster.properties.cluster ? await getClusterFeatures(mapRef.current, cluster.properties.cluster_id) : [cluster];
+        features.forEach(({ properties: { common_name } }) => {
+          if (!groups[common_name]) groups[common_name] = [];
+          groups[common_name].push(cluster);
+        });
+        return groups;
+      }, Promise.resolve({}));
+
+      setVisibleTrees(Object.entries(groupedTrees).sort((a, b) => b[1].length - a[1].length));
     };
-    const debouncedUpdateMap = debounce(() => updateMap(highlightedTree), 300);
-    if (mapLoaded) {
-      mapRef.current.on("moveend", debouncedUpdateMap);
-      mapRef.current.on("zoomend", debouncedUpdateMap);
+
+    const debouncedUpdateVisibleTrees = debounce(() => updateVisibleTrees(), 300);
+    if (layersLoaded && isTreeListVisible) {
+      console.debug("mounting visible tree event handlers...")
+      updateVisibleTrees()
+      mapRef.current.on("moveend", debouncedUpdateVisibleTrees);
+      mapRef.current.on("zoomend", debouncedUpdateVisibleTrees);
     }
     return () => {
-      if (mapRef.current) {
-        mapRef.current.off("moveend", debouncedUpdateMap);
-        mapRef.current.off("zoomend", debouncedUpdateMap);
+      if (mapRef.current && layersLoaded && isTreeListVisible) {
+        console.debug("unmounting visible tree event handlers...")
+        mapRef.current.off("moveend", debouncedUpdateVisibleTrees);
+        mapRef.current.off("zoomend", debouncedUpdateVisibleTrees);
       }
     };
-  }, [highlightedTree, mapLoaded]);
+  }, [layersLoaded, isTreeListVisible]);
+
+  useEffect(() => { // respond to highlighted-tree change
+    const highlightTree = async (treeName) => {
+      const allClusters = mapRef.current.queryRenderedFeatures({ layers: ["clusters"] });
+      const clusterIdsToHighlight = [];
+
+      for (const cluster of allClusters) {
+        const clusterId = cluster.properties.cluster_id;
+        const leaves = await getClusterFeatures(mapRef.current, clusterId);
+        if (leaves.some((leaf) => leaf.properties.common_name === treeName)) {
+          clusterIdsToHighlight.push(clusterId);
+        }
+      }
+      mapRef.current.setFilter("highlighted-point", ["in", "common_name", treeName]);
+      mapRef.current.setFilter("highlighted-cluster", ["in", "cluster_id", ...clusterIdsToHighlight]);
+    };
+    const debouncedHighlightTree = debounce(() => highlightTree(highlightedTree), 300);
+    if (layersLoaded && highlightedTree) {
+      console.debug("mounting highlighted tree event handlers...")
+      highlightTree(highlightedTree);
+      mapRef.current.on("moveend", debouncedHighlightTree);
+      mapRef.current.on("zoomend", debouncedHighlightTree);
+    }
+    return () => {
+      if (mapRef.current && layersLoaded && highlightedTree) {
+        console.debug("unmounting highlighted tree event handlers...")
+        mapRef.current.off("moveend", debouncedHighlightTree);
+        mapRef.current.off("zoomend", debouncedHighlightTree);
+        mapRef.current.setFilter("highlighted-point", ["in", "common_name", ""]);
+        mapRef.current.setFilter("highlighted-cluster", ["in", "cluster_id", ""]);
+      }
+    };
+  }, [layersLoaded, highlightedTree])
 
   return (
     <div>
