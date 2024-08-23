@@ -422,7 +422,7 @@ const App = () => {
 
   return (
     <div>
-      <div ref={mapContainerRef} className="w-screen h-screen" />
+      <div ref={mapContainerRef} className="w-screen h-[calc(100dvh)]" />
       <div>
         {isFormVisible && (
           <div>
