@@ -8,7 +8,6 @@ import { fetchTreeInfo, fetchTreeLocations, sendAddLocation, sendRemoveLocation,
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
 
-
 const addTreeLayers = (map, geojsonData) => {
   map.addSource("trees", {
     type: "geojson",
@@ -107,7 +106,7 @@ const App = () => {
     })
   );
   const mapboxButtonsRef = useRef(null);
-  const longPressTimeoutRef = useRef(null);
+  const lastTapTimeRef = useRef(0);
   const [currentPopupLocation, setCurrentPopupLocation] = useState([]);
   const [treeLocations, setTreeLocations] = useState([]);
   const [treeInfo, setTreeInfo] = useState([]);
@@ -197,6 +196,11 @@ const App = () => {
       center: [-71.09299151011383, 42.38245089323975],
       zoom: 18,
       boxZoom: false,
+      doubleClickZoom: false,
+      performanceMetricsCollection: false,
+      pitchWithRotate: false,
+      touchPitch: false,
+      renderWorldCopies: false,
     });
     mapRef.current = map;
 
@@ -239,41 +243,46 @@ const App = () => {
   }, [mapLoaded, dataLoaded, treeLocations]);
 
   useEffect(() => {
-    const handleLongPress = (event) => {
+    const handleDoubleTouch = (event) => {
+      event.preventDefault();
       setNewTreeCoordinates(event.lngLat);
       setIsFormVisible(true);
     };
 
-    const startPress = (event) => {
-      const features = mapRef.current.queryRenderedFeatures(event.point, {
+    const clickedOnFeature = (point) => {
+      const features = mapRef.current.queryRenderedFeatures(point, {
         layers: ['unclustered-point', 'clusters'],
       });
-      if (features.length === 0) {
+      return features.length > 0
+    }
+
+    const handleMapClick = (event) => {
+      if (!clickedOnFeature) {
         popupRef.current.remove();
-        longPressTimeoutRef.current = setTimeout(() => handleLongPress(event), 1000);
       }
     };
 
-    const endPress = () => {
-      if (longPressTimeoutRef.current) {
-        clearTimeout(longPressTimeoutRef.current);
-        longPressTimeoutRef.current = null;
+    const handleMapTouch = (event) => {
+      if (!clickedOnFeature(event.point)) {
+        popupRef.current.remove();
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTapTimeRef.current;
+        if (tapLength < 500 && tapLength > 0) {
+          handleDoubleTouch(event);
+        }
+        lastTapTimeRef.current = currentTime;
       }
     };
 
     if (mapLoaded && dataLoaded && layersLoaded) {
-      mapRef.current.on("mousedown", startPress);
-      mapRef.current.on("mouseup", endPress);
-      mapRef.current.on("touchstart", startPress);
-      mapRef.current.on("touchend", endPress);
-      mapRef.current.on("touchcancel", endPress);
+      mapRef.current.on("mousedown", handleMapClick);
+      mapRef.current.on("touchstart", handleMapTouch);
+      mapRef.current.on("dblclick", handleDoubleTouch);
     }
     return () => {
-      mapRef.current.off("mousedown", startPress);
-      mapRef.current.off("mouseup", endPress);
-      mapRef.current.off("touchstart", startPress);
-      mapRef.current.off("touchend", endPress);
-      mapRef.current.off("touchcancel", endPress);
+      mapRef.current.off("mousedown", handleMapTouch);
+      mapRef.current.off("touchstart", handleMapTouch);
+      mapRef.current.off("dblclick", handleDoubleTouch);
     };
   }, [mapLoaded, dataLoaded, layersLoaded])
 
