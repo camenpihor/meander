@@ -79,7 +79,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md md:rounded-lg">
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Common Name</label>
         <SearchableDropdown
@@ -171,19 +171,21 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
         />
       </div>
 
-      <button
-        type="submit"
-        className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-      >
-        Submit
-      </button>
-      <button
-        type="button"
-        onClick={handleCancel}
-        className="w-full py-2 px-4 mt-5 bg-gray-600 text-white font-semibold rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-      >
-        Cancel
-      </button>
+      <div>
+        <button
+          type="submit"
+          className="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          onClick={handleCancel}
+          className="w-full py-2 px-4 mt-5 bg-gray-600 text-white font-semibold rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+        >
+          Cancel
+        </button>
+      </div>
     </form>
   );
 };
