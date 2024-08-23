@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/meander/static/css/main.08f15e61.css",
-    "main.js": "/meander/static/js/main.da59f36a.js",
+    "main.js": "/meander/static/js/main.56ba08dc.js",
     "index.html": "/meander/index.html",
     "main.08f15e61.css.map": "/meander/static/css/main.08f15e61.css.map",
-    "main.da59f36a.js.map": "/meander/static/js/main.da59f36a.js.map"
+    "main.56ba08dc.js.map": "/meander/static/js/main.56ba08dc.js.map"
   },
   "entrypoints": [
     "static/css/main.08f15e61.css",
-    "static/js/main.da59f36a.js"
+    "static/js/main.56ba08dc.js"
   ]
 }
