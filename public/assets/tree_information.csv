@@ -869,3 +869,5 @@ tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessmen
 868,simaroubaceae,ailanthus altissima,tree of heave,[],least concern,True
 869,fabaceae,maackia amurensis,amur maackia,[],least concern,True
 870,malvaceae,hibiscus syriacus,rose of sharon,[],least concern,True
+871,sapindaceae,acer platanoides,norway mpale,[],least concern,True
+872,sapindaceae,acer palmatum,japanese mpale,[],least concern,True
