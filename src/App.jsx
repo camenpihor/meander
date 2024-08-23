@@ -85,7 +85,7 @@ const App = () => {
     console.debug("mounting map...")
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/camenpihor/cm0730bny011e01qqciye70j8",
       center: [-71.09299151011383, 42.38245089323975],
       zoom: 18,
       boxZoom: false,
