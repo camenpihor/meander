@@ -28,14 +28,14 @@ const App = () => {
     new mapboxgl.Popup({
       closeButton: true,
       closeOnClick: false,
-      closeOnMove: true,
+      closeOnMove: false,
       offset: [0, -15],
       className: "text-medium",
     })
   );
   const treeInfo = useRef(null);
   const mapboxButtonsRef = useRef(null);
-  const lastTapTimeRef = useRef(0);
+  const lastTapRef = useRef({point: {x: 0, y: 0}, time: 0});
 
   const [treeLocations, setTreeLocations] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
@@ -202,12 +202,23 @@ const App = () => {
   }, [readyForLayers]);
 
   useEffect(() => { // map event handlers
+    const closePopup = () => {
+      popupRef.current.remove();
+    };
+
     const clickedOnFeature = (point) => {
       const features = mapRef.current.queryRenderedFeatures(point, {
         layers: ['unclustered-point', 'clusters'],
       });
       return features.length > 0
     };
+
+    const isSameLocation = (point1, point2) => {
+      const tapThresholdPixels = 10
+      const tapDistanceX = Math.abs(point1.x - point2.x)
+      const tapDistanceY = Math.abs(point1.y - point2.y)
+      return (tapDistanceX <= tapThresholdPixels && tapDistanceY <= tapThresholdPixels)
+    }
 
     const handleDoubleTouch = (event) => {
       event.preventDefault();
@@ -217,26 +228,30 @@ const App = () => {
 
     const handleMapClick = (event) => {
       if (!clickedOnFeature) {
-        popupRef.current.remove();
+        closePopup();
       }
     };
 
     const handleMapTouch = (event) => {
-      if (!clickedOnFeature(event.point) && (event.points.length === 1)) {
-        popupRef.current.remove();
-        const currentTime = new Date().getTime();
-        const tapLength = currentTime - lastTapTimeRef.current;
-        if (tapLength < 500 && tapLength > 50) {
+      const currentTime = new Date().getTime();
+      const currentPoint = event.point
+      if (!clickedOnFeature(currentPoint)) {
+        closePopup();
+
+        const tapLength = currentTime - lastTapRef.current.time;
+        const isDoubleTapTime = tapLength < 300 && tapLength > 0
+        const isDoubleTapSpace = isSameLocation(currentPoint, lastTapRef.current.point);
+        if (isDoubleTapTime && isDoubleTapSpace) {
           handleDoubleTouch(event);
         } else {
-          lastTapTimeRef.current = currentTime;
+          lastTapRef.current = {point: currentPoint, time: currentTime};
         }
       }
     };
 
     const handleEscapeKey = (event) => {
       if (event.key === 'Escape') {
-        popupRef.current.remove();
+        closePopup();;
         setNewTreeCoordinates([]);
         setIsFormVisible(false);
       }
@@ -248,6 +263,7 @@ const App = () => {
       mapRef.current.on("mouseenter", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = "pointer"} );
       mapRef.current.on("mouseleave", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = ""} );
       mapRef.current.on("mousedown", handleMapClick);
+      mapRef.current.on("zoomstart", closePopup);
       mapRef.current.on("touchstart", handleMapTouch);
       mapRef.current.on("dblclick", handleDoubleTouch);
     }
@@ -257,6 +273,7 @@ const App = () => {
         mapRef.current.off("mouseenter", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = "pointer"} );
         mapRef.current.off("mouseleave", "unclustered-point", () => { mapRef.current.getCanvas().style.cursor = ""} );
         mapRef.current.off("mousedown", handleMapTouch);
+        mapRef.current.off("touchstart", handleMapTouch);
         mapRef.current.off("touchstart", handleMapTouch);
         mapRef.current.off("dblclick", handleDoubleTouch);
       }
@@ -274,7 +291,6 @@ const App = () => {
     const removeTree = async (locationId) => {
       const removedBy = window.prompt("Please enter your name to confirm removal:");
       if (!removedBy) {
-          alert("Removal canceled.");
           return;
       }
       await sendRemoveLocation(locationId, removedBy);
@@ -422,7 +438,7 @@ const App = () => {
 
   return (
     <div>
-      <div ref={mapContainerRef} className="w-screen h-[calc(100dvh)]" />
+      <div ref={mapContainerRef} className="w-screen h-dvh" />
       <div>
         {isFormVisible && (
           <div>
