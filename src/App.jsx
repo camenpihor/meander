@@ -107,7 +107,9 @@ const App = () => {
         showAccuracyCircle: false,
         showUserHeading: true,
       });
+      const navigationControl = new mapboxgl.NavigationControl({showZoom: false})
       map.addControl(geolocateControl, "top-right");
+      map.addControl(navigationControl, "top-right");
       document.querySelector(".mapboxgl-ctrl-top-right").appendChild(mapboxButtonsRef.current);
     });
     return () => {
