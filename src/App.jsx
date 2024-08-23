@@ -222,14 +222,15 @@ const App = () => {
     };
 
     const handleMapTouch = (event) => {
-      if (!clickedOnFeature(event.point)) {
+      if (!clickedOnFeature(event.point) && (event.points.length === 1)) {
         popupRef.current.remove();
         const currentTime = new Date().getTime();
         const tapLength = currentTime - lastTapTimeRef.current;
-        if (tapLength < 500 && tapLength > 0) {
+        if (tapLength < 500 && tapLength > 50) {
           handleDoubleTouch(event);
+        } else {
+          lastTapTimeRef.current = currentTime;
         }
-        lastTapTimeRef.current = currentTime;
       }
     };
 
