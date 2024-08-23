@@ -120,7 +120,6 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
           value={formState.family}
           readOnly
           className="lowercase mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
-          required
         />
       </div>
 
@@ -132,7 +131,6 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
           value={formState.latin_name}
           readOnly
           className="lowercase mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
-          required
         />
       </div>
 
@@ -144,7 +142,6 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
           value={formatStateDistribution(formState.state_distribution)}
           readOnly
           className="mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
-          required
         />
       </div>
 
