@@ -311,7 +311,7 @@ const App = () => {
       if (event.features) {
         const coordinates = event.features[0].geometry.coordinates.slice();
         const locationProperties = event.features[0].properties;
-        const tree = treeInfo[locationProperties.tree_id]
+        const tree = treeInfo.current[locationProperties.tree_id]
         const popupContent = createPopupContent(tree, locationProperties);
         popupRef.current
           .setLngLat(coordinates)
@@ -424,7 +424,7 @@ const App = () => {
           <div>
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 pointer-events-none" />
             <div className="absolute top-0 left-0 w-full h-full z-50">
-              <NewTreeForm treeList={treeInfo} coordinates={newTreeCoordinates} onSubmit={handleAddTreeSubmit} onCancel={handleAddTreeCancel} />
+              <NewTreeForm treeList={treeInfo.current} coordinates={newTreeCoordinates} onSubmit={handleAddTreeSubmit} onCancel={handleAddTreeCancel} />
             </div>
           </div>
         )}

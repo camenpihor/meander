@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import SearchableDropdown from './SearchableDropdown';
 
 
 const formatStateDistribution = (states) => {
   return states
-    .replace(/[\[\]']/g, '')
+    .replace(/[[\]']/g, '')
     .split(',')
     .map(state => state.trim().toUpperCase())
     .join(', ');
 };
+
 
 const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
   const treeNameList = Object.keys(treeList).reduce((accumulator, tree_id) => {
@@ -27,17 +29,16 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
     source: '',
   });
 
-  const handleCommonNameChange = (e) => {
-    const selectedCommonName = e.target.value;
-    const treeData = treeNameList[selectedCommonName] || {};
+  const handleSelectTree = (treeName) => {
+    const treeData = treeNameList[treeName] || {};
 
     setFormState({
       ...formState,
-      common_name: selectedCommonName,
-      tree_id: treeData.tree_id || '',
-      latin_name: treeData.latin_name || '',
-      state_distribution: treeData.state_distribution || '',
-      family: treeData.family || '',
+      common_name: treeData.tree_name,
+      tree_id: treeData.tree_id,
+      latin_name: treeData.latin_name,
+      state_distribution: treeData.state_distribution,
+      family: treeData.family,
     });
   };
 
@@ -49,8 +50,8 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (!formState.common_name || !formState.source) {
       alert("Please fill out all required fields.");
       return;
@@ -81,20 +82,10 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg">
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Common Name</label>
-        <select
-          name="common_name"
-          value={formState.common_name}
-          onChange={handleCommonNameChange}
-          className="capitalize mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          required
-        >
-          <option value="">Select a tree</option>
-          {Object.keys(treeNameList).map((commonName) => (
-            <option className="capitalize" key={commonName} value={commonName}>
-              {commonName}
-            </option>
-          ))}
-        </select>
+        <SearchableDropdown
+          options={Object.keys(treeNameList).sort()}
+          onSelect={handleSelectTree}
+        />
       </div>
 
       <div className="mb-4">
@@ -128,7 +119,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
           name="family"
           value={formState.family}
           readOnly
-          className="capitalize mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
+          className="lowercase mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
           required
         />
       </div>
@@ -140,7 +131,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
           name="latin_name"
           value={formState.latin_name}
           readOnly
-          className="capitalize mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
+          className="lowercase mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
           required
         />
       </div>
