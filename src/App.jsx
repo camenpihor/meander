@@ -24,7 +24,7 @@ const getClusterFeatures = (map, clusterId) => {
 const App = () => {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
-  const popupRef = useRef(
+  const tappedPopupRef = useRef(
     new mapboxgl.Popup({
       closeButton: true,
       closeOnClick: false,
@@ -108,9 +108,7 @@ const App = () => {
         showUserHeading: true,
         fitBoundsOptions: {linear: true, maxZoom: 18},
       });
-      const navigationControl = new mapboxgl.NavigationControl({showZoom: false})
       map.addControl(geolocateControl, "top-right");
-      map.addControl(navigationControl, "top-right");
       document.querySelector(".mapboxgl-ctrl-top-right").appendChild(mapboxButtonsRef.current);
     });
     return () => {
@@ -185,14 +183,14 @@ const App = () => {
           type: "circle",
           source: "trees",
           filter: ["!", ["has", "point_count"]],
-          paint: { "circle-color": "#11b4da", "circle-radius": 15 },
+          paint: { "circle-color": "#34B5E5", "circle-radius": 10 },
         },
         {
           id: "highlighted-point",
           type: "circle",
           source: "trees",
           filter: ["in", "common_name", ""],
-          paint: { "circle-color": "#FFD580", "circle-radius": 15 },
+          paint: { "circle-color": "#FFD580", "circle-radius": 10 },
         },
       ];
       layers.forEach((layer) => mapRef.current.addLayer(layer));
@@ -203,7 +201,7 @@ const App = () => {
 
   useEffect(() => { // map event handlers
     const closePopup = () => {
-      popupRef.current.remove();
+      tappedPopupRef.current.remove();
     };
 
     const clickedOnFeature = (point) => {
@@ -227,7 +225,7 @@ const App = () => {
     };
 
     const handleMapClick = (event) => {
-      if (!clickedOnFeature) {
+      if (!clickedOnFeature(event.point)) {
         closePopup();
       }
     };
@@ -303,19 +301,19 @@ const App = () => {
       });
     };
 
-    const createPopupContent = (tree, properties) => {
+    const createPopupContent = (tree, locationProperties) => {
       return `
         <div class="p-0">
           <div class="font-sans text-sm leading-tight relative">
-            <h3 class="m-0 text-lg font-bold">${properties.common_name}</h3>
-            <p class="text-gray-500 italic text-sm">(${tree.family} ${properties.latin_name})</p>
+            <h3 class="m-0 text-lg font-bold">${tree.common_name}</h3>
+            <p class="text-gray-500 italic text-sm">(${tree.family} ${tree.latin_name})</p>
             <div class="my-2 pb-2">
-              <p>${properties.is_native === "True" ? "Native" : "Non-Native"}</p>
+              <p>${locationProperties.is_native === "True" ? "Native" : "Non-Native"}</p>
               <p>${tree.iucn_red_list_assessment}</p>
             </div>
           </div>
           <div class="absolute bottom-0 right-0 mb-2 mr-2 text-xs italic text-gray-400">
-            ${properties.source}
+            ${locationProperties.source}
           </div>
         </div>
       `;
@@ -327,42 +325,49 @@ const App = () => {
       removeTree(locationId);
     };
 
-    const createTreePopup = (event) => {
-      if (event.features) {
-        const coordinates = event.features[0].geometry.coordinates.slice();
-        const locationProperties = event.features[0].properties;
-        const tree = treeInfo.current[locationProperties.tree_id]
-        const popupContent = createPopupContent(tree, locationProperties);
-        popupRef.current
-          .setLngLat(coordinates)
-          .setHTML(popupContent)
-          .addTo(mapRef.current);
+    const createTreePopup = ({ tree, locationProperties, coordinates, popup }) => {
+      const popupContent = createPopupContent(tree, locationProperties);
+      popup.setLngLat(coordinates).setHTML(popupContent).addTo(mapRef.current);
 
-        const closeButton = popupRef.current._closeButton;
-        if (closeButton) {
-          closeButton.addEventListener('click', (event) => handlePopupButtonClose(event, locationProperties.location_id));
-        }
-        closeButton.className = "absolute top-0 right-0 mt-2 mr-2 text-gray-500 hover:text-gray-800 focus:outline-none bg-white rounded-full shadow-md w-6 h-6 flex items-center justify-center"
+      const closeButton = popup._closeButton;
+      if (closeButton) {
+        closeButton.addEventListener('click', (event) => handlePopupButtonClose(event, locationProperties.location_id));
       }
+      closeButton.className = "absolute top-0 right-0 mt-2 mr-2 text-gray-500 hover:text-gray-800 focus:outline-none bg-white rounded-full shadow-md w-6 h-6 flex items-center justify-center"
       return () => {
-        const closeButton = popupRef.current._closeButton;
+        const closeButton = popup._closeButton;
         if (closeButton) {
           closeButton.removeEventListener('click', handlePopupButtonClose);
         }
       }
     };
 
+    const handlePointEntry = (event) => {
+      if (event.features) {
+        const feature = event.features[0]
+        const coordinates = feature.geometry.coordinates.slice();
+        const locationProperties = feature.properties
+        const tree = treeInfo.current[locationProperties.tree_id]
+        createTreePopup({
+          tree: tree,
+          locationProperties: locationProperties,
+          coordinates: coordinates,
+          popup: tappedPopupRef.current
+        });
+      }
+    };
+
     if (layersLoaded) {
       console.debug("mounting popup event handlers (may be due to treeLocations change)...")
-      mapRef.current.on("mousedown", "unclustered-point", createTreePopup);
-      mapRef.current.on("touchstart", "unclustered-point", createTreePopup);
+      mapRef.current.on("mousedown", "unclustered-point", handlePointEntry);
+      mapRef.current.on("touchstart", "unclustered-point", handlePointEntry);
     }
 
     return () => {
       if (mapRef.current && layersLoaded) {
         console.debug("unmounting popup event handlers...")
-        mapRef.current.off("mousedown", "unclustered-point", createTreePopup);
-        mapRef.current.off("touchstart", "unclustered-point", createTreePopup);
+        mapRef.current.off("mousedown", "unclustered-point", handlePointEntry);
+        mapRef.current.off("touchstart", "unclustered-point", handlePointEntry);
       }
     }
   }, [layersLoaded, treeLocations]);
@@ -471,13 +476,11 @@ const App = () => {
         onClick={() => setIsTreeListVisible(!isTreeListVisible)}
       >
         <button className="relative z-30">
-          <div className="relative flex overflow-hidden items-center justify-center">
-            <div className="flex flex-col justify-between w-[1rem] h-[1rem] origin-center overflow-hidden">
-              <div className={`${isTreeListVisible ? "bg-[rgb(45,166,222)]" : "bg-gray-800"} h-[3px] origin-left rounded`} aria-hidden="true"/>
-              <div className={`${isTreeListVisible ? "bg-[rgb(45,166,222)]" : "bg-gray-800"} h-[3px] origin-left rounded`} aria-hidden="true"/>
-              <div className={`${isTreeListVisible ? "bg-[rgb(45,166,222)]" : "bg-gray-800"} h-[3px] origin-left rounded`} aria-hidden="true"/>
-            </div>
-          </div>
+           <svg fill="currentColor" className={`h-full w-full ${isTreeListVisible ? "text-[rgb(52,181,229)]" : "text-[rgb(51,51,51)]"}`} viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 20,70 80,70" />
+            <polygon points="50,50 15,100 85,100" />
+            <rect x="40" y="95" width="20" height="30" />
+          </svg>
         </button>
       </div>
     </div>

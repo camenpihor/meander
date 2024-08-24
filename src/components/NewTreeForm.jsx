@@ -34,7 +34,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
 
     setFormState({
       ...formState,
-      common_name: treeData.tree_name,
+      common_name: treeData.common_name,
       tree_id: treeData.tree_id,
       latin_name: treeData.latin_name,
       state_distribution: treeData.state_distribution,
@@ -42,8 +42,8 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
     });
   };
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleInputChange = (event) => {
+    const { name, value, type, checked } = event.target;
     setFormState({
       ...formState,
       [name]: type === 'checkbox' ? checked : value,
