@@ -3,7 +3,7 @@ import mapboxgl from "mapbox-gl";
 import { debounce } from "lodash";
 import "./App.css";
 import NewTreeForm from "./components/NewTreeForm";
-import { fetchTreeInfo, fetchTreeLocations, sendAddLocation, sendRemoveLocation, treeToFeature } from "./api";
+import { fetchTreeInfo, fetchTreeLocations, sendAddLocation, sendRemoveLocation, treeToFeature } from "./utils/api";
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
 
