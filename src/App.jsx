@@ -237,7 +237,7 @@ const App = () => {
         closePopup();
 
         const tapLength = currentTime - lastTapRef.current.time;
-        const isDoubleTapTime = tapLength < 300 && tapLength > 0
+        const isDoubleTapTime = tapLength < 200 && tapLength > 0
         const isDoubleTapSpace = isSameLocation(currentPoint, lastTapRef.current.point);
         if (isDoubleTapTime && isDoubleTapSpace) {
           handleDoubleTouch(event);
