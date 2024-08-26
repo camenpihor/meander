@@ -63,7 +63,7 @@ const App = () => {
         common_name: newTree.common_name,
         latitude: newTree.latitude,
         longitude: newTree.longitude,
-        source: newTree.source,
+        source: newTree.source.trimEnd(),
         is_native: newTree.is_native,
       });
       setTreeLocations({
@@ -289,7 +289,7 @@ const App = () => {
 
   useEffect(() => { // popup event handlers (which include removing trees, sadly)
     const removeTree = async (locationId) => {
-      const removedBy = window.prompt("Please enter your name to confirm removal:", sourceNameRef.current);
+      const removedBy = window.prompt("Please enter your name to confirm removal:", sourceNameRef.current).trimEnd();
       if (!removedBy) {
           return;
       }
