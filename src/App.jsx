@@ -22,6 +22,7 @@ const getClusterFeatures = (map, clusterId) => {
 };
 
 const App = () => {
+  const sourceNameRef = useRef("");
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
   const tappedPopupRef = useRef(
@@ -33,7 +34,7 @@ const App = () => {
       className: "text-medium",
     })
   );
-  const treeInfo = useRef(null);
+  const treeInfo = useRef("");
   const mapboxButtonsRef = useRef(null);
   const lastTapRef = useRef({point: {x: 0, y: 0}, time: 0});
 
@@ -55,6 +56,7 @@ const App = () => {
 
   const handleAddTreeSubmit = async (newTree) => {
     try {
+      sourceNameRef.current = newTree.source;
       const addedTree = await sendAddLocation({
         tree_id: newTree.tree_id,
         latin_name: newTree.latin_name,
@@ -287,10 +289,11 @@ const App = () => {
 
   useEffect(() => { // popup event handlers (which include removing trees, sadly)
     const removeTree = async (locationId) => {
-      const removedBy = window.prompt("Please enter your name to confirm removal:");
+      const removedBy = window.prompt("Please enter your name to confirm removal:", sourceNameRef.current);
       if (!removedBy) {
           return;
       }
+      sourceNameRef.current = removedBy;
       await sendRemoveLocation(locationId, removedBy);
       const updatedFeatures = treeLocations.features.filter(
           feature => feature.properties.location_id !== locationId
@@ -449,7 +452,13 @@ const App = () => {
           <div>
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 pointer-events-none" />
             <div className="absolute top-0 left-0 w-full h-full z-50">
-              <NewTreeForm treeList={treeInfo.current} coordinates={newTreeCoordinates} onSubmit={handleAddTreeSubmit} onCancel={handleAddTreeCancel} />
+              <NewTreeForm
+                treeList={treeInfo.current}
+                coordinates={newTreeCoordinates}
+                onSubmit={handleAddTreeSubmit}
+                onCancel={handleAddTreeCancel}
+                defaultSource={sourceNameRef.current}
+              />
             </div>
           </div>
         )}

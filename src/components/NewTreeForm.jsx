@@ -11,7 +11,7 @@ const formatStateDistribution = (states) => {
 };
 
 
-const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
+const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource }) => {
   const treeNameList = Object.keys(treeList).reduce((accumulator, tree_id) => {
     const tree = treeList[tree_id];
     accumulator[tree.common_name] = tree;
@@ -26,7 +26,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
     family: '',
     latin_name: '',
     state_distribution: '',
-    source: '',
+    source: defaultSource,
   });
 
   const handleSelectTree = (treeName) => {
@@ -71,7 +71,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel }) => {
       family: '',
       latin_name: '',
       state_distribution: '',
-      source: '',
+      source: defaultSource,
     });
     if (onCancel) {
       onCancel();
