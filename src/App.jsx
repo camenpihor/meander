@@ -289,10 +289,11 @@ const App = () => {
 
   useEffect(() => { // popup event handlers (which include removing trees, sadly)
     const removeTree = async (locationId) => {
-      const removedBy = window.prompt("Please enter your name to confirm removal:", sourceNameRef.current).trimEnd();
+      let removedBy = window.prompt("Please enter your name to confirm removal:", sourceNameRef.current);
       if (!removedBy) {
           return;
       }
+      removedBy = removedBy.trimEnd();
       sourceNameRef.current = removedBy;
       await sendRemoveLocation(locationId, removedBy);
       const updatedFeatures = treeLocations.features.filter(
