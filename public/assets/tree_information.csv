@@ -1,163 +1,163 @@
 tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessment,planted
-1,pinaceae,abies amabilis,pacific silver fir,"['ak', 'ca', 'or', 'wa']",least concern,False
-2,pinaceae,abies balsamea,balsam fir,"['ct', 'ia', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv']",least concern,False
+1,pinaceae,abies amabilis,pacific silver fir,['ak', 'ca', 'or', 'wa'],least concern,False
+2,pinaceae,abies balsamea,balsam fir,['ct', 'ia', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv'],least concern,False
 3,pinaceae,abies bracteata,santa lucia fir,['ca'],near threatened,False
-4,pinaceae,abies concolor,white fir,"['az', 'ca', 'co', 'id', 'ma', 'me', 'nm', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-5,pinaceae,abies fraseri,fraser fir,"['ga', 'nc', 'tn', 'va', 'wv']",endangered,False
-6,pinaceae,abies grandis,grand fir,"['ca', 'id', 'mt', 'or', 'wa']",least concern,False
-7,pinaceae,abies lasiocarpa,subalpine fir,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-8,pinaceae,abies magnifica,norway spruce,"['ca', 'nv', 'ny', 'or']",least concern,False
-9,pinaceae,abies procera,noble fir,"['ca', 'or', 'wa']",least concern,False
+4,pinaceae,abies concolor,white fir,['az', 'ca', 'co', 'id', 'ma', 'me', 'nm', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+5,pinaceae,abies fraseri,fraser fir,['ga', 'nc', 'tn', 'va', 'wv'],endangered,False
+6,pinaceae,abies grandis,grand fir,['ca', 'id', 'mt', 'or', 'wa'],least concern,False
+7,pinaceae,abies lasiocarpa,subalpine fir,['ak', 'az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+8,pinaceae,abies magnifica,norway spruce,['ca', 'nv', 'ny', 'or'],least concern,False
+9,pinaceae,abies procera,noble fir,['ca', 'or', 'wa'],least concern,False
 10,fabaceae,acacia rigidula,blackbrush acacia,['tx'],least concern,False
-11,sapindaceae,acer circinatum,vine maple,"['ak', 'ca', 'or', 'wa']",least concern,False
-12,sapindaceae,acer floridanum,southern sugar maple,"['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-13,sapindaceae,acer glabrum ,rocky mountain maple,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
-14,sapindaceae,acer grandidentatum,bigtooth maple,"['az', 'co', 'id', 'nm', 'nv', 'ok', 'tx', 'ut', 'wa', 'wy']",least concern,False
-15,sapindaceae,acer leucoderme,chalk maple,"['al', 'ar', 'dc', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx']",least concern,False
-16,sapindaceae,acer macrophyllum,bigleaf maple,"['ca', 'or', 'wa']",least concern,False
-17,sapindaceae,acer negundo,boxelder maple,"['al', 'ar', 'az', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-18,sapindaceae,acer nigrum,black maple,"['al', 'ar', 'ct', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'mi', 'mn', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'sd', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-19,sapindaceae,acer pensylvanicum,striped maple,"['ct', 'dc', 'ga', 'ky', 'ma', 'md', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-20,sapindaceae,acer rubrum,red maple,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,True
-21,sapindaceae,acer saccharinum,silver maple,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-22,sapindaceae,acer saccharum,sugar maple,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-23,sapindaceae,acer spicatum,mountain maple,"['ct', 'ga', 'ia', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
+11,sapindaceae,acer circinatum,vine maple,['ak', 'ca', 'or', 'wa'],least concern,False
+12,sapindaceae,acer floridanum,southern sugar maple,['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+13,sapindaceae,acer glabrum ,rocky mountain maple,['ak', 'az', 'ca', 'co', 'id', 'mt', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
+14,sapindaceae,acer grandidentatum,bigtooth maple,['az', 'co', 'id', 'nm', 'nv', 'ok', 'tx', 'ut', 'wa', 'wy'],least concern,False
+15,sapindaceae,acer leucoderme,chalk maple,['al', 'ar', 'dc', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx'],least concern,False
+16,sapindaceae,acer macrophyllum,bigleaf maple,['ca', 'or', 'wa'],least concern,False
+17,sapindaceae,acer negundo,boxelder maple,['al', 'ar', 'az', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+18,sapindaceae,acer nigrum,black maple,['al', 'ar', 'ct', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'mi', 'mn', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'sd', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+19,sapindaceae,acer pensylvanicum,striped maple,['ct', 'dc', 'ga', 'ky', 'ma', 'md', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+20,sapindaceae,acer rubrum,red maple,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,True
+21,sapindaceae,acer saccharinum,silver maple,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+22,sapindaceae,acer saccharum,sugar maple,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+23,sapindaceae,acer spicatum,mountain maple,['ct', 'ga', 'ia', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
 24,arecaceae,acoelorraphe wrightii,everglades palm,['fl'],least concern (estimated),False
 25,rosaceae,adenostoma sparsifolium,redshanks,['ca'],least concern,False
 26,schisandraceae,aesculus californica,california buckeye,['ca'],least concern,False
-27,schisandraceae,aesculus flava,yellow buckeye,"['al', 'ga', 'il', 'in', 'ky', 'md', 'ms', 'nc', 'nj', 'oh', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-28,schisandraceae,aesculus glabra,ohio buckeye,"['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'me', 'mi', 'mn', 'mo', 'ms', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'tn', 'tx', 'wi', 'wv', 'wy']",least concern,False
-29,schisandraceae,aesculus parviflora,bottlebrush buckeye,"['al', 'dc', 'ga', 'nj', 'pa', 'sc']",least concern,False
-30,schisandraceae,aesculus pavia,red buckeye,"['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'wv']",least concern,False
-31,schisandraceae,aesculus sylvatica,painted buckeye,"['al', 'fl', 'ga', 'ky', 'nc', 'sc', 'tn', 'va']",least concern,False
-32,betulaceae,alnus alnobetula,green alder,"['ak', 'ca', 'id', 'ma', 'me', 'mi', 'mn', 'mt', 'nc', 'nh', 'ny', 'or', 'pa', 'tn', 'vt', 'wa', 'wi', 'wy']",least concern,False
-33,betulaceae,alnus incana,grey alder,"['ak', 'az', 'ca', 'co', 'ct', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nd', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-34,betulaceae,alnus maritima,seaside alder,"['de', 'ga', 'md(.1)', 'ok']",endangered,False
-35,betulaceae,alnus oblongifolia,arizona alder,"['az', 'nm']",least concern,False
-36,betulaceae,alnus rhombifolia,white alder,"['ca', 'id', 'nv', 'or', 'wa']",least concern,False
-37,betulaceae,alnus rubra,red alder,"['ak', 'ca', 'id', 'mt', 'or', 'wa']",least concern,False
-38,betulaceae,alnus serrulata,smooth alder,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
+27,schisandraceae,aesculus flava,yellow buckeye,['al', 'ga', 'il', 'in', 'ky', 'md', 'ms', 'nc', 'nj', 'oh', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+28,schisandraceae,aesculus glabra,ohio buckeye,['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'me', 'mi', 'mn', 'mo', 'ms', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'tn', 'tx', 'wi', 'wv', 'wy'],least concern,False
+29,schisandraceae,aesculus parviflora,bottlebrush buckeye,['al', 'dc', 'ga', 'nj', 'pa', 'sc'],least concern,False
+30,schisandraceae,aesculus pavia,red buckeye,['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'wv'],least concern,False
+31,schisandraceae,aesculus sylvatica,painted buckeye,['al', 'fl', 'ga', 'ky', 'nc', 'sc', 'tn', 'va'],least concern,False
+32,betulaceae,alnus alnobetula,green alder,['ak', 'ca', 'id', 'ma', 'me', 'mi', 'mn', 'mt', 'nc', 'nh', 'ny', 'or', 'pa', 'tn', 'vt', 'wa', 'wi', 'wy'],least concern,False
+33,betulaceae,alnus incana,grey alder,['ak', 'az', 'ca', 'co', 'ct', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nd', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+34,betulaceae,alnus maritima,seaside alder,['de', 'ga', 'md(.1)', 'ok'],endangered,False
+35,betulaceae,alnus oblongifolia,arizona alder,['az', 'nm'],least concern,False
+36,betulaceae,alnus rhombifolia,white alder,['ca', 'id', 'nv', 'or', 'wa'],least concern,False
+37,betulaceae,alnus rubra,red alder,['ak', 'ca', 'id', 'mt', 'or', 'wa'],least concern,False
+38,betulaceae,alnus serrulata,smooth alder,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],least concern,False
 39,simaroubaceae,alvaradoa amorphoides,mexican alvaradoa,['fl'],least concern,False
-40,rosaceae,amelanchier alnifolia,saskatoon,"['ak', 'ca', 'co', 'ia', 'id', 'mn', 'mt', 'nd', 'ne', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
-41,rosaceae,amelanchier arborea,common serviceberry,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-42,rosaceae,amelanchier bartramiana,bartram shadbush,"['ma', 'me', 'mi', 'mn', 'nh', 'ny', 'pa', 'vt', 'wi', 'wv']",least concern,False
-43,rosaceae,amelanchier cusickii,cusick's serviceberry,"['id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-44,rosaceae,amelanchier interior,interior shadbush,"['ia', 'il', 'me', 'mi', 'mn', 'ny', 'oh', 'sd', 'vt', 'wi']",least concern,False
-45,rosaceae,amelanchier laevis,smooth shadbush,"['al', 'ct', 'dc', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-46,rosaceae,amelanchier pallida,pale serviceberry,"['ca', 'id', 'nv', 'or', 'wa']",least concern,False
-47,rosaceae,amelanchier utahensis,utah serviceberry,"['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'tx', 'ut', 'wa', 'wy']",least concern,False
+40,rosaceae,amelanchier alnifolia,saskatoon,['ak', 'ca', 'co', 'ia', 'id', 'mn', 'mt', 'nd', 'ne', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
+41,rosaceae,amelanchier arborea,common serviceberry,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+42,rosaceae,amelanchier bartramiana,bartram shadbush,['ma', 'me', 'mi', 'mn', 'nh', 'ny', 'pa', 'vt', 'wi', 'wv'],least concern,False
+43,rosaceae,amelanchier cusickii,cusick's serviceberry,['id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+44,rosaceae,amelanchier interior,interior shadbush,['ia', 'il', 'me', 'mi', 'mn', 'ny', 'oh', 'sd', 'vt', 'wi'],least concern,False
+45,rosaceae,amelanchier laevis,smooth shadbush,['al', 'ct', 'dc', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+46,rosaceae,amelanchier pallida,pale serviceberry,['ca', 'id', 'nv', 'or', 'wa'],least concern,False
+47,rosaceae,amelanchier utahensis,utah serviceberry,['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'tx', 'ut', 'wa', 'wy'],least concern,False
 48,bignoniaceae,amphitecna latifolia,black calabash,['fl'],least concern (estimated),False
 49,rutaceae,amyris elemifera,sea torchwood,['fl'],least concern,False
 50,rutaceae,amyris madrensis,sierra madre torchwood,['tx'],least concern,False
 51,rutaceae,amyris texana,texas torchwood,['tx'],least concern,False
 52,annonaceae,annona glabra,pond apple,['fl'],least concern,False
-53,araliaceae,aralia humilis,arizona spikenard,"['az', 'nm']",least concern,False
-54,araliaceae,aralia spinosa,devil's walkingstick,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-55,ericaceae,arbutus arizonica,arizona madrone,"['az', 'nm']",least concern,False
-56,ericaceae,arbutus menziesii,pacific madrone,"['ca', 'or', 'wa']",least concern,False
-57,ericaceae,arbutus xalapensis,texas madrone,"['nm', 'tx']",least concern,False
+53,araliaceae,aralia humilis,arizona spikenard,['az', 'nm'],least concern,False
+54,araliaceae,aralia spinosa,devil's walkingstick,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+55,ericaceae,arbutus arizonica,arizona madrone,['az', 'nm'],least concern,False
+56,ericaceae,arbutus menziesii,pacific madrone,['ca', 'or', 'wa'],least concern,False
+57,ericaceae,arbutus xalapensis,texas madrone,['nm', 'tx'],least concern,False
 58,ericaceae,arctostaphylos andersonii,santa cruz manzanita,['ca'],endangered,False
 59,ericaceae,arctostaphylos catalinae,santa catalina island manzanita,['ca'],endangered (estimated),False
-60,ericaceae,arctostaphylos columbiana,hairy manzanita,"['ca', 'or', 'wa']",least concern,False
+60,ericaceae,arctostaphylos columbiana,hairy manzanita,['ca', 'or', 'wa'],least concern,False
 61,ericaceae,arctostaphylos glauca,big berry manzanita,['ca'],least concern,False
 62,ericaceae,arctostaphylos hooveri,hoover's manzanita,['ca'],vulnerable (estimated),False
 63,ericaceae,arctostaphylos nortensis,del norte manzanita,['ca'],least concern,False
 64,ericaceae,arctostaphylos obispoensis,bishop manzanita,['ca'],least concern,False
-65,ericaceae,arctostaphylos pringlei,pringle's manzanita,"['az', 'ca', 'nv', 'ut']",least concern,False
-66,ericaceae,arctostaphylos pungens,pointleaf manzanita,"['az', 'ca', 'nm', 'nv', 'tx', 'ut']",least concern,False
-67,ericaceae,arctostaphylos viscida,whiteleaf manzanita,"['ca', 'or']",least concern (estimated),False
+65,ericaceae,arctostaphylos pringlei,pringle's manzanita,['az', 'ca', 'nv', 'ut'],least concern,False
+66,ericaceae,arctostaphylos pungens,pointleaf manzanita,['az', 'ca', 'nm', 'nv', 'tx', 'ut'],least concern,False
+67,ericaceae,arctostaphylos viscida,whiteleaf manzanita,['ca', 'or'],least concern (estimated),False
 68,primulaceae,ardisia escallonioides,marlberry,['fl'],least concern,False
-69,asteraceae,artemisia tridentata,big sagebrush,"['az', 'ca', 'co', 'id', 'ma', 'mt', 'nd', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
+69,asteraceae,artemisia tridentata,big sagebrush,['az', 'ca', 'co', 'id', 'ma', 'mt', 'nd', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
 70,annonaceae,asimina obovata,flag-pawpaw,['fl'],least concern,False
-71,annonaceae,asimina parviflora,small-flower pawpaw,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'nj', 'sc', 'tx', 'va', 'wv']",least concern,False
+71,annonaceae,asimina parviflora,small-flower pawpaw,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'nj', 'sc', 'tx', 'va', 'wv'],least concern,False
 72,annonaceae,asimina tetramera,four-petal pawpaw,['fl'],endangered,False
-73,annonaceae,asimina triloba,common pawpaw,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wi', 'wv']",least concern,False
+73,annonaceae,asimina triloba,common pawpaw,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wi', 'wv'],least concern,False
 74,capparaceae,atamisquea emarginata,desert caper,['az'],least concern,False
-75,verbenaceae,avicennia germinans,black mangrove,"['fl', 'la', 'ms', 'tx']",not evaluated,False
+75,verbenaceae,avicennia germinans,black mangrove,['fl', 'la', 'ms', 'tx'],not evaluated,False
 76,asteraceae,baccharis dioica,broombush false willow,['fl(sx)'],least concern,False
-77,asteraceae,baccharis halimifolia,groundsel tree,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'ma', 'md', 'ms', 'nc', 'nj', 'ny', 'ok', 'pa', 'ri', 'sc', 'tx', 'va']",least concern,False
-78,fabaceae,bauhinia lunarioides,anacacho orchid,"['la', 'tx']",data deficient (estimated),False
-79,betulaceae,betula alleghaniensis,yellow birch,"['ct', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-80,betulaceae,betula cordifolia,heartleaf paper birch,"['ct', 'ia', 'in', 'ma', 'me', 'mi', 'mn', 'nc', 'nd', 'nh', 'nj', 'ny', 'pa', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-81,betulaceae,betula lenta,sweet birch,"['al', 'ct', 'de', 'ga', 'ky', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv']",least concern,False
+77,asteraceae,baccharis halimifolia,groundsel tree,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'ma', 'md', 'ms', 'nc', 'nj', 'ny', 'ok', 'pa', 'ri', 'sc', 'tx', 'va'],least concern,False
+78,fabaceae,bauhinia lunarioides,anacacho orchid,['la', 'tx'],data deficient (estimated),False
+79,betulaceae,betula alleghaniensis,yellow birch,['ct', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+80,betulaceae,betula cordifolia,heartleaf paper birch,['ct', 'ia', 'in', 'ma', 'me', 'mi', 'mn', 'nc', 'nd', 'nh', 'nj', 'ny', 'pa', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+81,betulaceae,betula lenta,sweet birch,['al', 'ct', 'de', 'ga', 'ky', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv'],least concern,False
 82,betulaceae,betula murrayana,murray's birch,['mi'],critically endangered,False
-83,betulaceae,betula nigra,river birch,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,True
-84,betulaceae,betula occidentalis,water birch,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
-85,betulaceae,betula papyrifera,paper birch,"['ak', 'co', 'ct', 'ia', 'id', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'or', 'pa', 'ri', 'sd', 'va', 'vt', 'wa', 'wi', 'wy']",least concern,False
-86,betulaceae,betula populifolia,gray birch,"['ct', 'de', 'il', 'in', 'ma', 'md', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wv']",least concern,False
+83,betulaceae,betula nigra,river birch,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,True
+84,betulaceae,betula occidentalis,water birch,['ak', 'az', 'ca', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
+85,betulaceae,betula papyrifera,paper birch,['ak', 'co', 'ct', 'ia', 'id', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'or', 'pa', 'ri', 'sd', 'va', 'vt', 'wa', 'wi', 'wy'],least concern,False
+86,betulaceae,betula populifolia,gray birch,['ct', 'de', 'il', 'in', 'ma', 'md', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wv'],least concern,False
 87,betulaceae,betula uber,virginia roundleaf birch,['va'],not evaluated,False
 88,scrophulariaceae,bontia daphnoides,white alling,['fl'],data deficient (estimated),False
 89,boraginaceae,bourreria cassinifolia,little strongbark,['fl'],data deficient,False
 90,boraginaceae,bourreria succulenta,bahama strongbark,['fl'],least concern,False
 91,combretaceae,bucida molinetii,dwarf black olive,['fl'],least concern,False
-92,scrophulariaceae,buddleja sessiliflora,rio grande butterfly-bush,"['az', 'tx']",least concern,False
+92,scrophulariaceae,buddleja sessiliflora,rio grande butterfly-bush,['az', 'tx'],least concern,False
 93,burseraceae,bursera fagaroides,mexican frankincense,['az'],least concern,False
-94,burseraceae,bursera microphylla,elephant tree,"['az', 'ca']",least concern,False
+94,burseraceae,bursera microphylla,elephant tree,['az', 'ca'],least concern,False
 95,burseraceae,bursera simaruba,gumbo limbo,['fl'],least concern,False
 96,malpighiaceae,byrsonima lucida,locustberry,['fl'],least concern (estimated),False
 97,malpighiaceae,callaeum macropterum,yellow butterfly vine,['az'],least concern,False
-98,cupressaceae,callitropsis nootkatensis,alaska yellow cedar,"['ak', 'ca', 'or', 'wa']",least concern (estimated),False
-99,cupressaceae,calocedrus decurrens,california incense-cedar,"['ca', 'nv', 'or', 'ut']",least concern,False
+98,cupressaceae,callitropsis nootkatensis,alaska yellow cedar,['ak', 'ca', 'or', 'wa'],least concern (estimated),False
+99,cupressaceae,calocedrus decurrens,california incense-cedar,['ca', 'nv', 'or', 'ut'],least concern,False
 100,canellaceae,canella winterana,pepper cinnamon,['fl'],least concern,False
 101,celastraceae,canotia holacantha,crucifixion thorn,['az'],least concern,False
-102,cactaceae,carnegiea gigantea,saguaro,"['az', 'ca']",least concern,False
-103,betulaceae,carpinus caroliniana,american hornbeam,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,True
-104,oleaceae,cartrema americana,american olive,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'va']",least concern (estimated),False
+102,cactaceae,carnegiea gigantea,saguaro,['az', 'ca'],least concern,False
+103,betulaceae,carpinus caroliniana,american hornbeam,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,True
+104,oleaceae,cartrema americana,american olive,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'va'],least concern (estimated),False
 105,oleaceae,cartrema floridana,scrub wild olive,['fl'],near threatened,False
-106,juglandaceae,carya aquatica,water hickory,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-107,juglandaceae,carya cordiformis,bitternut hickory,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+106,juglandaceae,carya aquatica,water hickory,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+107,juglandaceae,carya cordiformis,bitternut hickory,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 108,juglandaceae,carya floridana,scrub hickory,['fl'],least concern,False
-109,juglandaceae,carya glabra,pignut hickory,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
-110,juglandaceae,carya illinoinensis,pecan,"['al', 'ar', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ne', 'oh', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-111,juglandaceae,carya laciniosa,shellbark hickory,"['al', 'ar', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'tn', 'tx', 'wv']",least concern,False
-112,juglandaceae,carya myristiciformis,nutmeg hickory,"['al', 'ar', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx']",least concern,False
-113,juglandaceae,carya ovata,shagbark hickory,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-114,juglandaceae,carya pallida,sand hickory,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'sc', 'tn', 'va']",least concern,False
-115,juglandaceae,carya texana,black hickory,"['al', 'ar', 'ga', 'il', 'in', 'ks', 'la', 'mo', 'ms', 'ok', 'tn', 'tx', 'wv']",least concern,False
-116,juglandaceae,carya tomentosa,mockernut,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
+109,juglandaceae,carya glabra,pignut hickory,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],least concern,False
+110,juglandaceae,carya illinoinensis,pecan,['al', 'ar', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ne', 'oh', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+111,juglandaceae,carya laciniosa,shellbark hickory,['al', 'ar', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'tn', 'tx', 'wv'],least concern,False
+112,juglandaceae,carya myristiciformis,nutmeg hickory,['al', 'ar', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx'],least concern,False
+113,juglandaceae,carya ovata,shagbark hickory,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+114,juglandaceae,carya pallida,sand hickory,['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'sc', 'tn', 'va'],least concern,False
+115,juglandaceae,carya texana,black hickory,['al', 'ar', 'ga', 'il', 'in', 'ks', 'la', 'mo', 'ms', 'ok', 'tn', 'tx', 'wv'],least concern,False
+116,juglandaceae,carya tomentosa,mockernut,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],least concern,False
 117,rubiaceae,casasia clusiifolia,seven-year apple,['fl'],least concern,False
-118,fagaceae,castanea dentata,american chestnut,"['al', 'ct', 'dc', 'de', 'fl(sx)', 'ga', 'ia', 'il(sx)', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",critically endangered,False
-119,fagaceae,castanea ozarkensis,ozark chinquapin,"['al', 'ar', 'la', 'mo', 'ok']",near threatened,False
-120,fagaceae,castanea pumila,allegheny chinquapin,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-121,simaroubaceae,castela emoryi,emory's crucifixion-thorn,"['az', 'ca']",near threatened (estimated),False
-122,simaroubaceae,castela erecta,amargosa,"['az', 'ca', 'tx']",least concern,False
-123,bignoniaceae,catalpa bignonioides,southern catalpa,"['al', 'ar', 'az', 'ca', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nd', 'ne', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv']",data deficient,False
-124,bignoniaceae,catalpa speciosa,northern catalpa,"['al', 'ar', 'ct', 'dc', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'wi', 'wv']",least concern,False
+118,fagaceae,castanea dentata,american chestnut,['al', 'ct', 'dc', 'de', 'fl(sx)', 'ga', 'ia', 'il(sx)', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],critically endangered,False
+119,fagaceae,castanea ozarkensis,ozark chinquapin,['al', 'ar', 'la', 'mo', 'ok'],near threatened,False
+120,fagaceae,castanea pumila,allegheny chinquapin,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+121,simaroubaceae,castela emoryi,emory's crucifixion-thorn,['az', 'ca'],near threatened (estimated),False
+122,simaroubaceae,castela erecta,amargosa,['az', 'ca', 'tx'],least concern,False
+123,bignoniaceae,catalpa bignonioides,southern catalpa,['al', 'ar', 'az', 'ca', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nd', 'ne', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv'],data deficient,False
+124,bignoniaceae,catalpa speciosa,northern catalpa,['al', 'ar', 'ct', 'dc', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'wi', 'wv'],least concern,False
 125,rhamnaceae,ceanothus arboreus,island ceanothus,['ca'],endangered (estimated),False
 126,rhamnaceae,ceanothus crassifolius,hoaryleaf ceanothus,['ca'],least concern,False
 127,rhamnaceae,ceanothus impressus,santa barbara ceanothus,['ca'],vulnerable,False
 128,rhamnaceae,ceanothus oliganthus,hairy ceanothus,['ca'],least concern (estimated),False
 129,rhamnaceae,ceanothus spinosus,greenbark ceanothus,['ca'],least concern,False
-130,rhamnaceae,ceanothus thyrsiflorus,blueblossom,"['ca', 'or']",least concern,False
-131,rhamnaceae,ceanothus velutinus,snowbrush ceanothus,"['ca', 'co', 'id', 'mt', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
-132,ulmaceae,celtis iguanaea,spiny hackberry,"['fl', 'tx']",least concern,False
-133,ulmaceae,celtis laevigata,sugar hackberry,"['al', 'ar', 'az', 'ca', 'co', 'dc', 'fl', 'ga', 'id', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nm', 'nv', 'oh', 'ok', 'or', 'sc', 'tn', 'tx', 'ut', 'va', 'wa', 'wv', 'wy']",least concern,False
+130,rhamnaceae,ceanothus thyrsiflorus,blueblossom,['ca', 'or'],least concern,False
+131,rhamnaceae,ceanothus velutinus,snowbrush ceanothus,['ca', 'co', 'id', 'mt', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
+132,ulmaceae,celtis iguanaea,spiny hackberry,['fl', 'tx'],least concern,False
+133,ulmaceae,celtis laevigata,sugar hackberry,['al', 'ar', 'az', 'ca', 'co', 'dc', 'fl', 'ga', 'id', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nm', 'nv', 'oh', 'ok', 'or', 'sc', 'tn', 'tx', 'ut', 'va', 'wa', 'wv', 'wy'],least concern,False
 134,ulmaceae,celtis lindheimeri,lindheimer hackberry,['tx'],critically endangered,False
-135,ulmaceae,celtis occidentalis,common hackberry,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,True
-136,cannabaceae,celtis pallida,spiny hackberry,"['az', 'fl', 'nm', 'tx']",least concern,False
-137,cannabaceae,celtis tenuifolia,dwarf hackberry,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",not evaluated,False
-138,rosaceae,cephalanthus occidentalis,buttonbush,"['al', 'ar', 'az', 'ca', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+135,ulmaceae,celtis occidentalis,common hackberry,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,True
+136,cannabaceae,celtis pallida,spiny hackberry,['az', 'fl', 'nm', 'tx'],least concern,False
+137,cannabaceae,celtis tenuifolia,dwarf hackberry,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],not evaluated,False
+138,rosaceae,cephalanthus occidentalis,buttonbush,['al', 'ar', 'az', 'ca', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 139,rubiaceae,cephalanthus salicifolius,mexican buttonbush,['tx'],least concern,False
-140,fabaceae,cercis canadensis,eastern redbud,"['al', 'ar', 'az', 'ca', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'ut', 'va', 'wv']",least concern,True
-141,fabaceae,cercis orbiculata,california redbud,"['az', 'ca', 'nv', 'ut']",data deficient (estimated),False
-142,rosaceae,cercocarpus ledifolius,curlleaf mountain mahogany,"['az', 'ca', 'co', 'id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-143,rosaceae,cercocarpus montanus,alderleaf mountain mahogany,"['az', 'ca', 'co', 'id', 'ks', 'mt', 'ne', 'nm', 'nv', 'ok', 'or', 'sd', 'tx', 'ut', 'wy']",least concern,False
+140,fabaceae,cercis canadensis,eastern redbud,['al', 'ar', 'az', 'ca', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'ut', 'va', 'wv'],least concern,True
+141,fabaceae,cercis orbiculata,california redbud,['az', 'ca', 'nv', 'ut'],data deficient (estimated),False
+142,rosaceae,cercocarpus ledifolius,curlleaf mountain mahogany,['az', 'ca', 'co', 'id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+143,rosaceae,cercocarpus montanus,alderleaf mountain mahogany,['az', 'ca', 'co', 'id', 'ks', 'mt', 'ne', 'nm', 'nv', 'ok', 'or', 'sd', 'tx', 'ut', 'wy'],least concern,False
 144,rosaceae,cercocarpus traskiae,catalina island mountain mahogany,['ca'],critically endangered (estimated),False
-145,cupressaceae,chamaecyparis lawsoniana,lawson's cypress,"['ca', 'or']",near threatened,False
-146,cupressaceae,chamaecyparis thyoides,atlantic white cedar,"['al', 'ct', 'de', 'fl', 'ga', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'pa(sx)', 'ri', 'sc', 'va']",least concern,False
-147,bignoniaceae,chilopsis linearis,desert willow,"['az', 'ca', 'ks', 'nm', 'nv', 'ok', 'tx', 'ut']",least concern,False
+145,cupressaceae,chamaecyparis lawsoniana,lawson's cypress,['ca', 'or'],near threatened,False
+146,cupressaceae,chamaecyparis thyoides,atlantic white cedar,['al', 'ct', 'de', 'fl', 'ga', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'pa(sx)', 'ri', 'sc', 'va'],least concern,False
+147,bignoniaceae,chilopsis linearis,desert willow,['az', 'ca', 'ks', 'nm', 'nv', 'ok', 'tx', 'ut'],least concern,False
 148,oleaceae,chionanthus pygmaeus,pygmy fringetree,['fl'],endangered,False
-149,oleaceae,chionanthus virginicus,white fringetree,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
+149,oleaceae,chionanthus virginicus,white fringetree,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
 150,chrysobalanaceae,chrysobalanus icaco,cocoplum,['fl'],least concern,False
-151,fagaceae,chrysolepis chrysophylla,golden chinquapin,"['ca', 'or', 'wa']",least concern,False
-152,sapotaceae,chrysophyllum oliviforme,satinleaf,"['fl', 'hi']",least concern,False
+151,fagaceae,chrysolepis chrysophylla,golden chinquapin,['ca', 'or', 'wa'],least concern,False
+152,sapotaceae,chrysophyllum oliviforme,satinleaf,['fl', 'hi'],least concern,False
 153,verbenaceae,citharexylum berlandieri,berlandier's fiddlewood,['tx'],least concern,False
-154,verbenaceae,citharexylum spinosum,spiny fiddlewood,"['hi', 'fl']",least concern,False
-155,fabaceae,cladrastis kentukea,kentucky yellowwood,"['al', 'ar', 'ct', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'me', 'mo', 'ms', 'nc', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn']",least concern,False
-156,clethraceae,clethra acuminata,mountain sweet pepperbush,"['al', 'ga', 'ky', 'nc', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-157,clethraceae,clethra alnifolia,sweet pepperbush,"['al', 'ct', 'dc', 'de', 'fl', 'ga', 'la', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'pa', 'ri', 'sc', 'tx', 'va']",least concern,False
-158,cyrillaceae,cliftonia monophylla,buckwheat tree,"['al', 'fl', 'ga', 'la', 'ms', 'sc']",least concern,False
-159,clusiaceae,clusia rosea,autograph tree,"['fl', 'hi']",least concern,False
+154,verbenaceae,citharexylum spinosum,spiny fiddlewood,['hi', 'fl'],least concern,False
+155,fabaceae,cladrastis kentukea,kentucky yellowwood,['al', 'ar', 'ct', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'me', 'mo', 'ms', 'nc', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn'],least concern,False
+156,clethraceae,clethra acuminata,mountain sweet pepperbush,['al', 'ga', 'ky', 'nc', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+157,clethraceae,clethra alnifolia,sweet pepperbush,['al', 'ct', 'dc', 'de', 'fl', 'ga', 'la', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'pa', 'ri', 'sc', 'tx', 'va'],least concern,False
+158,cyrillaceae,cliftonia monophylla,buckwheat tree,['al', 'fl', 'ga', 'la', 'ms', 'sc'],least concern,False
+159,clusiaceae,clusia rosea,autograph tree,['fl', 'hi'],least concern,False
 160,polygonaceae,coccoloba diversifolia,pigeon plum,['fl'],least concern,False
 161,polygonaceae,coccoloba uvifera,sea grape,['fl'],least concern,False
 162,arecaceae,coccothrinax argentata,florida silver palm,['fl'],least concern,False
@@ -165,180 +165,180 @@ tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessmen
 164,rhamnaceae,colubrina elliptica,soldierwood,['fl'],least concern,False
 165,rhamnaceae,colubrina greggii,sierra nakedwood,['tx'],least concern,False
 166,ericaceae,comarostaphylis diversifolia,summer holly,['ca'],near threatened (estimated),False
-167,rhamnaceae,condalia globosa,bitter snakewood,"['az', 'ca']",least concern,False
-168,rhamnaceae,condalia hookeri,brasil,"['ar', 'tx']",least concern,False
-169,combretaceae,conocarpus erectus,green buttonwood,"['fl', 'hi']",not evaluated,False
+167,rhamnaceae,condalia globosa,bitter snakewood,['az', 'ca'],least concern,False
+168,rhamnaceae,condalia hookeri,brasil,['ar', 'tx'],least concern,False
+169,combretaceae,conocarpus erectus,green buttonwood,['fl', 'hi'],not evaluated,False
 170,cactaceae,consolea corallicola,semaphore pricklypear,['fl'],critically endangered,False
 171,boraginaceae,cordia boissieri,anacahuita,['tx'],least concern,False
-172,cornaceae,cornus alternifolia,alternate-leaved dogwood,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-173,cornaceae,cornus asperifolia,toughleaf dogwood,"['al', 'fl', 'ga', 'nc', 'sc']",least concern,False
-174,cornaceae,cornus drummondii,roughleaf dogwood,"['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'mi', 'mn', 'mo', 'ms', 'ne', 'ny', 'oh', 'ok', 'pa', 'sd', 'tn', 'tx', 'wi']",least concern,False
-175,cornaceae,cornus florida,flowering dogwood,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
-176,cornaceae,cornus foemina,gray dogwood,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-177,cornaceae,cornus glabrata,brown dogwood,"['ca', 'or']",least concern,False
-178,cornaceae,cornus nuttallii,pacific dogwood,"['ca', 'id', 'or', 'wa']",least concern,False
-179,cornaceae,cornus rugosa,round-leaved dogwood,"['ct', 'dc', 'de', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv']",least concern,False
+172,cornaceae,cornus alternifolia,alternate-leaved dogwood,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+173,cornaceae,cornus asperifolia,toughleaf dogwood,['al', 'fl', 'ga', 'nc', 'sc'],least concern,False
+174,cornaceae,cornus drummondii,roughleaf dogwood,['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'mi', 'mn', 'mo', 'ms', 'ne', 'ny', 'oh', 'ok', 'pa', 'sd', 'tn', 'tx', 'wi'],least concern,False
+175,cornaceae,cornus florida,flowering dogwood,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],least concern,False
+176,cornaceae,cornus foemina,gray dogwood,['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+177,cornaceae,cornus glabrata,brown dogwood,['ca', 'or'],least concern,False
+178,cornaceae,cornus nuttallii,pacific dogwood,['ca', 'id', 'or', 'wa'],least concern,False
+179,cornaceae,cornus rugosa,round-leaved dogwood,['ct', 'dc', 'de', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv'],least concern,False
 180,cornaceae,cornus sessilis,blackfruit dogwood,['ca'],least concern,False
-181,betulaceae,corylus cornuta,beaked hazelnut,"['al', 'ca', 'co', 'ct', 'de', 'ga', 'ia', 'id', 'il', 'ks', 'ma', 'md', 'me', 'mi', 'mn', 'ms', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-182,anacardiaceae,cotinus obovatus,american smoketree,"['al', 'ar', 'ga', 'ky', 'mo', 'ok', 'tn', 'tx']",least concern,False
+181,betulaceae,corylus cornuta,beaked hazelnut,['al', 'ca', 'co', 'ct', 'de', 'ga', 'ia', 'id', 'il', 'ks', 'ma', 'md', 'me', 'mi', 'mn', 'ms', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+182,anacardiaceae,cotinus obovatus,american smoketree,['al', 'ar', 'ga', 'ky', 'mo', 'ok', 'tn', 'tx'],least concern,False
 183,fabaceae,coursetia glandulosa,rosary babybonnets,['az'],least concern,False
-184,rosaceae,crataegus aemula,stolon-bearing hawthorn,"['al', 'ga']",vulnerable (estimated),False
-185,rosaceae,crataegus aestivalis,mayhaw,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc']",least concern,False
-186,rosaceae,crataegus alabamensis,alabama hawthorn,"['al', 'fl']",near threatened,False
-187,rosaceae,crataegus alleghaniensis,allegheny hawthorn,"['al', 'ga', 'tn']",endangered,False
-188,rosaceae,crataegus aprica,sunny hawthorn,"['al', 'ga', 'nc', 'sc', 'tn', 'va']",least concern,False
-189,rosaceae,crataegus ashei,ashe's hawthorn,"['al', 'la', 'ms']",endangered (estimated),False
+184,rosaceae,crataegus aemula,stolon-bearing hawthorn,['al', 'ga'],vulnerable (estimated),False
+185,rosaceae,crataegus aestivalis,mayhaw,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc'],least concern,False
+186,rosaceae,crataegus alabamensis,alabama hawthorn,['al', 'fl'],near threatened,False
+187,rosaceae,crataegus alleghaniensis,allegheny hawthorn,['al', 'ga', 'tn'],endangered,False
+188,rosaceae,crataegus aprica,sunny hawthorn,['al', 'ga', 'nc', 'sc', 'tn', 'va'],least concern,False
+189,rosaceae,crataegus ashei,ashe's hawthorn,['al', 'la', 'ms'],endangered (estimated),False
 190,rosaceae,crataegus austromontana,valley head hawthorn,,not evaluated,False
-191,rosaceae,crataegus beata,dunbar's hawthorn,"['mi', 'ny', 'oh', 'pa', 'wi']",least concern,False
-192,rosaceae,crataegus berberifolia,barberry hawthorn,"['al', 'ar', 'fl', 'ga', 'ks', 'la', 'mo', 'ms', 'nc', 'sc', 'tn']",least concern,False
-193,rosaceae,crataegus brachyacantha,blueberry hawthorn,"['al', 'ar', 'ga', 'la', 'ms', 'ok', 'tx']",least concern,False
-194,rosaceae,crataegus brainerdii,brainerd's hawthorn,"['ct', 'ma', 'me', 'mi', 'nc', 'nh', 'ny', 'oh', 'pa', 'vt']",least concern,False
+191,rosaceae,crataegus beata,dunbar's hawthorn,['mi', 'ny', 'oh', 'pa', 'wi'],least concern,False
+192,rosaceae,crataegus berberifolia,barberry hawthorn,['al', 'ar', 'fl', 'ga', 'ks', 'la', 'mo', 'ms', 'nc', 'sc', 'tn'],least concern,False
+193,rosaceae,crataegus brachyacantha,blueberry hawthorn,['al', 'ar', 'ga', 'la', 'ms', 'ok', 'tx'],least concern,False
+194,rosaceae,crataegus brainerdii,brainerd's hawthorn,['ct', 'ma', 'me', 'mi', 'nc', 'nh', 'ny', 'oh', 'pa', 'vt'],least concern,False
 195,rosaceae,crataegus brazoria,brazoria hawthorn,['tx'],not evaluated,False
-196,rosaceae,crataegus calpodendron,pear hawthorn,"['al', 'ar', 'dc', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'tn', 'tx', 'va', 'wi', 'wv']",least concern,False
-197,rosaceae,crataegus chrysocarpa,fireberry hawthorn,"['al', 'co', 'ct', 'ga', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-198,rosaceae,crataegus coccinea,fireberry hawthorn,"['ct', 'de', 'ia', 'il', 'in', 'ky', 'ma', 'mi', 'mn', 'nc', 'nh', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi']",least concern,False
-199,rosaceae,crataegus coccinioides,large-flowered cockspurthorn,"['ar', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'mo', 'ny', 'oh', 'pa', 'ok', 'vt']",least concern,False
-200,rosaceae,crataegus collina,dotted hawthorn,"['ga', 'il', 'ky', 'mo']",least concern,False
-201,rosaceae,crataegus condigna,river junction hawthorn,"['fl', 'ga']",not evaluated,False
-202,rosaceae,crataegus crus-galli,cockspur hawthorn,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+196,rosaceae,crataegus calpodendron,pear hawthorn,['al', 'ar', 'dc', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'tn', 'tx', 'va', 'wi', 'wv'],least concern,False
+197,rosaceae,crataegus chrysocarpa,fireberry hawthorn,['al', 'co', 'ct', 'ga', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+198,rosaceae,crataegus coccinea,fireberry hawthorn,['ct', 'de', 'ia', 'il', 'in', 'ky', 'ma', 'mi', 'mn', 'nc', 'nh', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi'],least concern,False
+199,rosaceae,crataegus coccinioides,large-flowered cockspurthorn,['ar', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'mo', 'ny', 'oh', 'pa', 'ok', 'vt'],least concern,False
+200,rosaceae,crataegus collina,dotted hawthorn,['ga', 'il', 'ky', 'mo'],least concern,False
+201,rosaceae,crataegus condigna,river junction hawthorn,['fl', 'ga'],not evaluated,False
+202,rosaceae,crataegus crus-galli,cockspur hawthorn,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 203,rosaceae,crataegus cupressocollina,cypress hills hawthorn,['mt'],data deficient (estimated),False
-204,rosaceae,crataegus dispar,aiken hawthorn,"['ga', 'sc']",near threatened,False
-205,rosaceae,crataegus dodgei,dodge's hawthorn,"['ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'nh', 'nj', 'ny', 'pa', 'ri', 'vt', 'wi']",least concern,False
-206,rosaceae,crataegus douglasii,black hawthorn,"['ak', 'ca', 'id', 'mi', 'mn', 'mt', 'nd', 'or', 'sd', 'ut', 'wa', 'wi', 'wy']",least concern,False
-207,rosaceae,crataegus erythropoda,cerro hawthorn,"['az', 'co', 'nm', 'ut', 'wy']",least concern,False
+204,rosaceae,crataegus dispar,aiken hawthorn,['ga', 'sc'],near threatened,False
+205,rosaceae,crataegus dodgei,dodge's hawthorn,['ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'nh', 'nj', 'ny', 'pa', 'ri', 'vt', 'wi'],least concern,False
+206,rosaceae,crataegus douglasii,black hawthorn,['ak', 'ca', 'id', 'mi', 'mn', 'mt', 'nd', 'or', 'sd', 'ut', 'wa', 'wi', 'wy'],least concern,False
+207,rosaceae,crataegus erythropoda,cerro hawthorn,['az', 'co', 'nm', 'ut', 'wy'],least concern,False
 208,rosaceae,crataegus fecunda,cockspur hawthorn,,not evaluated,False
-209,rosaceae,crataegus flabellata,fanleaf hawthorn,"['al', 'ar', 'ct', 'fl', 'ga', 'il', 'la', 'ma', 'me', 'mi', 'mn', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv']",least concern,False
+209,rosaceae,crataegus flabellata,fanleaf hawthorn,['al', 'ar', 'ct', 'fl', 'ga', 'il', 'la', 'ma', 'me', 'mi', 'mn', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv'],least concern,False
 210,rosaceae,crataegus furtiva,albany hawthorn,['ga'],least concern,False
 211,rosaceae,crataegus greggiana,gregg's hawthorn,['tx'],vulnerable,False
-212,rosaceae,crataegus harbisonii,harbison's hawthorn,"['ga', 'la', 'tn']",critically endangered (estimated),False
-213,rosaceae,crataegus holmesiana,holmes' hawthorn,"['ct', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi', 'wv']",least concern,False
-214,rosaceae,crataegus intricata,copenhagen hawthorn,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'il', 'in', 'ky', 'ma', 'md', 'mi', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",not evaluated,False
-215,rosaceae,crataegus iracunda,stolon-bearing hawthorn,"['al', 'ct', 'de', 'ga', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wv']",least concern,False
-216,rosaceae,crataegus jesupii,jesup's hawthorn,"['ct', 'mi', 'nh', 'nj', 'ny', 'oh', 'pa', 'vt', 'wi']",data deficient (estimated),False
-217,rosaceae,crataegus jonesiae,miss jone's hawthorn,"['me', 'mn', 'nh', 'ny', 'ri', 'vt']",not evaluated,False
+212,rosaceae,crataegus harbisonii,harbison's hawthorn,['ga', 'la', 'tn'],critically endangered (estimated),False
+213,rosaceae,crataegus holmesiana,holmes' hawthorn,['ct', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi', 'wv'],least concern,False
+214,rosaceae,crataegus intricata,copenhagen hawthorn,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'il', 'in', 'ky', 'ma', 'md', 'mi', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],not evaluated,False
+215,rosaceae,crataegus iracunda,stolon-bearing hawthorn,['al', 'ct', 'de', 'ga', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wv'],least concern,False
+216,rosaceae,crataegus jesupii,jesup's hawthorn,['ct', 'mi', 'nh', 'nj', 'ny', 'oh', 'pa', 'vt', 'wi'],data deficient (estimated),False
+217,rosaceae,crataegus jonesiae,miss jone's hawthorn,['me', 'mn', 'nh', 'ny', 'ri', 'vt'],not evaluated,False
 218,rosaceae,crataegus lacrimata,pensacola hawthorn,['fl'],least concern,False
 219,rosaceae,crataegus lanuginosa,woolly hawthorn,,not evaluated,False
-220,rosaceae,crataegus lassa,sandhill hawthorn,"['al', 'fl', 'ga', 'sc']",least concern,False
-221,rosaceae,crataegus lumaria,roundleaf hawthorn,"['ct', 'ma', 'mi', 'ny', 'wi']",data deficient (estimated),False
-222,rosaceae,crataegus macrosperma,big-fruit hawthorn,"['ar', 'ct', 'de', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-223,rosaceae,crataegus margarettae,margaret's hawthorn,"['ia', 'il', 'in', 'ky', 'md', 'mi', 'mo', 'oh', 'pa', 'tn', 'va', 'wi', 'wv']",least concern,False
-224,rosaceae,crataegus marshallii,parsley hawthorn,"['al', 'ar', 'fl', 'ga', 'il', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-225,rosaceae,crataegus mendosa,albertville hawthorn,"['al', 'ga']",data deficient (estimated),False
-226,rosaceae,crataegus mollis,downy hawthorn,"['al', 'ar', 'ct', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nd', 'ne', 'nh', 'ny', 'oh', 'ok', 'pa', 'sd', 'tn', 'tx', 'va', 'wi', 'wv']",least concern,False
-227,rosaceae,crataegus nitida,glossy hawthorn,"['ar', 'il', 'mo', 'oh', 'pa', 'tn', 'wi']",not evaluated,False
-228,rosaceae,crataegus okennonii,o'kennon's hawthorn,"['id', 'mt', 'wa']",least concern,False
-229,rosaceae,crataegus opaca,western mayhaw,"['al', 'ar', 'la', 'ms', 'tx']",least concern,False
+220,rosaceae,crataegus lassa,sandhill hawthorn,['al', 'fl', 'ga', 'sc'],least concern,False
+221,rosaceae,crataegus lumaria,roundleaf hawthorn,['ct', 'ma', 'mi', 'ny', 'wi'],data deficient (estimated),False
+222,rosaceae,crataegus macrosperma,big-fruit hawthorn,['ar', 'ct', 'de', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+223,rosaceae,crataegus margarettae,margaret's hawthorn,['ia', 'il', 'in', 'ky', 'md', 'mi', 'mo', 'oh', 'pa', 'tn', 'va', 'wi', 'wv'],least concern,False
+224,rosaceae,crataegus marshallii,parsley hawthorn,['al', 'ar', 'fl', 'ga', 'il', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+225,rosaceae,crataegus mendosa,albertville hawthorn,['al', 'ga'],data deficient (estimated),False
+226,rosaceae,crataegus mollis,downy hawthorn,['al', 'ar', 'ct', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nd', 'ne', 'nh', 'ny', 'oh', 'ok', 'pa', 'sd', 'tn', 'tx', 'va', 'wi', 'wv'],least concern,False
+227,rosaceae,crataegus nitida,glossy hawthorn,['ar', 'il', 'mo', 'oh', 'pa', 'tn', 'wi'],not evaluated,False
+228,rosaceae,crataegus okennonii,o'kennon's hawthorn,['id', 'mt', 'wa'],least concern,False
+229,rosaceae,crataegus opaca,western mayhaw,['al', 'ar', 'la', 'ms', 'tx'],least concern,False
 230,rosaceae,crataegus ouachitensis,ouachita hawthorn,['ar'],data deficient (estimated),False
-231,rosaceae,crataegus pennsylvanica,pennsylvania hawthorn,"['de', 'md', 'nj(.1)', 'ny', 'oh', 'pa', 'va', 'wv']",data deficient (estimated),False
-232,rosaceae,crataegus phaenopyrum,washington hawthorn,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'ma', 'md', 'mi', 'mo', 'nc', 'nj', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'wv']",least concern,False
-233,rosaceae,crataegus phippsii,phipps' hawthorn,"['mt', 'wa']",data deficient (estimated),False
-234,rosaceae,crataegus prona,illinois hawthorn,"['in', 'mi', 'ny', 'oh', 'pa', 'wv']",data deficient (estimated),False
-235,rosaceae,crataegus pruinosa,waxy-fruited hawthorn,"['ar', 'ct', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-236,rosaceae,crataegus pulcherrima,beautiful hawthorn,"['al', 'fl', 'ga', 'ms']",data deficient (estimated),False
-237,rosaceae,crataegus punctata,dotted hawthorn,"['al', 'ar', 'ct', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-238,rosaceae,crataegus reverchonii,reverchon's hawthorn,"['ar', 'ks', 'mo', 'ok', 'tx']",data deficient (estimated),False
-239,rosaceae,crataegus rivularis,river hawthorn,"['az', 'co', 'id', 'nm', 'nv', 'tx', 'ut', 'wy']",least concern,False
-240,rosaceae,crataegus sargentii,sargent's hawthorn,"['al', 'ga', 'tn']",data deficient (estimated),False
-241,rosaceae,crataegus schuettei,schuette's hawthorn,"['ar', 'ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
+231,rosaceae,crataegus pennsylvanica,pennsylvania hawthorn,['de', 'md', 'nj(.1)', 'ny', 'oh', 'pa', 'va', 'wv'],data deficient (estimated),False
+232,rosaceae,crataegus phaenopyrum,washington hawthorn,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'ma', 'md', 'mi', 'mo', 'nc', 'nj', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'wv'],least concern,False
+233,rosaceae,crataegus phippsii,phipps' hawthorn,['mt', 'wa'],data deficient (estimated),False
+234,rosaceae,crataegus prona,illinois hawthorn,['in', 'mi', 'ny', 'oh', 'pa', 'wv'],data deficient (estimated),False
+235,rosaceae,crataegus pruinosa,waxy-fruited hawthorn,['ar', 'ct', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+236,rosaceae,crataegus pulcherrima,beautiful hawthorn,['al', 'fl', 'ga', 'ms'],data deficient (estimated),False
+237,rosaceae,crataegus punctata,dotted hawthorn,['al', 'ar', 'ct', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+238,rosaceae,crataegus reverchonii,reverchon's hawthorn,['ar', 'ks', 'mo', 'ok', 'tx'],data deficient (estimated),False
+239,rosaceae,crataegus rivularis,river hawthorn,['az', 'co', 'id', 'nm', 'nv', 'tx', 'ut', 'wy'],least concern,False
+240,rosaceae,crataegus sargentii,sargent's hawthorn,['al', 'ga', 'tn'],data deficient (estimated),False
+241,rosaceae,crataegus schuettei,schuette's hawthorn,['ar', 'ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
 242,rosaceae,crataegus senta,yellowleaf hawthorn,['nc'],data deficient (estimated),False
-243,rosaceae,crataegus sororia,russian hawthorn,"['al', 'ga', 'sc']",near threatened,False
-244,rosaceae,crataegus spathulata,littlehip hawthorn,"['al', 'ar', 'fl', 'ga', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'wv']",least concern,False
-245,rosaceae,crataegus submollis,hairy cockspurthorn,"['ct', 'ma', 'me', 'mi', 'mn', 'nh', 'ny', 'oh', 'pa', 'vt', 'wi']",least concern,False
-246,rosaceae,crataegus suborbiculata,caughnawaga hawthorn,"['ct', 'mi', 'ny', 'oh']",data deficient (estimated),False
-247,rosaceae,crataegus succulenta,fleshy hawthorn,"['ar', 'co', 'ct', 'ga', 'ia', 'il', 'in', 'ks', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'tn', 'ut', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-248,rosaceae,crataegus texana,texas hawthorn,"['ar', 'mo', 'tx']",not evaluated,False
+243,rosaceae,crataegus sororia,russian hawthorn,['al', 'ga', 'sc'],near threatened,False
+244,rosaceae,crataegus spathulata,littlehip hawthorn,['al', 'ar', 'fl', 'ga', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'wv'],least concern,False
+245,rosaceae,crataegus submollis,hairy cockspurthorn,['ct', 'ma', 'me', 'mi', 'mn', 'nh', 'ny', 'oh', 'pa', 'vt', 'wi'],least concern,False
+246,rosaceae,crataegus suborbiculata,caughnawaga hawthorn,['ct', 'mi', 'ny', 'oh'],data deficient (estimated),False
+247,rosaceae,crataegus succulenta,fleshy hawthorn,['ar', 'co', 'ct', 'ga', 'ia', 'il', 'in', 'ks', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'tn', 'ut', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+248,rosaceae,crataegus texana,texas hawthorn,['ar', 'mo', 'tx'],not evaluated,False
 249,rosaceae,crataegus tracyi,tracy's hawthorn,['tx'],least concern,False
-250,rosaceae,crataegus triflora,three-flowered hawthorn,"['al', 'ar', 'ga', 'la', 'ms']",not evaluated,False
+250,rosaceae,crataegus triflora,three-flowered hawthorn,['al', 'ar', 'ga', 'la', 'ms'],not evaluated,False
 251,rosaceae,crataegus turnerorum,turners' hawthorn,['tx'],vulnerable (estimated),False
-252,rosaceae,crataegus uniflora,one-flowered hawthorn,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",not evaluated,False
-253,rosaceae,crataegus venusta,red mountain hawthorn,"['al', 'fl', 'ga', 'la', 'ms', 'tx']",data deficient (estimated),False
-254,rosaceae,crataegus viridis,green hawthorn,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
+252,rosaceae,crataegus uniflora,one-flowered hawthorn,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],not evaluated,False
+253,rosaceae,crataegus venusta,red mountain hawthorn,['al', 'fl', 'ga', 'la', 'ms', 'tx'],data deficient (estimated),False
+254,rosaceae,crataegus viridis,green hawthorn,['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
 255,rosaceae,crataegus wootoniana,wooton's hawthorn,['nm'],not evaluated,False
 256,celastraceae,crossopetalum rhacoma,maidenberry,['fl'],least concern,False
 257,crossosomataceae,crossosoma californicum,catalina crossosoma,['ca'],near threatened (estimated),False
 258,euphorbiaceae,croton cortesianus,cortez's croton,['tx'],least concern,False
-259,cupressaceae,cupressus arizonica,arizona cypress,"['az', 'ca', 'nm', 'nv', 'tx', 'ut']",least concern,False
-260,cupressaceae,cupressus bakeri,baker's cypress,"['ca', 'or']",vulnerable,False
+259,cupressaceae,cupressus arizonica,arizona cypress,['az', 'ca', 'nm', 'nv', 'tx', 'ut'],least concern,False
+260,cupressaceae,cupressus bakeri,baker's cypress,['ca', 'or'],vulnerable,False
 261,cupressaceae,cupressus guadalupensis,guadalupe cypress,['ca'],endangered,False
 262,cupressaceae,cupressus macnabiana,mcnab cypress,['ca'],least concern,False
 263,cupressaceae,cupressus macrocarpa,monterey cypress,['ca'],vulnerable,False
 264,cupressaceae,cupressus sargentii,sargent's cypress,['ca'],vulnerable,False
-265,cactaceae,cylindropuntia fulgida,chain-fruit cholla,"['az', 'nm']",least concern,False
-266,cactaceae,cylindropuntia imbricata,tree cholla,"['az', 'co', 'ks', 'nm', 'ok', 'tx', 'ut']",least concern,False
+265,cactaceae,cylindropuntia fulgida,chain-fruit cholla,['az', 'nm'],least concern,False
+266,cactaceae,cylindropuntia imbricata,tree cholla,['az', 'co', 'ks', 'nm', 'ok', 'tx', 'ut'],least concern,False
 267,cactaceae,cylindropuntia prolifera,coast cholla,['ca'],least concern,False
-268,cactaceae,cylindropuntia spinosior,walkingstick cactus,"['az', 'nm']",least concern,False
-269,cactaceae,cylindropuntia versicolor,staghorn cholla,"['az', 'nm', 'tx']",least concern,False
+268,cactaceae,cylindropuntia spinosior,walkingstick cactus,['az', 'nm'],least concern,False
+269,cactaceae,cylindropuntia versicolor,staghorn cholla,['az', 'nm', 'tx'],least concern,False
 270,capparaceae,cynophalla flexuosa,bay-leaved caper,['fl'],least concern,False
-271,cyrillaceae,cyrilla racemiflora,swamp titi,"['al', 'de', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va']",least concern,False
+271,cyrillaceae,cyrilla racemiflora,swamp titi,['al', 'de', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va'],least concern,False
 272,lauraceae,damburneya coriacea,lancewood,['fl'],least concern,False
 273,papaveraceae,dendromecon harfordii,channel islands tree poppy,['ca'],endangered (estimated),False
 274,papaveraceae,dendromecon rigida,bush poppy,['ca'],least concern,False
-275,fabaceae,dermatophyllum secundiflorum,texas mountain laurel,"['fl', 'ga', 'la', 'ms', 'nm', 'tx']",least concern,False
+275,fabaceae,dermatophyllum secundiflorum,texas mountain laurel,['fl', 'ga', 'la', 'ms', 'nm', 'tx'],least concern,False
 276,ebenaceae,diospyros texana,texas persimmon,['tx'],least concern,False
-277,ebenaceae,diospyros virginiana,american persimmon,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'ut', 'va', 'wv']",least concern,False
-278,sapindaceae,dodonaea viscosa,akeake,"['az', 'fl', 'hi']",least concern,False
+277,ebenaceae,diospyros virginiana,american persimmon,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'ut', 'va', 'wv'],least concern,False
+278,sapindaceae,dodonaea viscosa,akeake,['az', 'fl', 'hi'],least concern,False
 279,euphorbiaceae,drypetes diversifolia,milkbark,['fl'],least concern (estimated),False
 280,euphorbiaceae,drypetes lateriflora,guiana plum,['fl'],least concern,False
-281,verbenaceae,duranta erecta,skyflower,"['az', 'ca', 'fl', 'hi', 'la', 'tx']",least concern,False
+281,verbenaceae,duranta erecta,skyflower,['az', 'ca', 'fl', 'hi', 'la', 'tx'],least concern,False
 282,fabaceae,ebenopsis ebano,texas ebony,['tx'],least concern,False
 283,boraginaceae,ehretia anacua,anacua,['tx'],least concern,False
-284,ericaceae,elliottia racemosa,georgia plume,"['ga', 'sc(sx)']",vulnerable,False
+284,ericaceae,elliottia racemosa,georgia plume,['ga', 'sc(sx)'],vulnerable,False
 285,rubiaceae,erithalis fruticosa,black torch,['fl'],least concern,False
-286,fabaceae,erythrina flabelliformis,western coral bean,"['az', 'nm']",least concern,False
-287,fabaceae,erythrina herbacea,coral bean,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",least concern,False
+286,fabaceae,erythrina flabelliformis,western coral bean,['az', 'nm'],least concern,False
+287,fabaceae,erythrina herbacea,coral bean,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],least concern,False
 288,fabaceae,erythrostemon mexicanus,mexican holdback,['tx'],least concern,False
 289,rutaceae,esenbeckia berlandieri,berlandier's jopoy,['tx'],endangered,False
 290,myrtaceae,eugenia axillaris,white stopper,['fl'],least concern,False
 291,myrtaceae,eugenia confusa,redberry stopper,['fl'],least concern,False
 292,myrtaceae,eugenia foetida,spanish stopper,['fl'],least concern,False
 293,myrtaceae,eugenia rhombea,red stopper,['fl'],least concern,False
-294,celastraceae,euonymus atropurpureus,wahoo,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'wi', 'wv']",least concern,False
-295,celastraceae,euonymus occidentalis,western burning bush,"['ca', 'or', 'wa']",least concern,False
+294,celastraceae,euonymus atropurpureus,wahoo,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'wi', 'wv'],least concern,False
+295,celastraceae,euonymus occidentalis,western burning bush,['ca', 'or', 'wa'],least concern,False
 296,rubiaceae,exostema caribaeum,caribbean princewood,['fl'],least concern,False
 297,sapindaceae,exothea paniculata,inkwood,['fl'],least concern,False
 298,fabaceae,eysenhardtia orthocarpa,desert kidneywood,['az'],least concern,False
 299,fabaceae,eysenhardtia texana,texas kidneywood,['tx'],least concern,False
-300,fagaceae,fagus grandifolia,american beech,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv']",least concern,False
-301,cactaceae,ferocactus wislizeni,fishhook barrel cactus,"['az', 'nm', 'tx']",vulnerable,False
+300,fagaceae,fagus grandifolia,american beech,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv'],least concern,False
+301,cactaceae,ferocactus wislizeni,fishhook barrel cactus,['az', 'nm', 'tx'],vulnerable,False
 302,moraceae,ficus americana,west indian laurel fig,['fl'],least concern,False
 303,moraceae,ficus aurea,florida strangler fig,['fl'],least concern,False
 304,moraceae,ficus citrifolia,shortleaf fig,['fl'],least concern,False
-305,oleaceae,forestiera acuminata,eastern swamp privet,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'ok', 'sc', 'tn', 'tx']",least concern,False
+305,oleaceae,forestiera acuminata,eastern swamp privet,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'ok', 'sc', 'tn', 'tx'],least concern,False
 306,oleaceae,forestiera angustifolia,narrowleaf forestiera,['tx'],least concern,False
 307,oleaceae,forestiera reticulata,netleaf forestiera,['tx'],least concern,False
-308,oleaceae,forestiera segregata,florida swampprivet,"['fl', 'ga', 'sc']",least concern,False
+308,oleaceae,forestiera segregata,florida swampprivet,['fl', 'ga', 'sc'],least concern,False
 309,oleaceae,forestiera shrevei,desert-olive,['az'],least concern,False
-310,rhamnaceae,frangula betulifolia,birchleaf buckthorn,"['az', 'nm', 'nv', 'tx', 'ut']",least concern,False
-311,rhamnaceae,frangula californica,coffeeberry,"['az', 'ca', 'hi', 'nm', 'nv', 'or']",least concern,False
-312,rhamnaceae,frangula caroliniana,carolina buckthorn,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'oh', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-313,rhamnaceae,frangula purshiana,cascara,"['ca', 'id', 'mt', 'or', 'wa']",least concern,False
+310,rhamnaceae,frangula betulifolia,birchleaf buckthorn,['az', 'nm', 'nv', 'tx', 'ut'],least concern,False
+311,rhamnaceae,frangula californica,coffeeberry,['az', 'ca', 'hi', 'nm', 'nv', 'or'],least concern,False
+312,rhamnaceae,frangula caroliniana,carolina buckthorn,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'oh', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+313,rhamnaceae,frangula purshiana,cascara,['ca', 'id', 'mt', 'or', 'wa'],least concern,False
 314,theaceae,franklinia alatamaha,franklin tree,,extinct in the wild,False
-315,oleaceae,fraxinus albicans,texas ash,"['ok', 'tx']",near threatened,False
-316,oleaceae,fraxinus americana,white ash,"['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'hi', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",critically endangered,False
-317,oleaceae,fraxinus anomala,single-leaf ash,"['az', 'ca', 'co', 'nm', 'nv', 'ut', 'wy']",least concern,False
-318,oleaceae,fraxinus berlandieriana,mexican ash,"['nm', 'tx']",least concern,False
-319,oleaceae,fraxinus caroliniana,carolina ash,"['al', 'ar', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'sc', 'tx', 'va']",endangered,False
-320,oleaceae,fraxinus cuspidata,fragrant ash,"['az', 'ca', 'nm', 'nv', 'tx']",least concern,False
-321,oleaceae,fraxinus dipetala,california ash,"['az', 'ca', 'nv', 'ut']",least concern,False
+315,oleaceae,fraxinus albicans,texas ash,['ok', 'tx'],near threatened,False
+316,oleaceae,fraxinus americana,white ash,['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'hi', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],critically endangered,False
+317,oleaceae,fraxinus anomala,single-leaf ash,['az', 'ca', 'co', 'nm', 'nv', 'ut', 'wy'],least concern,False
+318,oleaceae,fraxinus berlandieriana,mexican ash,['nm', 'tx'],least concern,False
+319,oleaceae,fraxinus caroliniana,carolina ash,['al', 'ar', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'sc', 'tx', 'va'],endangered,False
+320,oleaceae,fraxinus cuspidata,fragrant ash,['az', 'ca', 'nm', 'nv', 'tx'],least concern,False
+321,oleaceae,fraxinus dipetala,california ash,['az', 'ca', 'nv', 'ut'],least concern,False
 322,oleaceae,fraxinus gooddingii,goodding's ash,['az'],least concern,False
-323,oleaceae,fraxinus greggii,gregg's ash,"['az', 'nm', 'tx']",least concern,False
-324,oleaceae,fraxinus latifolia,oregon ash,"['ca', 'or', 'wa']",near threatened,False
-325,oleaceae,fraxinus nigra,black ash,"['ct', 'dc', 'de', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv']",critically endangered,False
-326,oleaceae,fraxinus pennsylvanica,green ash,"['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy']",critically endangered,False
-327,oleaceae,fraxinus profunda,pumpkin ash,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'sc', 'tn', 'va']",critically endangered,False
-328,oleaceae,fraxinus quadrangulata,blue ash,"['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'mi', 'mn', 'mo', 'ms', 'oh', 'ok', 'pa', 'tn', 'va', 'wi', 'wv']",critically endangered,False
-329,oleaceae,fraxinus velutina,velvet ash,"['az', 'ca', 'nm', 'nv', 'tx', 'ut']",least concern,False
-330,malvaceae,fremontodendron californicum,california flannelbush,"['az', 'ca']",least concern,False
+323,oleaceae,fraxinus greggii,gregg's ash,['az', 'nm', 'tx'],least concern,False
+324,oleaceae,fraxinus latifolia,oregon ash,['ca', 'or', 'wa'],near threatened,False
+325,oleaceae,fraxinus nigra,black ash,['ct', 'dc', 'de', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va', 'vt', 'wi', 'wv'],critically endangered,False
+326,oleaceae,fraxinus pennsylvanica,green ash,['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy'],critically endangered,False
+327,oleaceae,fraxinus profunda,pumpkin ash,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'sc', 'tn', 'va'],critically endangered,False
+328,oleaceae,fraxinus quadrangulata,blue ash,['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'mi', 'mn', 'mo', 'ms', 'oh', 'ok', 'pa', 'tn', 'va', 'wi', 'wv'],critically endangered,False
+329,oleaceae,fraxinus velutina,velvet ash,['az', 'ca', 'nm', 'nv', 'tx', 'ut'],least concern,False
+330,malvaceae,fremontodendron californicum,california flannelbush,['az', 'ca'],least concern,False
 331,malvaceae,fremontodendron mexicanum,mexican flannelbush,['ca'],endangered,False
-332,garryaceae,garrya elliptica,coast silk tassel,"['ca', 'or']",least concern,False
-333,garryaceae,garrya flavescens,ashy silktassel,"['az', 'ca', 'nm', 'nv', 'ut']",least concern,False
-334,garryaceae,garrya fremontii,frémont's silktassel,"['ca', 'or', 'wa']",least concern,False
-335,garryaceae,garrya ovata,lindheimer's silktassel,"['nm', 'tx']",least concern,False
+332,garryaceae,garrya elliptica,coast silk tassel,['ca', 'or'],least concern,False
+333,garryaceae,garrya flavescens,ashy silktassel,['az', 'ca', 'nm', 'nv', 'ut'],least concern,False
+334,garryaceae,garrya fremontii,frémont's silktassel,['ca', 'or', 'wa'],least concern,False
+335,garryaceae,garrya ovata,lindheimer's silktassel,['nm', 'tx'],least concern,False
 336,garryaceae,garrya veatchii,ashy silktassel,['ca'],least concern,False
-337,garryaceae,garrya wrightii,wright's silktassel,"['az', 'nm', 'tx']",least concern,False
-338,fabaceae,gleditsia aquatica,water locust,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'ny', 'sc', 'tn', 'tx', 'va']",least concern,False
-339,fabaceae,gleditsia triacanthos,honey locust,"['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,True
-340,theaceae,gordonia lasianthus,loblolly bay,"['al', 'fl', 'ga', 'ms', 'nc', 'sc']",least concern,False
+337,garryaceae,garrya wrightii,wright's silktassel,['az', 'nm', 'tx'],least concern,False
+338,fabaceae,gleditsia aquatica,water locust,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'ny', 'sc', 'tn', 'tx', 'va'],least concern,False
+339,fabaceae,gleditsia triacanthos,honey locust,['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,True
+340,theaceae,gordonia lasianthus,loblolly bay,['al', 'fl', 'ga', 'ms', 'nc', 'sc'],least concern,False
 341,malvaceae,gossypium thurberi,desert cotton,['az'],endangered,False
 342,zygophyllaceae,guaiacum officinale,roughbark lignum-vitae,['fl'],endangered,False
 343,zygophyllaceae,guaiacum sanctum,lignum-vitae,['fl'],near threatened,False
@@ -348,11 +348,11 @@ tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessmen
 347,rubiaceae,guettarda scabra,rough velvetseed,['fl'],least concern,False
 348,celastraceae,gyminda latifolia,west indian falsebox,['fl'],least concern,False
 349,euphorbiaceae,gymnanthes lucida,crabwood,['fl'],least concern,False
-350,fabaceae,gymnocladus dioicus,kentucky coffeetree,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'sd', 'tn', 'tx', 'va', 'wi', 'wv']",vulnerable,True
+350,fabaceae,gymnocladus dioicus,kentucky coffeetree,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'sd', 'tn', 'tx', 'va', 'wi', 'wv'],vulnerable,True
 351,styracaceae,halesia carolina,carolina silverbell,['ky'],least concern,False
-352,styracaceae,halesia diptera,two-wing silverbell,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'ok', 'sc', 'tx']",least concern,False
-353,hamamelidaceae,hamamelis vernalis,ozark witch-hazel,"['ar', 'mo', 'ok', 'tx']",least concern,False
-354,hamamelidaceae,hamamelis virginiana,american witch-hazel,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+352,styracaceae,halesia diptera,two-wing silverbell,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'ok', 'sc', 'tx'],least concern,False
+353,hamamelidaceae,hamamelis vernalis,ozark witch-hazel,['ar', 'mo', 'ok', 'tx'],least concern,False
+354,hamamelidaceae,hamamelis virginiana,american witch-hazel,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 355,rubiaceae,hamelia patens,firebush,['fl'],least concern,False
 356,fabaceae,havardia pallens,tenaza,['tx'],least concern,False
 357,rutaceae,helietta parvifolia,barreta,['tx'],least concern,False
@@ -364,479 +364,479 @@ tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessmen
 363,euphorbiaceae,hippomane mancinella,manchineel,['fl'],least concern,False
 364,sapindaceae,hypelate trifoliata,white ironwood,['fl'],least concern,False
 365,clusiaceae,hypericum chapmanii,apalachicola st. johnswort,['fl'],near threatened (estimated),False
-366,aquifoliaceae,ilex ambigua,carolina holly,"['al', 'ar', 'fl', 'ga', 'ky', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-367,aquifoliaceae,ilex amelanchier,swamp holly,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc']",least concern,False
-368,aquifoliaceae,ilex cassine,dahoon holly,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",least concern,False
-369,aquifoliaceae,ilex collina,long-stalked holly,"['ga', 'nc', 'tn', 'va', 'wv']",vulnerable,False
-370,aquifoliaceae,ilex coriacea,large gallberry,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'nj', 'sc', 'tx', 'va']",least concern,False
-371,aquifoliaceae,ilex decidua,possumhaw,"['al', 'ar', 'dc', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
+366,aquifoliaceae,ilex ambigua,carolina holly,['al', 'ar', 'fl', 'ga', 'ky', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+367,aquifoliaceae,ilex amelanchier,swamp holly,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc'],least concern,False
+368,aquifoliaceae,ilex cassine,dahoon holly,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],least concern,False
+369,aquifoliaceae,ilex collina,long-stalked holly,['ga', 'nc', 'tn', 'va', 'wv'],vulnerable,False
+370,aquifoliaceae,ilex coriacea,large gallberry,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'nj', 'sc', 'tx', 'va'],least concern,False
+371,aquifoliaceae,ilex decidua,possumhaw,['al', 'ar', 'dc', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
 372,aquifoliaceae,ilex krugiana,tawnyberry holly,['fl'],least concern,False
-373,aquifoliaceae,ilex laevigata,smooth winterberry,"['ct', 'dc', 'de', 'ga', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'pa', 'ri', 'sc', 'va', 'vt']",least concern,False
-374,aquifoliaceae,ilex longipes,georgia holly,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tn', 'tx']",least concern,False
-375,aquifoliaceae,ilex montana,mountain winterberry,"['al', 'ct', 'ga', 'ky', 'ma', 'md', 'ms', 'nc', 'nj', 'ny', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-376,aquifoliaceae,ilex mucronata,mountain holly,"['ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi', 'wv']",least concern,False
-377,aquifoliaceae,ilex myrtifolia,myrtle dahoon,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",least concern,False
-378,aquifoliaceae,ilex opaca,american holly,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-379,aquifoliaceae,ilex verticillata,winterberry holly,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-380,aquifoliaceae,ilex vomitoria,yaupon holly,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx', 'va']",least concern,False
-381,schisandraceae,illicium floridanum,florida anise,"['al', 'fl', 'ga', 'la', 'ms']",least concern,False
-382,schisandraceae,illicium parviflorum,yellow anise,"['fl', 'ga']",endangered (estimated),False
+373,aquifoliaceae,ilex laevigata,smooth winterberry,['ct', 'dc', 'de', 'ga', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'pa', 'ri', 'sc', 'va', 'vt'],least concern,False
+374,aquifoliaceae,ilex longipes,georgia holly,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tn', 'tx'],least concern,False
+375,aquifoliaceae,ilex montana,mountain winterberry,['al', 'ct', 'ga', 'ky', 'ma', 'md', 'ms', 'nc', 'nj', 'ny', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+376,aquifoliaceae,ilex mucronata,mountain holly,['ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi', 'wv'],least concern,False
+377,aquifoliaceae,ilex myrtifolia,myrtle dahoon,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],least concern,False
+378,aquifoliaceae,ilex opaca,american holly,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+379,aquifoliaceae,ilex verticillata,winterberry holly,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+380,aquifoliaceae,ilex vomitoria,yaupon holly,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx', 'va'],least concern,False
+381,schisandraceae,illicium floridanum,florida anise,['al', 'fl', 'ga', 'la', 'ms'],least concern,False
+382,schisandraceae,illicium parviflorum,yellow anise,['fl', 'ga'],endangered (estimated),False
 383,primulaceae,jacquinia keyensis,wash wood,['fl'],least concern,False
 384,euphorbiaceae,jatropha cinerea,ashy jatropha,['az'],least concern,False
 385,juglandaceae,juglans californica,southern california walnut,['ca'],near threatened,False
-386,juglandaceae,juglans cinerea,butternut,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wa', 'wi', 'wv']",endangered,False
+386,juglandaceae,juglans cinerea,butternut,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wa', 'wi', 'wv'],endangered,False
 387,juglandaceae,juglans hindsii,northern california black walnut,['ca'],least concern,False
-388,juglandaceae,juglans major,arizona black walnut,"['az', 'nm', 'tx', 'ut']",least concern,False
-389,juglandaceae,juglans microcarpa,little walnut,"['ks', 'nm', 'ok', 'tx']",least concern,False
-390,juglandaceae,juglans nigra,eastern black walnut,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-391,cupressaceae,juniperus arizonica,redberry juniper,"['az', 'nm', 'tx']",least concern,False
-392,cupressaceae,juniperus ashei,ashe juniper,"['ar', 'mo', 'nm', 'ok', 'tx']",least concern,False
-393,cupressaceae,juniperus californica,california juniper,"['az', 'ca', 'nv']",least concern,False
-394,cupressaceae,juniperus coahuilensis,rose-fruited juniper,"['az', 'nm', 'tx']",least concern,False
-395,cupressaceae,juniperus communis,common juniper,"['ak', 'al', 'az', 'ca', 'co', 'ct', 'de', 'ga', 'ia', 'id', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sc', 'sd', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-396,cupressaceae,juniperus deppeana,alligator juniper,"['az', 'nm', 'tx']",least concern,False
+388,juglandaceae,juglans major,arizona black walnut,['az', 'nm', 'tx', 'ut'],least concern,False
+389,juglandaceae,juglans microcarpa,little walnut,['ks', 'nm', 'ok', 'tx'],least concern,False
+390,juglandaceae,juglans nigra,eastern black walnut,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+391,cupressaceae,juniperus arizonica,redberry juniper,['az', 'nm', 'tx'],least concern,False
+392,cupressaceae,juniperus ashei,ashe juniper,['ar', 'mo', 'nm', 'ok', 'tx'],least concern,False
+393,cupressaceae,juniperus californica,california juniper,['az', 'ca', 'nv'],least concern,False
+394,cupressaceae,juniperus coahuilensis,rose-fruited juniper,['az', 'nm', 'tx'],least concern,False
+395,cupressaceae,juniperus communis,common juniper,['ak', 'al', 'az', 'ca', 'co', 'ct', 'de', 'ga', 'ia', 'id', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sc', 'sd', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+396,cupressaceae,juniperus deppeana,alligator juniper,['az', 'nm', 'tx'],least concern,False
 397,cupressaceae,juniperus flaccida,weeping juniper,['tx'],least concern,False
-398,cupressaceae,juniperus grandis,sierra juniper,"['ca', 'nv']",not evaluated,False
-399,cupressaceae,juniperus monosperma,one-seed juniper,"['az', 'co', 'nm', 'ok', 'tx', 'ut']",least concern,False
-400,cupressaceae,juniperus occidentalis,western juniper,"['ca', 'id', 'nv', 'or', 'wa']",least concern,False
-401,cupressaceae,juniperus osteosperma,utah juniper,"['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'ut', 'wy']",least concern,False
-402,cupressaceae,juniperus pinchotii,redberry juniper,"['nm', 'ok', 'tx']",least concern,False
-403,cupressaceae,juniperus scopulorum,rocky mountain juniper,"['az', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'ok', 'or', 'sd', 'tx', 'ut', 'wa', 'wy']",least concern,False
-404,cupressaceae,juniperus virginiana,eastern redcedar,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-405,ericaceae,kalmia latifolia,mountain laurel,"['al', 'ct', 'dc', 'de', 'fl', 'ga', 'in', 'ky', 'la', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv']",least concern,False
+398,cupressaceae,juniperus grandis,sierra juniper,['ca', 'nv'],not evaluated,False
+399,cupressaceae,juniperus monosperma,one-seed juniper,['az', 'co', 'nm', 'ok', 'tx', 'ut'],least concern,False
+400,cupressaceae,juniperus occidentalis,western juniper,['ca', 'id', 'nv', 'or', 'wa'],least concern,False
+401,cupressaceae,juniperus osteosperma,utah juniper,['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'ut', 'wy'],least concern,False
+402,cupressaceae,juniperus pinchotii,redberry juniper,['nm', 'ok', 'tx'],least concern,False
+403,cupressaceae,juniperus scopulorum,rocky mountain juniper,['az', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'ok', 'or', 'sd', 'tx', 'ut', 'wa', 'wy'],least concern,False
+404,cupressaceae,juniperus virginiana,eastern redcedar,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+405,ericaceae,kalmia latifolia,mountain laurel,['al', 'ct', 'dc', 'de', 'fl', 'ga', 'in', 'ky', 'la', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv'],least concern,False
 406,rhamnaceae,karwinskia humboldtiana,coyotillo,['tx'],least concern,False
-407,capparaceae,koeberlinia spinosa,crown of thorns,"['az', 'ca', 'nm', 'tx']",least concern,False
+407,capparaceae,koeberlinia spinosa,crown of thorns,['az', 'ca', 'nm', 'tx'],least concern,False
 408,rhamnaceae,krugiodendron ferreum,black ironwood,['fl'],least concern,False
 409,combretaceae,laguncularia racemosa,white mangrove,['fl'],least concern (estimated),False
-410,pinaceae,larix laricina,tamarack,"['ak', 'ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi', 'wv']",least concern,False
-411,pinaceae,larix lyallii,subalpine larch,"['id', 'mt', 'wa']",least concern,False
-412,pinaceae,larix occidentalis,western larch,"['id', 'mt', 'or', 'ut', 'wa', 'wy']",least concern,False
-413,simaroubaceae,leitneria floridana,corkwood,"['fl', 'ga']",near threatened,False
-414,simaroubaceae,leitneria pilosa,hairy corkwood,"['ar', 'mo', 'tx']",endangered,False
-415,asteraceae,lepidospartum squamatum,california broomsage,"['az', 'ca']",least concern,False
+410,pinaceae,larix laricina,tamarack,['ak', 'ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'vt', 'wi', 'wv'],least concern,False
+411,pinaceae,larix lyallii,subalpine larch,['id', 'mt', 'wa'],least concern,False
+412,pinaceae,larix occidentalis,western larch,['id', 'mt', 'or', 'ut', 'wa', 'wy'],least concern,False
+413,simaroubaceae,leitneria floridana,corkwood,['fl', 'ga'],near threatened,False
+414,simaroubaceae,leitneria pilosa,hairy corkwood,['ar', 'mo', 'tx'],endangered,False
+415,asteraceae,lepidospartum squamatum,california broomsage,['az', 'ca'],least concern,False
 416,fabaceae,leucaena pulverulenta,great leadtree,['tx'],least concern,False
-417,fabaceae,leucaena retusa,golden-ball lead tree,"['nm', 'tx']",least concern,False
+417,fabaceae,leucaena retusa,golden-ball lead tree,['nm', 'tx'],least concern,False
 418,arecaceae,leucothrinax morrisii,key thatch palm,['fl'],least concern,False
 419,lauraceae,licaria triandra,pepperleaf sweetwood,['fl'],least concern,False
-420,lauraceae,lindera benzoin,northern spicebush,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
-421,hamamelidaceae,liquidambar styraciflua,american sweetgum,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,True
-422,magnoliaceae,liriodendron tulipifera,tulip tree,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'vt', 'wi', 'wv']",least concern,True
-423,ericaceae,lyonia ferruginea,rusty staggerbush,"['fl', 'ga', 'sc']",least concern,False
+420,lauraceae,lindera benzoin,northern spicebush,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],least concern,False
+421,hamamelidaceae,liquidambar styraciflua,american sweetgum,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,True
+422,magnoliaceae,liriodendron tulipifera,tulip tree,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'vt', 'wi', 'wv'],least concern,True
+423,ericaceae,lyonia ferruginea,rusty staggerbush,['fl', 'ga', 'sc'],least concern,False
 424,rosaceae,lyonothamnus floribundus,ironwood,['ca'],endangered,False
 425,fabaceae,lysiloma latisiliquum,wild tamarind,['fl'],least concern,False
 426,fabaceae,lysiloma watsonii,littleleaf false tamarind,['az'],least concern,False
-427,moraceae,maclura pomifera,osage-orange,"['al', 'ar', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'wa', 'wi', 'wv']",least concern,False
-428,magnoliaceae,magnolia acuminata,cucumber-tree,"['al', 'ar', 'ct', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-429,magnoliaceae,magnolia fraseri,fraser magnolia,"['al', 'ga', 'ky', 'nc', 'ny', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-430,magnoliaceae,magnolia grandiflora,southern magnolia,"['al', 'ar', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'sc', 'tn', 'tx', 'va']",least concern,False
-431,magnoliaceae,magnolia macrophylla,bigleaf magnolia,"['al', 'ar', 'dc', 'fl', 'ga', 'ky', 'la', 'md', 'ms', 'nc', 'oh', 'sc', 'tn', 'va', 'wv']",least concern,False
-432,magnoliaceae,magnolia tripetala,umbrella magnolia,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'in', 'ky', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-433,magnoliaceae,magnolia virginiana,sweetbay magnolia,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'la', 'ma', 'md', 'ms', 'nc', 'nj', 'ny', 'pa', 'sc', 'tn', 'tx', 'va']",least concern,False
+427,moraceae,maclura pomifera,osage-orange,['al', 'ar', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'wa', 'wi', 'wv'],least concern,False
+428,magnoliaceae,magnolia acuminata,cucumber-tree,['al', 'ar', 'ct', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+429,magnoliaceae,magnolia fraseri,fraser magnolia,['al', 'ga', 'ky', 'nc', 'ny', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+430,magnoliaceae,magnolia grandiflora,southern magnolia,['al', 'ar', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'sc', 'tn', 'tx', 'va'],least concern,False
+431,magnoliaceae,magnolia macrophylla,bigleaf magnolia,['al', 'ar', 'dc', 'fl', 'ga', 'ky', 'la', 'md', 'ms', 'nc', 'oh', 'sc', 'tn', 'va', 'wv'],least concern,False
+432,magnoliaceae,magnolia tripetala,umbrella magnolia,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'in', 'ky', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+433,magnoliaceae,magnolia virginiana,sweetbay magnolia,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'la', 'ma', 'md', 'ms', 'nc', 'nj', 'ny', 'pa', 'sc', 'tn', 'tx', 'va'],least concern,False
 434,anacardiaceae,malosma laurina,laurel sumac,['ca'],least concern (estimated),False
 435,malpighiaceae,malpighia glabra,wild crapemyrtle,['tx'],least concern,False
-436,rosaceae,malus angustifolia,southern crabapple,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'oh', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-437,rosaceae,malus coronaria,sweet crabapple,"['al', 'ar', 'dc', 'de', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'nc', 'nj', 'ny', 'oh', 'pa', 'sc', 'tn', 'va', 'wi', 'wv']",least concern,False
-438,rosaceae,malus fusca,pacific crab apple,"['ak', 'ca', 'or', 'wa']",least concern,False
-439,rosaceae,malus ioensis,prairie crab apple,"['ar', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'mi(sx)', 'mn', 'mo', 'ne', 'nj', 'oh', 'ok', 'sd', 'tx', 'wi', 'wv']",least concern,False
+436,rosaceae,malus angustifolia,southern crabapple,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'oh', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+437,rosaceae,malus coronaria,sweet crabapple,['al', 'ar', 'dc', 'de', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'nc', 'nj', 'ny', 'oh', 'pa', 'sc', 'tn', 'va', 'wi', 'wv'],least concern,False
+438,rosaceae,malus fusca,pacific crab apple,['ak', 'ca', 'or', 'wa'],least concern,False
+439,rosaceae,malus ioensis,prairie crab apple,['ar', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'mi(sx)', 'mn', 'mo', 'ne', 'nj', 'oh', 'ok', 'sd', 'tx', 'wi', 'wv'],least concern,False
 440,sapotaceae,manilkara jaimiqui,wild dilly,['fl'],least concern,False
-441,fabaceae,mariosousa millefolia,santa rita acacia,"['az', 'nm']",least concern,False
-442,celastraceae,maytenus phyllanthoides,florida mayten,"['fl', 'tx']",least concern,False
+441,fabaceae,mariosousa millefolia,santa rita acacia,['az', 'nm'],least concern,False
+442,celastraceae,maytenus phyllanthoides,florida mayten,['fl', 'tx'],least concern,False
 443,rosaceae,mespilus canescens,stern's medlar,['ar'],critically endangered (estimated),False
 444,anacardiaceae,metopium toxiferum,poisonwood,['fl'],least concern,False
-445,fabaceae,mimosa aculeaticarpa,catclaw mimosa,"['az', 'nm', 'tx']",least concern,False
-446,myricaceae,morella californica,pacific wax myrtle,"['ca', 'or', 'wa']",least concern,False
-447,myricaceae,morella caroliniensis,southern bayberry,"['al', 'ar', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'nj', 'pa', 'sc', 'tx', 'va']",least concern (estimated),False
-448,myricaceae,morella cerifera,wax myrtle,"['al', 'ar', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'nj', 'ok', 'sc', 'tx', 'va', 'wv']",least concern,False
-449,myricaceae,morella inodora,scentless bayberry,"['al', 'fl', 'ga', 'la', 'ms']",not evaluated,False
-450,myricaceae,morella pensylvanica,northern bayberry,"['ct', 'dc', 'de', 'ma', 'md', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va']",least concern,False
-451,moraceae,morus microphylla,texas mulberry,"['az', 'nm', 'ok', 'tx']",least concern,False
-452,moraceae,morus rubra,red mulberry,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+445,fabaceae,mimosa aculeaticarpa,catclaw mimosa,['az', 'nm', 'tx'],least concern,False
+446,myricaceae,morella californica,pacific wax myrtle,['ca', 'or', 'wa'],least concern,False
+447,myricaceae,morella caroliniensis,southern bayberry,['al', 'ar', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'nj', 'pa', 'sc', 'tx', 'va'],least concern (estimated),False
+448,myricaceae,morella cerifera,wax myrtle,['al', 'ar', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'nj', 'ok', 'sc', 'tx', 'va', 'wv'],least concern,False
+449,myricaceae,morella inodora,scentless bayberry,['al', 'fl', 'ga', 'la', 'ms'],not evaluated,False
+450,myricaceae,morella pensylvanica,northern bayberry,['ct', 'dc', 'de', 'ma', 'md', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'va'],least concern,False
+451,moraceae,morus microphylla,texas mulberry,['az', 'nm', 'ok', 'tx'],least concern,False
+452,moraceae,morus rubra,red mulberry,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 453,myrtaceae,mosiera longipes,mangroveberry,['fl'],near threatened,False
 454,myrtaceae,myrcia neopallens,pale lidflower,['fl'],not evaluated,False
 455,myrtaceae,myrcianthes fragrans,simpson's stopper,['fl'],least concern,False
 456,primulaceae,myrsine cubana,colicwood,['fl'],least concern,False
-457,fagaceae,notholithocarpus densiflorus,tanoak,"['ca', 'or']",least concern,False
-458,nyssaceae,nyssa aquatica,water tupelo,"['al', 'ar', 'dc', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'sc', 'tn', 'tx', 'va']",least concern,False
-459,nyssaceae,nyssa biflora,swamp tupelo,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'sc', 'tn', 'tx', 'va']",least concern,False
-460,nyssaceae,nyssa ogeche,white tupelo,"['fl', 'ga', 'sc']",least concern,False
-461,nyssaceae,nyssa sylvatica,black tupelo,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,True
+457,fagaceae,notholithocarpus densiflorus,tanoak,['ca', 'or'],least concern,False
+458,nyssaceae,nyssa aquatica,water tupelo,['al', 'ar', 'dc', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'sc', 'tn', 'tx', 'va'],least concern,False
+459,nyssaceae,nyssa biflora,swamp tupelo,['al', 'ar', 'de', 'fl', 'ga', 'il', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'sc', 'tn', 'tx', 'va'],least concern,False
+460,nyssaceae,nyssa ogeche,white tupelo,['fl', 'ga', 'sc'],least concern,False
+461,nyssaceae,nyssa sylvatica,black tupelo,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,True
 462,nyssaceae,nyssa ursina,bog tupelo,['fl'],not evaluated,False
-463,rosaceae,oemleria cerasiformis,osoberry,"['ca', 'or', 'wa']",least concern,False
-464,fabaceae,olneya tesota,desert ironwood,"['az', 'ca']",near threatened,False
+463,rosaceae,oemleria cerasiformis,osoberry,['ca', 'or', 'wa'],least concern,False
+464,fabaceae,olneya tesota,desert ironwood,['az', 'ca'],near threatened,False
 465,cactaceae,opuntia oricola,chaparral pricklypear,['ca'],least concern,False
 466,betulaceae,ostrya chisosensis,big bend hop hornbeam,['tx'],critically endangered,False
-467,betulaceae,ostrya knowltonii,western hophornbeam,"['az', 'nm', 'tx', 'ut']",least concern,False
-468,betulaceae,ostrya virginiana,american hophornbeam,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,True
-469,ericaceae,oxydendrum arboreum,sourwood,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'ms', 'nc', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-470,fabaceae,parkinsonia florida,blue palo verde,"['az', 'ca', 'nv']",least concern,False
-471,fabaceae,parkinsonia microphylla,little-leaved palo verde,"['az', 'ca']",least concern,False
+467,betulaceae,ostrya knowltonii,western hophornbeam,['az', 'nm', 'tx', 'ut'],least concern,False
+468,betulaceae,ostrya virginiana,american hophornbeam,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,True
+469,ericaceae,oxydendrum arboreum,sourwood,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'ms', 'nc', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+470,fabaceae,parkinsonia florida,blue palo verde,['az', 'ca', 'nv'],least concern,False
+471,fabaceae,parkinsonia microphylla,little-leaved palo verde,['az', 'ca'],least concern,False
 472,fabaceae,parkinsonia texana,texas paloverde,['tx'],least concern,False
 473,malvaceae,pavonia spinifex,gingerbush,['fl'],least concern,False
-474,lauraceae,persea borbonia,redbay,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",endangered,False
+474,lauraceae,persea borbonia,redbay,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],endangered,False
 475,lauraceae,persea humilis,silk bay,['fl'],near threatened,False
-476,lauraceae,persea palustris,swamp bay,"['al', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'sc', 'tx', 'va']",vulnerable,False
-477,asteraceae,peucephyllum schottii,schott's pygmycedar,"['az', 'ca', 'nv', 'ut']",least concern,False
+476,lauraceae,persea palustris,swamp bay,['al', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'sc', 'tx', 'va'],vulnerable,False
+477,asteraceae,peucephyllum schottii,schott's pygmycedar,['az', 'ca', 'nv', 'ut'],least concern,False
 478,achatocarpaceae,phaulothamnus spinescens,snake eyes,['tx'],data deficient (estimated),False
-479,pinaceae,picea breweriana,brewer's spruce,"['ca', 'or']",vulnerable,False
-480,pinaceae,picea engelmannii,engelmann spruce,"['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-481,pinaceae,picea glauca,white spruce,"['ak', 'ct', 'id', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nh', 'ny', 'pa', 'ri', 'sd', 'vt', 'wa', 'wi', 'wy']",least concern,False
-482,pinaceae,picea mariana,black spruce,"['ak', 'ct', 'il', 'ma', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'pa', 'ri', 'vt', 'wi']",least concern,False
-483,pinaceae,picea pungens,blue spruce,"['az', 'co', 'id', 'ma', 'md', 'me', 'nm', 'ny', 'pa', 'ut', 'wy']",least concern,False
-484,pinaceae,picea rubens,red spruce,"['ct', 'de', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'pa', 'tn', 'va', 'vt', 'wv']",least concern,False
-485,pinaceae,picea sitchensis,sitka spruce,"['ak', 'ca', 'or', 'wa']",least concern,False
+479,pinaceae,picea breweriana,brewer's spruce,['ca', 'or'],vulnerable,False
+480,pinaceae,picea engelmannii,engelmann spruce,['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+481,pinaceae,picea glauca,white spruce,['ak', 'ct', 'id', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nh', 'ny', 'pa', 'ri', 'sd', 'vt', 'wa', 'wi', 'wy'],least concern,False
+482,pinaceae,picea mariana,black spruce,['ak', 'ct', 'il', 'ma', 'me', 'mi', 'mn', 'nh', 'nj', 'ny', 'pa', 'ri', 'vt', 'wi'],least concern,False
+483,pinaceae,picea pungens,blue spruce,['az', 'co', 'id', 'ma', 'md', 'me', 'nm', 'ny', 'pa', 'ut', 'wy'],least concern,False
+484,pinaceae,picea rubens,red spruce,['ct', 'de', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'pa', 'tn', 'va', 'vt', 'wv'],least concern,False
+485,pinaceae,picea sitchensis,sitka spruce,['ak', 'ca', 'or', 'wa'],least concern,False
 486,simaroubaceae,picramnia pentandra,florida bitterbush,['fl'],least concern,False
 487,cactaceae,pilosocereus polygonus,deering's tree cactus,['fl'],least concern,False
-488,pinaceae,pinus albicaulis,whitebark pine,"['ca', 'id', 'mt', 'nv', 'or', 'wa', 'wy']",endangered,False
-489,pinaceae,pinus aristata,rocky mountain bristlecone pine,"['az', 'co', 'nm']",least concern,False
-490,pinaceae,pinus arizonica,arizona pine,"['az', 'nm', 'tx']",least concern,False
-491,pinaceae,pinus attenuata,knobcone pine,"['ca', 'or']",least concern,False
+488,pinaceae,pinus albicaulis,whitebark pine,['ca', 'id', 'mt', 'nv', 'or', 'wa', 'wy'],endangered,False
+489,pinaceae,pinus aristata,rocky mountain bristlecone pine,['az', 'co', 'nm'],least concern,False
+490,pinaceae,pinus arizonica,arizona pine,['az', 'nm', 'tx'],least concern,False
+491,pinaceae,pinus attenuata,knobcone pine,['ca', 'or'],least concern,False
 492,pinaceae,pinus balfouriana,foxtail pine,['ca'],near threatened,False
-493,pinaceae,pinus banksiana,jack pine,"['ak', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'nd', 'nh', 'ny', 'pa', 'vt', 'vt', 'wi', 'wv']",least concern,False
-494,pinaceae,pinus cembroides,colorado pinyon,"['nm', 'tx']",least concern,False
-495,pinaceae,pinus clausa,sand pine,"['al', 'fl', 'ga', 'ms', 'nc']",least concern,False
-496,pinaceae,pinus contorta,lodgepole pine,"['ak', 'ca', 'co', 'id', 'mt', 'ne', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
+493,pinaceae,pinus banksiana,jack pine,['ak', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'nd', 'nh', 'ny', 'pa', 'vt', 'vt', 'wi', 'wv'],least concern,False
+494,pinaceae,pinus cembroides,colorado pinyon,['nm', 'tx'],least concern,False
+495,pinaceae,pinus clausa,sand pine,['al', 'fl', 'ga', 'ms', 'nc'],least concern,False
+496,pinaceae,pinus contorta,lodgepole pine,['ak', 'ca', 'co', 'id', 'mt', 'ne', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
 497,pinaceae,pinus coulteri,coulter pine,['ca'],near threatened,False
-498,pinaceae,pinus echinata,shortleaf pine,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-499,pinaceae,pinus edulis,colorado pinyon,"['az', 'ca', 'co', 'nm', 'nv', 'ok', 'tx', 'ut', 'wy']",least concern,False
-500,pinaceae,pinus elliottii,slash pine,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",least concern,False
-501,pinaceae,pinus engelmannii,apache pine,"['az', 'nm']",least concern,False
-502,pinaceae,pinus flexilis,limber pine,"['az', 'ca', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wy']",least concern,False
-503,pinaceae,pinus glabra,spruce pine,"['al', 'dc', 'fl', 'ga', 'la', 'ms', 'sc']",least concern,False
-504,pinaceae,pinus jeffreyi,jeffrey pine,"['ca', 'nv', 'or']",least concern,False
-505,pinaceae,pinus lambertiana,sugar pine,"['ca', 'nv', 'or']",least concern,False
-506,pinaceae,pinus leiophylla,chihuahuan pine,"['az', 'nm']",least concern,False
-507,pinaceae,pinus longaeva,great basin bristlecone pine,"['ca', 'nv', 'ut']",least concern,False
-508,pinaceae,pinus monophylla,singleleaf pinyon,"['az', 'ca', 'id', 'nv', 'ut']",least concern,False
-509,pinaceae,pinus monticola,western white pine,"['ca', 'id', 'mt', 'nv', 'or', 'ut', 'wa']",near threatened,False
+498,pinaceae,pinus echinata,shortleaf pine,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+499,pinaceae,pinus edulis,colorado pinyon,['az', 'ca', 'co', 'nm', 'nv', 'ok', 'tx', 'ut', 'wy'],least concern,False
+500,pinaceae,pinus elliottii,slash pine,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],least concern,False
+501,pinaceae,pinus engelmannii,apache pine,['az', 'nm'],least concern,False
+502,pinaceae,pinus flexilis,limber pine,['az', 'ca', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'or', 'sd', 'ut', 'wy'],least concern,False
+503,pinaceae,pinus glabra,spruce pine,['al', 'dc', 'fl', 'ga', 'la', 'ms', 'sc'],least concern,False
+504,pinaceae,pinus jeffreyi,jeffrey pine,['ca', 'nv', 'or'],least concern,False
+505,pinaceae,pinus lambertiana,sugar pine,['ca', 'nv', 'or'],least concern,False
+506,pinaceae,pinus leiophylla,chihuahuan pine,['az', 'nm'],least concern,False
+507,pinaceae,pinus longaeva,great basin bristlecone pine,['ca', 'nv', 'ut'],least concern,False
+508,pinaceae,pinus monophylla,singleleaf pinyon,['az', 'ca', 'id', 'nv', 'ut'],least concern,False
+509,pinaceae,pinus monticola,western white pine,['ca', 'id', 'mt', 'nv', 'or', 'ut', 'wa'],near threatened,False
 510,pinaceae,pinus muricata,bishop pine,['ca'],vulnerable,False
-511,pinaceae,pinus palustris,longleaf pine,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va']",endangered,False
-512,pinaceae,pinus ponderosa,ponderosa pine,"['az', 'ca', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'ok', 'or', 'sd', 'tx', 'ut', 'wa', 'wy']",least concern,False
-513,pinaceae,pinus pungens,table mountain pine,"['dc', 'ga', 'il', 'md', 'nc', 'nj(.1)', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
+511,pinaceae,pinus palustris,longleaf pine,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va'],endangered,False
+512,pinaceae,pinus ponderosa,ponderosa pine,['az', 'ca', 'co', 'id', 'mt', 'nd', 'ne', 'nm', 'nv', 'ok', 'or', 'sd', 'tx', 'ut', 'wa', 'wy'],least concern,False
+513,pinaceae,pinus pungens,table mountain pine,['dc', 'ga', 'il', 'md', 'nc', 'nj(.1)', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
 514,pinaceae,pinus quadrifolia,parry pinyon,['ca'],least concern,False
 515,pinaceae,pinus radiata,monterey pine,['ca'],endangered,False
 516,pinaceae,pinus remota,papershell pinyon,['tx'],least concern,False
-517,pinaceae,pinus resinosa,red pine,"['ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj(.1)', 'ny', 'pa', 'ri', 'vt', 'wi', 'wv']",least concern,False
-518,pinaceae,pinus rigida,pitch pine,"['ct', 'dc', 'de', 'ga', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv']",least concern,False
-519,pinaceae,pinus sabiniana,gray pine,"['ca', 'or']",least concern,False
-520,pinaceae,pinus serotina,pond pine,"['al', 'de', 'fl', 'ga', 'md', 'nc', 'nj', 'sc', 'va']",least concern,False
-521,pinaceae,pinus strobiformis,southwestern white pine,"['az', 'co', 'nm', 'tx']",least concern,False
-522,pinaceae,pinus strobus,eastern white pine,"['ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-523,pinaceae,pinus taeda,loblolly pine,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'md', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
+517,pinaceae,pinus resinosa,red pine,['ct', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj(.1)', 'ny', 'pa', 'ri', 'vt', 'wi', 'wv'],least concern,False
+518,pinaceae,pinus rigida,pitch pine,['ct', 'dc', 'de', 'ga', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv'],least concern,False
+519,pinaceae,pinus sabiniana,gray pine,['ca', 'or'],least concern,False
+520,pinaceae,pinus serotina,pond pine,['al', 'de', 'fl', 'ga', 'md', 'nc', 'nj', 'sc', 'va'],least concern,False
+521,pinaceae,pinus strobiformis,southwestern white pine,['az', 'co', 'nm', 'tx'],least concern,False
+522,pinaceae,pinus strobus,eastern white pine,['ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+523,pinaceae,pinus taeda,loblolly pine,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'md', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
 524,pinaceae,pinus torreyana,torrey pine,['ca'],critically endangered,False
-525,pinaceae,pinus virginiana,virginia pine,"['al', 'dc', 'de', 'ga', 'in', 'ky', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
+525,pinaceae,pinus virginiana,virginia pine,['al', 'dc', 'de', 'ga', 'in', 'ky', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
 526,piperaceae,piper aduncum,spiked pepper,['fl'],least concern,False
-527,fabaceae,piscidia piscipula,jamaican dogwood,"['fl', 'hi']",least concern,False
-528,nyctaginaceae,pisonia aculeata,native bougainvillea,"['fl', 'tx']",least concern,False
+527,fabaceae,piscidia piscipula,jamaican dogwood,['fl', 'hi'],least concern,False
+528,nyctaginaceae,pisonia aculeata,native bougainvillea,['fl', 'tx'],least concern,False
 529,nyctaginaceae,pisonia rotundata,smooth devil's claws,['fl'],data deficient (estimated),False
 530,anacardiaceae,pistacia mexicana,mexican pistache,['tx'],near threatened,False
 531,fabaceae,pithecellobium keyense,blackbead,['fl'],not evaluated,False
 532,fabaceae,pithecellobium unguis-cati,catclaw blackbead,['fl'],least concern,False
-533,ulmaceae,planera aquatica,water elm,"['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx']",least concern,False
-534,platanaceae,platanus occidentalis,american sycamore,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me(sx)', 'mi', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+533,ulmaceae,planera aquatica,water elm,['al', 'ar', 'fl', 'ga', 'il', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx'],least concern,False
+534,platanaceae,platanus occidentalis,american sycamore,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me(sx)', 'mi', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 535,platanaceae,platanus racemosa,western sycamore,['ca'],least concern,False
-536,platanaceae,platanus wrightii,arizona sycamore,"['az', 'nm']",least concern,False
+536,platanaceae,platanus wrightii,arizona sycamore,['az', 'nm'],least concern,False
 537,euphorbiaceae,pleradenophora bilocularis,arrow poison plant,['az'],least concern (estimated),False
-538,asteraceae,pluchea carolinensis,cure-for-all,"['fl', 'hi']",least concern,False
+538,asteraceae,pluchea carolinensis,cure-for-all,['fl', 'hi'],least concern,False
 539,apocynaceae,plumeria obtusa,white frangipani,['fl'],least concern,False
-540,salicaceae,populus angustifolia,narrowleaf cottonwood,"['az', 'ca', 'co', 'id', 'mt', 'ne', 'nm', 'nv', 'or', 'sd', 'tx', 'ut', 'wy']",least concern,False
-541,salicaceae,populus balsamifera,black cottonwood,"['ak', 'ca', 'co', 'ct', 'dc', 'de', 'ia', 'id', 'il', 'in', 'ky', 'ma', 'me', 'mi', 'mn', 'mt', 'nc', 'nd', 'ne', 'nh', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-542,salicaceae,populus deltoides,eastern cottonwood,"['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-543,salicaceae,populus fremontii,fremont cottonwood,"['az', 'ca', 'co', 'nm', 'nv', 'tx', 'ut']",least concern,False
-544,salicaceae,populus grandidentata,bigtooth aspen,"['ct', 'dc', 'de', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-545,salicaceae,populus heterophylla,swamp cottonwood,"['al', 'ar', 'ct', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va']",least concern,False
-546,salicaceae,populus tremuloides,trembling aspen,"['ak', 'ar', 'az', 'ca', 'co', 'ct', 'de', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-547,salicaceae,populus trichocarpa,black cottonwood,"['ak', 'ca', 'id', 'mt', 'nd', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-548,fabaceae,prosopis glandulosa,honey mesquite,"['az', 'ca', 'co', 'ks', 'la', 'nm', 'nv', 'ok', 'tx', 'ut']",least concern,False
-549,fabaceae,prosopis pubescens,screwbean,"['az', 'ca', 'nm', 'nv', 'tx', 'ut']",least concern,False
-550,fabaceae,prosopis velutina,velvet mesquite,"['az', 'ca', 'nm']",least concern,False
-551,rosaceae,prunus americana,american plum,"['al', 'ar', 'az', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'ut', 'va', 'vt', 'vt', 'wi', 'wv', 'wy']",least concern,False
-552,rosaceae,prunus angustifolia,chickasaw plum,"['al', 'ar', 'ca', 'co', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-553,rosaceae,prunus caroliniana,carolina laurelcherry,"['al', 'ar', 'ca', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",least concern,False
-554,rosaceae,prunus emarginata,bitter cherry,"['az', 'ca', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
+540,salicaceae,populus angustifolia,narrowleaf cottonwood,['az', 'ca', 'co', 'id', 'mt', 'ne', 'nm', 'nv', 'or', 'sd', 'tx', 'ut', 'wy'],least concern,False
+541,salicaceae,populus balsamifera,black cottonwood,['ak', 'ca', 'co', 'ct', 'dc', 'de', 'ia', 'id', 'il', 'in', 'ky', 'ma', 'me', 'mi', 'mn', 'mt', 'nc', 'nd', 'ne', 'nh', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+542,salicaceae,populus deltoides,eastern cottonwood,['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+543,salicaceae,populus fremontii,fremont cottonwood,['az', 'ca', 'co', 'nm', 'nv', 'tx', 'ut'],least concern,False
+544,salicaceae,populus grandidentata,bigtooth aspen,['ct', 'dc', 'de', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+545,salicaceae,populus heterophylla,swamp cottonwood,['al', 'ar', 'ct', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va'],least concern,False
+546,salicaceae,populus tremuloides,trembling aspen,['ak', 'ar', 'az', 'ca', 'co', 'ct', 'de', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+547,salicaceae,populus trichocarpa,black cottonwood,['ak', 'ca', 'id', 'mt', 'nd', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+548,fabaceae,prosopis glandulosa,honey mesquite,['az', 'ca', 'co', 'ks', 'la', 'nm', 'nv', 'ok', 'tx', 'ut'],least concern,False
+549,fabaceae,prosopis pubescens,screwbean,['az', 'ca', 'nm', 'nv', 'tx', 'ut'],least concern,False
+550,fabaceae,prosopis velutina,velvet mesquite,['az', 'ca', 'nm'],least concern,False
+551,rosaceae,prunus americana,american plum,['al', 'ar', 'az', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'ut', 'va', 'vt', 'vt', 'wi', 'wv', 'wy'],least concern,False
+552,rosaceae,prunus angustifolia,chickasaw plum,['al', 'ar', 'ca', 'co', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+553,rosaceae,prunus caroliniana,carolina laurelcherry,['al', 'ar', 'ca', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],least concern,False
+554,rosaceae,prunus emarginata,bitter cherry,['az', 'ca', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
 555,rosaceae,prunus eremophila,mojave desert plum,['ca'],endangered,False
 556,rosaceae,prunus fremontii,desert apricot,['ca'],least concern,False
-557,rosaceae,prunus hortulana,hortulan plum,"['ar', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'mo', 'ne', 'oh', 'ok', 'tn', 'tx', 'wv']",least concern,False
+557,rosaceae,prunus hortulana,hortulan plum,['ar', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'mo', 'ne', 'oh', 'ok', 'tn', 'tx', 'wv'],least concern,False
 558,rosaceae,prunus ilicifolia,hollyleaf cherry,['ca'],least concern,False
 559,rosaceae,prunus lyonii,catalina cherry,['ca'],least concern,False
-560,rosaceae,prunus mexicana,mexican plum,"['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'nc', 'ne', 'oh', 'ok', 'sc', 'sd', 'tn', 'tx']",least concern,False
-561,rosaceae,prunus munsoniana,wild goose plum,"['al', 'ar', 'ga', 'il', 'ks', 'ky', 'la', 'mo', 'ms', 'nj', 'oh', 'ok', 'tn', 'tx', 'va']",least concern,False
+560,rosaceae,prunus mexicana,mexican plum,['al', 'ar', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'nc', 'ne', 'oh', 'ok', 'sc', 'sd', 'tn', 'tx'],least concern,False
+561,rosaceae,prunus munsoniana,wild goose plum,['al', 'ar', 'ga', 'il', 'ks', 'ky', 'la', 'mo', 'ms', 'nj', 'oh', 'ok', 'tn', 'tx', 'va'],least concern,False
 562,rosaceae,prunus murrayana,murray plum,['tx'],critically endangered,False
 563,rosaceae,prunus myrtifolia,west indian cherry,['fl'],least concern (estimated),False
-564,rosaceae,prunus nigra,canada plum,"['ct', 'ia', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'nc', 'nh', 'ny', 'oh', 'ri', 'va', 'vt', 'wi']",least concern,False
-565,rosaceae,prunus pensylvanica,fire cherry,"['co', 'ct', 'dc', 'ga', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-566,rosaceae,prunus serotina,black cherry,"['al', 'ar', 'az', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wa', 'wi', 'wv']",least concern,False
-567,rosaceae,prunus subcordata,pacific plum,"['ca', 'or']",least concern,False
-568,rosaceae,prunus umbellata,hog plum,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx']",least concern,False
-569,rosaceae,prunus virginiana,chokecherry,"['ar', 'az', 'ca', 'co', 'ct', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,True
+564,rosaceae,prunus nigra,canada plum,['ct', 'ia', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'nc', 'nh', 'ny', 'oh', 'ri', 'va', 'vt', 'wi'],least concern,False
+565,rosaceae,prunus pensylvanica,fire cherry,['co', 'ct', 'dc', 'ga', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+566,rosaceae,prunus serotina,black cherry,['al', 'ar', 'az', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wa', 'wi', 'wv'],least concern,False
+567,rosaceae,prunus subcordata,pacific plum,['ca', 'or'],least concern,False
+568,rosaceae,prunus umbellata,hog plum,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx'],least concern,False
+569,rosaceae,prunus virginiana,chokecherry,['ar', 'az', 'ca', 'co', 'ct', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,True
 570,arecaceae,pseudophoenix sargentii,buccaneer palm,['fl'],vulnerable,False
 571,pinaceae,pseudotsuga macrocarpa,bigcone douglas-fir,['ca'],near threatened,False
-572,pinaceae,pseudotsuga menziesii,common douglas-fir,"['az', 'ca', 'co', 'id', 'mn', 'mt', 'nm', 'nv', 'ny', 'or', 'pa', 'tx', 'ut', 'wa', 'wy']",least concern,False
-573,fabaceae,psorothamnus spinosus,smoke tree,"['az', 'ca', 'nv']",least concern,False
+572,pinaceae,pseudotsuga menziesii,common douglas-fir,['az', 'ca', 'co', 'id', 'mn', 'mt', 'nm', 'nv', 'ny', 'or', 'pa', 'tx', 'ut', 'wa', 'wy'],least concern,False
+573,fabaceae,psorothamnus spinosus,smoke tree,['az', 'ca', 'nv'],least concern,False
 574,rubiaceae,psychotria nervosa,shiny-leaved wild coffee,['fl'],least concern,False
 575,rutaceae,ptelea crenulata,western hoptree,['ca'],least concern,False
-576,rutaceae,ptelea trifoliata,common hoptree,"['al', 'ar', 'az', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv']",least concern,False
+576,rutaceae,ptelea trifoliata,common hoptree,['al', 'ar', 'az', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wi', 'wv'],least concern,False
 577,rosaceae,purshia mexicana,stansbury's cliffrose,['az'],least concern,False
-578,rosaceae,purshia stansburiana,stansbury's cliffrose,"['az', 'ca', 'co', 'id', 'nm', 'nv', 'ut']",least concern,False
+578,rosaceae,purshia stansburiana,stansbury's cliffrose,['az', 'ca', 'co', 'id', 'nm', 'nv', 'ut'],least concern,False
 579,capparaceae,quadrella incana,hoary caper,['tx'],least concern,False
 580,fagaceae,quercus acerifolia,mapleleaf oak,['ar'],endangered,False
 581,fagaceae,quercus agrifolia,coast live oak,['ca'],least concern,False
-582,fagaceae,quercus ajoensis,ajo mountain scrub oak,"['az', 'co']",vulnerable,False
-583,fagaceae,quercus alba,white oak,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-584,fagaceae,quercus arizonica,arizona white oak,"['az', 'nm', 'tx']",least concern,False
-585,fagaceae,quercus arkansana,arkansas oak,"['al', 'ar', 'fl', 'ga', 'la', 'tx']",vulnerable,False
-586,fagaceae,quercus bicolor,swamp white oak,"['al', 'ct', 'dc', 'de', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,True
-587,fagaceae,quercus boyntonii,boynton oak,"['al', 'tx']",critically endangered,False
-588,fagaceae,quercus buckleyi,buckley's oak,"['ks', 'ok', 'tx']",least concern,False
+582,fagaceae,quercus ajoensis,ajo mountain scrub oak,['az', 'co'],vulnerable,False
+583,fagaceae,quercus alba,white oak,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+584,fagaceae,quercus arizonica,arizona white oak,['az', 'nm', 'tx'],least concern,False
+585,fagaceae,quercus arkansana,arkansas oak,['al', 'ar', 'fl', 'ga', 'la', 'tx'],vulnerable,False
+586,fagaceae,quercus bicolor,swamp white oak,['al', 'ct', 'dc', 'de', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,True
+587,fagaceae,quercus boyntonii,boynton oak,['al', 'tx'],critically endangered,False
+588,fagaceae,quercus buckleyi,buckley's oak,['ks', 'ok', 'tx'],least concern,False
 589,fagaceae,quercus carmenensis,carmen mountain oak,['tx'],endangered,False
 590,fagaceae,quercus cedrosensis,cedros island oak,['ca'],vulnerable,False
 591,fagaceae,quercus chihuahuensis,chihuahuan oak,['tx'],least concern,False
-592,fagaceae,quercus chrysolepis,canyon live oak,"['az', 'ca', 'nm', 'nv', 'or']",least concern,False
+592,fagaceae,quercus chrysolepis,canyon live oak,['az', 'ca', 'nm', 'nv', 'or'],least concern,False
 593,fagaceae,quercus cornelius-mulleri,muller's oak,['ca'],least concern,False
 594,fagaceae,quercus douglasii,blue oak,['ca'],least concern,False
 595,fagaceae,quercus durata,leather oak,['ca'],least concern,False
-596,fagaceae,quercus ellipsoidalis,northern pin oak,"['ia', 'il', 'in', 'mi', 'mn', 'mo', 'nd', 'oh', 'wi']",least concern,False
-597,fagaceae,quercus emoryi,emory oak,"['az', 'nm', 'tx']",least concern,False
+596,fagaceae,quercus ellipsoidalis,northern pin oak,['ia', 'il', 'in', 'mi', 'mn', 'mo', 'nd', 'oh', 'wi'],least concern,False
+597,fagaceae,quercus emoryi,emory oak,['az', 'nm', 'tx'],least concern,False
 598,fagaceae,quercus engelmannii,engelmann oak,['ca'],endangered,False
-599,fagaceae,quercus falcata,southern red oak,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-600,fagaceae,quercus fusiformis,texas live oak,"['ok', 'tx']",least concern,False
-601,fagaceae,quercus gambelii,gambel oak,"['az', 'co', 'nm', 'nv', 'ok', 'sd', 'tx', 'ut', 'wy']",least concern,False
-602,fagaceae,quercus garryana,oregon oak,"['ca', 'or', 'wa']",least concern,False
-603,fagaceae,quercus geminata,sand live oak,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc']",least concern,False
-604,fagaceae,quercus georgiana,georgia oak,"['al', 'ga', 'nc', 'sc']",endangered,False
+599,fagaceae,quercus falcata,southern red oak,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+600,fagaceae,quercus fusiformis,texas live oak,['ok', 'tx'],least concern,False
+601,fagaceae,quercus gambelii,gambel oak,['az', 'co', 'nm', 'nv', 'ok', 'sd', 'tx', 'ut', 'wy'],least concern,False
+602,fagaceae,quercus garryana,oregon oak,['ca', 'or', 'wa'],least concern,False
+603,fagaceae,quercus geminata,sand live oak,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc'],least concern,False
+604,fagaceae,quercus georgiana,georgia oak,['al', 'ga', 'nc', 'sc'],endangered,False
 605,fagaceae,quercus graciliformis,chisos oak,['tx'],critically endangered,False
 606,fagaceae,quercus gravesii,chisos red oak,['tx'],least concern,False
-607,fagaceae,quercus grisea,gray oak,"['az', 'co', 'nm', 'tx']",least concern,False
-608,fagaceae,quercus havardii,havard oak,"['co', 'ks', 'nm', 'ok', 'tx', 'ut']",endangered,False
-609,fagaceae,quercus hemisphaerica,darlington oak,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va']",least concern,False
-610,fagaceae,quercus hypoleucoides,silverleaf oak,"['az', 'nm', 'tx']",least concern,False
-611,fagaceae,quercus imbricaria,shingle oak,"['al', 'ar', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj(.1)', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'wi', 'wv']",least concern,True
+607,fagaceae,quercus grisea,gray oak,['az', 'co', 'nm', 'tx'],least concern,False
+608,fagaceae,quercus havardii,havard oak,['co', 'ks', 'nm', 'ok', 'tx', 'ut'],endangered,False
+609,fagaceae,quercus hemisphaerica,darlington oak,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va'],least concern,False
+610,fagaceae,quercus hypoleucoides,silverleaf oak,['az', 'nm', 'tx'],least concern,False
+611,fagaceae,quercus imbricaria,shingle oak,['al', 'ar', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj(.1)', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'wi', 'wv'],least concern,True
 612,fagaceae,quercus inopina,florida scrub oak,['fl'],least concern,False
 613,fagaceae,quercus john-tuckeri,tucker's oak,['ca'],least concern,False
-614,fagaceae,quercus kelloggii,california black oak,"['ca', 'or']",least concern,False
+614,fagaceae,quercus kelloggii,california black oak,['ca', 'or'],least concern,False
 615,fagaceae,quercus laceyi,lacey oak,['tx'],least concern,False
-616,fagaceae,quercus laevis,american turkey oak,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'va']",least concern,False
-617,fagaceae,quercus laurifolia,swamp laurel oak,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va']",least concern,False
+616,fagaceae,quercus laevis,american turkey oak,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'va'],least concern,False
+617,fagaceae,quercus laurifolia,swamp laurel oak,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va'],least concern,False
 618,fagaceae,quercus lobata,valley oak,['ca'],near threatened,False
-619,fagaceae,quercus macrocarpa,bur oak,"['al', 'ar', 'ct', 'dc', 'de', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-620,fagaceae,quercus margarettae,sand post oak,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-621,fagaceae,quercus michauxii,swamp chestnut oak,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'pa', 'sc', 'tn', 'tx', 'va']",least concern,False
-622,fagaceae,quercus minima,dwarf live oak,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'tx']",least concern,False
-623,fagaceae,quercus mohriana,mohr oak,"['nm', 'ok', 'tx']",least concern,False
-624,fagaceae,quercus montana,chestnut oak,"['al', 'ct', 'dc', 'de', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv']",least concern,True
-625,fagaceae,quercus muehlenbergii,chinkapin oak,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-626,fagaceae,quercus myrtifolia,myrtle oak,"['al', 'fl', 'ga', 'ms', 'nc', 'sc']",least concern,False
-627,fagaceae,quercus nigra,water oak,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-628,fagaceae,quercus oblongifolia,mexican blue oak,"['az', 'nm', 'tx']",least concern,False
-629,fagaceae,quercus oglethorpensis,oglethorpe oak,"['al', 'ga', 'la', 'ms', 'sc']",endangered,False
+619,fagaceae,quercus macrocarpa,bur oak,['al', 'ar', 'ct', 'dc', 'de', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+620,fagaceae,quercus margarettae,sand post oak,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+621,fagaceae,quercus michauxii,swamp chestnut oak,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'pa', 'sc', 'tn', 'tx', 'va'],least concern,False
+622,fagaceae,quercus minima,dwarf live oak,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'tx'],least concern,False
+623,fagaceae,quercus mohriana,mohr oak,['nm', 'ok', 'tx'],least concern,False
+624,fagaceae,quercus montana,chestnut oak,['al', 'ct', 'dc', 'de', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv'],least concern,True
+625,fagaceae,quercus muehlenbergii,chinkapin oak,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+626,fagaceae,quercus myrtifolia,myrtle oak,['al', 'fl', 'ga', 'ms', 'nc', 'sc'],least concern,False
+627,fagaceae,quercus nigra,water oak,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+628,fagaceae,quercus oblongifolia,mexican blue oak,['az', 'nm', 'tx'],least concern,False
+629,fagaceae,quercus oglethorpensis,oglethorpe oak,['al', 'ga', 'la', 'ms', 'sc'],endangered,False
 630,fagaceae,quercus pacifica,island scrub oak,['ca'],endangered,False
-631,fagaceae,quercus pagoda,cherrybark oak,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-632,fagaceae,quercus palmeri,palmer's oak,"['az', 'ca', 'nm']",near threatened,False
-633,fagaceae,quercus palustris,pin oak,"['ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,True
+631,fagaceae,quercus pagoda,cherrybark oak,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+632,fagaceae,quercus palmeri,palmer's oak,['az', 'ca', 'nm'],near threatened,False
+633,fagaceae,quercus palustris,pin oak,['ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'ne', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,True
 634,fagaceae,quercus parvula,coast oak,['ca'],near threatened,False
 635,fagaceae,quercus polymorpha,mexican white oak,['tx'],least concern,False
-636,fagaceae,quercus pungens,pungent oak,"['az', 'nm', 'tx']",least concern,False
+636,fagaceae,quercus pungens,pungent oak,['az', 'nm', 'tx'],least concern,False
 637,fagaceae,quercus robusta,robust oak,['tx'],data deficient,False
-638,fagaceae,quercus rubra,northern red oak,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,True
-639,fagaceae,quercus rugosa,netleaf oak,"['az', 'nm', 'tx']",least concern,False
-640,fagaceae,quercus similis,bottomland post oak,"['al', 'ar', 'ga', 'la', 'ms', 'sc', 'tx']",least concern,False
-641,fagaceae,quercus sinuata,bastard oak,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx']",least concern,False
+638,fagaceae,quercus rubra,northern red oak,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,True
+639,fagaceae,quercus rugosa,netleaf oak,['az', 'nm', 'tx'],least concern,False
+640,fagaceae,quercus similis,bottomland post oak,['al', 'ar', 'ga', 'la', 'ms', 'sc', 'tx'],least concern,False
+641,fagaceae,quercus sinuata,bastard oak,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx'],least concern,False
 642,fagaceae,quercus tardifolia,chisos mountains oak,,data deficient,False
-643,fagaceae,quercus texana,texas red oak,"['al', 'ar', 'il', 'ky', 'la', 'ms', 'mo', 'ok', 'tn', 'tx']",least concern,False
+643,fagaceae,quercus texana,texas red oak,['al', 'ar', 'il', 'ky', 'la', 'ms', 'mo', 'ok', 'tn', 'tx'],least concern,False
 644,fagaceae,quercus tomentella,island oak,['ca'],endangered,False
-645,fagaceae,quercus toumeyi,toumey oak,"['az', 'nm', 'tx']",data deficient,False
-646,fagaceae,quercus turbinella,sonoran scrub oak,"['az', 'ca', 'co', 'nm', 'nv', 'tx', 'ut']",least concern,False
-647,fagaceae,quercus velutina,black oak,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+645,fagaceae,quercus toumeyi,toumey oak,['az', 'nm', 'tx'],data deficient,False
+646,fagaceae,quercus turbinella,sonoran scrub oak,['az', 'ca', 'co', 'nm', 'nv', 'tx', 'ut'],least concern,False
+647,fagaceae,quercus velutina,black oak,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 648,fagaceae,quercus viminea,mexican willow oak,['az'],least concern,False
-649,fagaceae,quercus virginiana,southern live oak,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va']",least concern,False
+649,fagaceae,quercus virginiana,southern live oak,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tx', 'va'],least concern,False
 650,fagaceae,quercus wislizeni,interior live oak,['ca'],least concern,False
 651,rubiaceae,randia aculeata,white indigoberry,['fl'],least concern,False
 652,rubiaceae,randia obcordata,crucillo,['tx'],least concern,False
 653,rhamnaceae,reynosia septentrionalis,darlingplum,['fl'],near threatened (estimated),False
-654,rhamnaceae,rhamnus crocea,hollyleaf redberry,"['az', 'ca', 'nv', 'or']",least concern,False
-655,rhamnaceae,rhamnus ilicifolia,hollyleaf redberry,"['az', 'ca', 'nv', 'or']",least concern,False
-656,rhamnaceae,rhamnus lanceolata,lanceleaf buckthorn,"['al', 'ar', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'ne', 'oh', 'ok', 'pa', 'sd', 'tn', 'tx', 'va', 'wi', 'wv']",least concern (estimated),False
+654,rhamnaceae,rhamnus crocea,hollyleaf redberry,['az', 'ca', 'nv', 'or'],least concern,False
+655,rhamnaceae,rhamnus ilicifolia,hollyleaf redberry,['az', 'ca', 'nv', 'or'],least concern,False
+656,rhamnaceae,rhamnus lanceolata,lanceleaf buckthorn,['al', 'ar', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'ne', 'oh', 'ok', 'pa', 'sd', 'tn', 'tx', 'va', 'wi', 'wv'],least concern (estimated),False
 657,rhamnaceae,rhamnus pirifolia,island redberry,['ca'],endangered (estimated),False
-658,rhizophoraceae,rhizophora mangle,red mangrove,"['fl', 'hi', 'nc', 'sc']",least concern,False
-659,ericaceae,rhododendron arborescens,smooth azalea,"['al', 'ga', 'ky', 'md', 'ms', 'nc', 'ny', 'pa', 'sc', 'tn', 'va', 'wv']",least concern,False
-660,ericaceae,rhododendron calendulaceum,flame azalea,"['al', 'ga', 'ky', 'md', 'nc', 'ny', 'oh', 'pa(sx)', 'sc', 'tn', 'va', 'wv']",least concern,False
-661,ericaceae,rhododendron canescens,mountain azalea,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx']",not evaluated,False
-662,ericaceae,rhododendron catawbiense,catawba rhododendron,"['al', 'ga', 'ky', 'ma', 'nc', 'sc', 'tn', 'va', 'wv']",least concern,False
+658,rhizophoraceae,rhizophora mangle,red mangrove,['fl', 'hi', 'nc', 'sc'],least concern,False
+659,ericaceae,rhododendron arborescens,smooth azalea,['al', 'ga', 'ky', 'md', 'ms', 'nc', 'ny', 'pa', 'sc', 'tn', 'va', 'wv'],least concern,False
+660,ericaceae,rhododendron calendulaceum,flame azalea,['al', 'ga', 'ky', 'md', 'nc', 'ny', 'oh', 'pa(sx)', 'sc', 'tn', 'va', 'wv'],least concern,False
+661,ericaceae,rhododendron canescens,mountain azalea,['al', 'ar', 'de', 'fl', 'ga', 'il', 'ky', 'la', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx'],not evaluated,False
+662,ericaceae,rhododendron catawbiense,catawba rhododendron,['al', 'ga', 'ky', 'ma', 'nc', 'sc', 'tn', 'va', 'wv'],least concern,False
 663,ericaceae,rhododendron eastmanii,santee azalea,['sc'],least concern,False
-664,ericaceae,rhododendron macrophyllum,pacific rhododendron,"['ca', 'or', 'wa']",least concern,False
-665,ericaceae,rhododendron maximum,great rhododendron,"['al', 'ct', 'dc', 'de', 'ga', 'ky', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv']",least concern,False
-666,ericaceae,rhododendron prunifolium,plumleaf azalea,"['al', 'ga']",not evaluated,False
-667,ericaceae,rhododendron viscosum,swamp azalea,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'la', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",not evaluated,False
-668,anacardiaceae,rhus copallinum,shining sumac,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-669,anacardiaceae,rhus glabra,smooth sumac,"['al', 'ar', 'az', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
+664,ericaceae,rhododendron macrophyllum,pacific rhododendron,['ca', 'or', 'wa'],least concern,False
+665,ericaceae,rhododendron maximum,great rhododendron,['al', 'ct', 'dc', 'de', 'ga', 'ky', 'ma', 'md', 'me', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wv'],least concern,False
+666,ericaceae,rhododendron prunifolium,plumleaf azalea,['al', 'ga'],not evaluated,False
+667,ericaceae,rhododendron viscosum,swamp azalea,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'la', 'ma', 'md', 'me', 'ms', 'nc', 'nh', 'nj', 'ny', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],not evaluated,False
+668,anacardiaceae,rhus copallinum,shining sumac,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+669,anacardiaceae,rhus glabra,smooth sumac,['al', 'ar', 'az', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
 670,anacardiaceae,rhus integrifolia,lemonade berry,['ca'],least concern,False
 671,anacardiaceae,rhus kearneyi,kearney's sumac,['az'],least concern (estimated),False
-672,anacardiaceae,rhus lanceolata,prairie flameleaf sumac,"['az', 'nm', 'ok', 'tx']",least concern,False
-673,anacardiaceae,rhus microphylla,little leaf sumac,"['az', 'nm', 'ok', 'tx']",least concern,False
-674,anacardiaceae,rhus ovata,sugar bush,"['az', 'ca']",least concern,False
-675,anacardiaceae,rhus typhina,staghorn sumac,"['al', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'sd', 'tn', 'ut', 'va', 'vt', 'wi', 'wv']",least concern,False
-676,anacardiaceae,rhus virens,evergreen sumac,"['az', 'nm', 'tx']",least concern,False
-677,fabaceae,robinia hispida,bristly locust,"['al', 'ar', 'co', 'ct', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv']",least concern,False
-678,fabaceae,robinia neomexicana,new mexico locust,"['az', 'ca', 'co', 'in', 'nm', 'nv', 'tx', 'ut', 'wy']",least concern,False
-679,fabaceae,robinia pseudoacacia,black locust,"['al', 'ar', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-680,fabaceae,robinia viscosa,clammy locust,"['al', 'ct', 'ga', 'il', 'in', 'ma', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'vt', 'wv']",near threatened (estimated),False
+672,anacardiaceae,rhus lanceolata,prairie flameleaf sumac,['az', 'nm', 'ok', 'tx'],least concern,False
+673,anacardiaceae,rhus microphylla,little leaf sumac,['az', 'nm', 'ok', 'tx'],least concern,False
+674,anacardiaceae,rhus ovata,sugar bush,['az', 'ca'],least concern,False
+675,anacardiaceae,rhus typhina,staghorn sumac,['al', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'sd', 'tn', 'ut', 'va', 'vt', 'wi', 'wv'],least concern,False
+676,anacardiaceae,rhus virens,evergreen sumac,['az', 'nm', 'tx'],least concern,False
+677,fabaceae,robinia hispida,bristly locust,['al', 'ar', 'co', 'ct', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'nm', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv'],least concern,False
+678,fabaceae,robinia neomexicana,new mexico locust,['az', 'ca', 'co', 'in', 'nm', 'nv', 'tx', 'ut', 'wy'],least concern,False
+679,fabaceae,robinia pseudoacacia,black locust,['al', 'ar', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+680,fabaceae,robinia viscosa,clammy locust,['al', 'ct', 'ga', 'il', 'in', 'ma', 'me', 'mi', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'vt', 'wv'],near threatened (estimated),False
 681,arecaceae,roystonea regia,royal palm,['fl'],least concern,False
 682,arecaceae,sabal mexicana,mexican palmetto,['tx'],least concern,False
-683,arecaceae,sabal minor,dwarf palmetto,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx']",least concern,False
-684,arecaceae,sabal palmetto,cabbage palmetto,"['fl', 'ga', 'la', 'nc', 'sc']",least concern,False
+683,arecaceae,sabal minor,dwarf palmetto,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx'],least concern,False
+684,arecaceae,sabal palmetto,cabbage palmetto,['fl', 'ga', 'la', 'nc', 'sc'],least concern,False
 685,salicaceae,salix alaxensis,alaska willow,['ak'],least concern,False
-686,salicaceae,salix amygdaloides,peachleaf willow,"['az', 'co', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'sd', 'tx', 'ut', 'vt', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
+686,salicaceae,salix amygdaloides,peachleaf willow,['az', 'co', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'sd', 'tx', 'ut', 'vt', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
 687,salicaceae,salix arbusculoides,little-tree willow,['ak'],least concern,False
-688,salicaceae,salix barclayi,barclay's willow,"['ak', 'co', 'id', 'mt', 'or', 'wa', 'wy']",least concern,False
-689,salicaceae,salix bebbiana,bebb's willow,"['ak', 'az', 'ca', 'co', 'ct', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'vt', 'wa', 'wi', 'wy']",least concern,False
+688,salicaceae,salix barclayi,barclay's willow,['ak', 'co', 'id', 'mt', 'or', 'wa', 'wy'],least concern,False
+689,salicaceae,salix bebbiana,bebb's willow,['ak', 'az', 'ca', 'co', 'ct', 'ia', 'id', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'vt', 'wa', 'wi', 'wy'],least concern,False
 690,salicaceae,salix bonplandiana,red willow,['az'],least concern,False
 691,salicaceae,salix breweri,brewer's willow,['ca'],least concern,False
-692,salicaceae,salix caroliniana,carolina willow,"['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ne', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-693,salicaceae,salix discolor,pussy willow,"['ct', 'de', 'ia', 'id', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-694,salicaceae,salix eriocephala,heart-leaved willow,"['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-695,salicaceae,salix exigua,narrowleaf willow,"['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'tx', 'ut', 'wa', 'wy']",least concern,False
-696,salicaceae,salix floridana,florida willow,"['al', 'fl', 'ga']",endangered,False
-697,salicaceae,salix geyeriana,geyer's willow,"['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-698,salicaceae,salix glauca,grayleaf willow,"['ak', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-699,salicaceae,salix gooddingii,goodding's willow,"['az', 'ca', 'co', 'nm', 'nv', 'tx', 'ut']",least concern,False
-700,salicaceae,salix hookeriana,coastal willow,"['ak', 'ca', 'or', 'wa']",least concern,False
-701,salicaceae,salix interior,interior sandbar willow,"['ak', 'ar', 'co', 'ct', 'dc', 'de', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'me', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-702,salicaceae,salix irrorata,dewystem willow,"['az', 'co', 'nm', 'wy']",least concern,False
-703,salicaceae,salix laevigata,red willow,"['az', 'ca', 'nv', 'or', 'ut']",least concern,False
-704,salicaceae,salix lasiandra,pacific willow,"['mt', 'wy']",not evaluated,False
-705,salicaceae,salix lasiolepis,arroyo willow,"['az', 'ca', 'id', 'nm', 'nv', 'or', 'tx', 'ut', 'wa']",least concern,False
-706,salicaceae,salix ligulifolia,strap-leafed willow,"['az', 'ca', 'co', 'mt', 'nm', 'or', 'sd', 'ut', 'wy']",least concern,False
-707,salicaceae,salix lucida,shining willow,"['ak', 'az', 'ca', 'co', 'ct', 'de', 'ia', 'id', 'il', 'in', 'ks', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-708,salicaceae,salix lutea,yellow willow,"['az', 'ca', 'co', 'id', 'mt', 'nv', 'or', 'ut', 'wy']",least concern,False
-709,salicaceae,salix maccalliana,mccalla's willow,"['mn', 'nd', 'wa']",least concern,False
-710,salicaceae,salix melanopsis,dusky willow,"['ca', 'id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
-711,salicaceae,salix monticola,park willow,"['az', 'co', 'nm', 'ut', 'wy']",least concern,False
-712,salicaceae,salix myricoides,blueleaf willow,"['ct', 'il', 'in', 'ma', 'me', 'mi', 'nh', 'oh', 'pa', 'ri', 'vt', 'wi']",least concern,False
-713,salicaceae,salix nigra,black willow,"['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-714,salicaceae,salix pellita,satiny willow,"['me', 'mi', 'mn', 'nh', 'vt', 'wi']",least concern,False
-715,salicaceae,salix petiolaris,meadow willow,"['co', 'ct', 'ia', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'vt', 'wi']",least concern,False
-716,salicaceae,salix planifolia,tea-leafed willow,"['ak', 'az', 'ca', 'co', 'id', 'la', 'me', 'mi', 'mn', 'nv', 'nh', 'nm', 'or', 'sd', 'ut', 'vt', 'wa', 'wi', 'wy']",least concern,False
-717,salicaceae,salix prolixa,mackenzie's willow,"['ak', 'ca', 'id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy']",least concern,False
+692,salicaceae,salix caroliniana,carolina willow,['al', 'ar', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ne', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+693,salicaceae,salix discolor,pussy willow,['ct', 'de', 'ia', 'id', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+694,salicaceae,salix eriocephala,heart-leaved willow,['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+695,salicaceae,salix exigua,narrowleaf willow,['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'tx', 'ut', 'wa', 'wy'],least concern,False
+696,salicaceae,salix floridana,florida willow,['al', 'fl', 'ga'],endangered,False
+697,salicaceae,salix geyeriana,geyer's willow,['az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+698,salicaceae,salix glauca,grayleaf willow,['ak', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+699,salicaceae,salix gooddingii,goodding's willow,['az', 'ca', 'co', 'nm', 'nv', 'tx', 'ut'],least concern,False
+700,salicaceae,salix hookeriana,coastal willow,['ak', 'ca', 'or', 'wa'],least concern,False
+701,salicaceae,salix interior,interior sandbar willow,['ak', 'ar', 'co', 'ct', 'dc', 'de', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'me', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'sd', 'tn', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+702,salicaceae,salix irrorata,dewystem willow,['az', 'co', 'nm', 'wy'],least concern,False
+703,salicaceae,salix laevigata,red willow,['az', 'ca', 'nv', 'or', 'ut'],least concern,False
+704,salicaceae,salix lasiandra,pacific willow,['mt', 'wy'],not evaluated,False
+705,salicaceae,salix lasiolepis,arroyo willow,['az', 'ca', 'id', 'nm', 'nv', 'or', 'tx', 'ut', 'wa'],least concern,False
+706,salicaceae,salix ligulifolia,strap-leafed willow,['az', 'ca', 'co', 'mt', 'nm', 'or', 'sd', 'ut', 'wy'],least concern,False
+707,salicaceae,salix lucida,shining willow,['ak', 'az', 'ca', 'co', 'ct', 'de', 'ia', 'id', 'il', 'in', 'ks', 'ma', 'md', 'me', 'mi', 'mn', 'mt', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+708,salicaceae,salix lutea,yellow willow,['az', 'ca', 'co', 'id', 'mt', 'nv', 'or', 'ut', 'wy'],least concern,False
+709,salicaceae,salix maccalliana,mccalla's willow,['mn', 'nd', 'wa'],least concern,False
+710,salicaceae,salix melanopsis,dusky willow,['ca', 'id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
+711,salicaceae,salix monticola,park willow,['az', 'co', 'nm', 'ut', 'wy'],least concern,False
+712,salicaceae,salix myricoides,blueleaf willow,['ct', 'il', 'in', 'ma', 'me', 'mi', 'nh', 'oh', 'pa', 'ri', 'vt', 'wi'],least concern,False
+713,salicaceae,salix nigra,black willow,['al', 'ar', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+714,salicaceae,salix pellita,satiny willow,['me', 'mi', 'mn', 'nh', 'vt', 'wi'],least concern,False
+715,salicaceae,salix petiolaris,meadow willow,['co', 'ct', 'ia', 'il', 'in', 'ma', 'me', 'mi', 'mn', 'mo', 'mt', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'vt', 'wi'],least concern,False
+716,salicaceae,salix planifolia,tea-leafed willow,['ak', 'az', 'ca', 'co', 'id', 'la', 'me', 'mi', 'mn', 'nv', 'nh', 'nm', 'or', 'sd', 'ut', 'vt', 'wa', 'wi', 'wy'],least concern,False
+717,salicaceae,salix prolixa,mackenzie's willow,['ak', 'ca', 'id', 'mt', 'nv', 'or', 'ut', 'wa', 'wy'],least concern,False
 718,salicaceae,salix pseudomyrsinites,tall blueberry willow,['ak'],least concern,False
-719,salicaceae,salix pyrifolia,balsam willow,"['me', 'mi', 'mn', 'nh', 'ny', 'vt', 'wi']",least concern,False
+719,salicaceae,salix pyrifolia,balsam willow,['me', 'mi', 'mn', 'nh', 'ny', 'vt', 'wi'],least concern,False
 720,salicaceae,salix richardsonii,richardson's willow,['ak'],least concern,False
-721,salicaceae,salix scouleriana,scouler's willow,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
-722,salicaceae,salix sericea,silky willow,"['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-723,salicaceae,salix serissima,autumn willow,"['co', 'ct', 'il', 'in', 'ma', 'mi', 'mn', 'mt', 'nd', 'nj', 'ny', 'oh', 'pa', 'sd', 'wi', 'wy']",least concern,False
-724,salicaceae,salix sessilifolia,northwest sandbar willow,"['or', 'wa']",least concern,False
-725,salicaceae,salix sitchensis,sitka willow,"['ak', 'ca', 'id', 'mt', 'nv', 'or', 'wa']",least concern,False
-726,salicaceae,salix taxifolia,yewleaf willow,"['az', 'nm', 'tx']",least concern,False
-727,salicaceae,salix tracyi,tracy's willow,"['ca', 'or']",near threatened,False
-728,caprifoliaceae,sambucus nigra,european black elderberry,"['al', 'ar', 'az', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'hi', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-729,caprifoliaceae,sambucus racemosa,red-berried elder,"['ak', 'az', 'ca', 'co', 'ct', 'de', 'ga', 'ia', 'id', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'tn', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy']",least concern,False
-730,sapindaceae,sapindus saponaria,western soapberry,"['al', 'ar', 'az', 'co', 'fl', 'ga', 'hi', 'ks', 'la', 'mo', 'ms', 'nm', 'ok', 'tx']",least concern,False
-731,lauraceae,sassafras albidum,sassafras,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
+721,salicaceae,salix scouleriana,scouler's willow,['ak', 'az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
+722,salicaceae,salix sericea,silky willow,['al', 'ar', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+723,salicaceae,salix serissima,autumn willow,['co', 'ct', 'il', 'in', 'ma', 'mi', 'mn', 'mt', 'nd', 'nj', 'ny', 'oh', 'pa', 'sd', 'wi', 'wy'],least concern,False
+724,salicaceae,salix sessilifolia,northwest sandbar willow,['or', 'wa'],least concern,False
+725,salicaceae,salix sitchensis,sitka willow,['ak', 'ca', 'id', 'mt', 'nv', 'or', 'wa'],least concern,False
+726,salicaceae,salix taxifolia,yewleaf willow,['az', 'nm', 'tx'],least concern,False
+727,salicaceae,salix tracyi,tracy's willow,['ca', 'or'],near threatened,False
+728,caprifoliaceae,sambucus nigra,european black elderberry,['al', 'ar', 'az', 'ca', 'co', 'ct', 'dc', 'de', 'fl', 'ga', 'hi', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+729,caprifoliaceae,sambucus racemosa,red-berried elder,['ak', 'az', 'ca', 'co', 'ct', 'de', 'ga', 'ia', 'id', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'or', 'pa', 'ri', 'sd', 'tn', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'],least concern,False
+730,sapindaceae,sapindus saponaria,western soapberry,['al', 'ar', 'az', 'co', 'fl', 'ga', 'hi', 'ks', 'la', 'mo', 'ms', 'nm', 'ok', 'tx'],least concern,False
+731,lauraceae,sassafras albidum,sassafras,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv'],least concern,False
 732,celastraceae,schaefferia frutescens,florida boxwood,['fl'],least concern,False
 733,olacaceae,schoepfia schreberi,graytwig,['fl'],least concern,False
-734,fabaceae,senegalia berlandieri,guajillo,"['fl', 'tx']",least concern,False
-735,fabaceae,senegalia greggii,catclaw acacia,"['az', 'ca', 'nm', 'nv', 'tx', 'ut']",least concern,False
-736,fabaceae,senegalia roemeriana,roundflower catclaw,"['nm', 'tx']",least concern,False
+734,fabaceae,senegalia berlandieri,guajillo,['fl', 'tx'],least concern,False
+735,fabaceae,senegalia greggii,catclaw acacia,['az', 'ca', 'nm', 'nv', 'tx', 'ut'],least concern,False
+736,fabaceae,senegalia roemeriana,roundflower catclaw,['nm', 'tx'],least concern,False
 737,fabaceae,senegalia wrightii,wright acacia,['tx'],least concern,False
 738,fabaceae,senna mexicana,chapman's wild sensitive plant,['fl'],least concern (estimated),False
-739,fabaceae,senna pendula,christmas senna,"['fl', 'hi', 'tx']",least concern (estimated),False
-740,cupressaceae,sequoia sempervirens,coast redwood,"['ca', 'or']",endangered,False
+739,fabaceae,senna pendula,christmas senna,['fl', 'hi', 'tx'],least concern (estimated),False
+740,cupressaceae,sequoia sempervirens,coast redwood,['ca', 'or'],endangered,False
 741,cupressaceae,sequoiadendron giganteum,giant sequoia,['ca'],endangered,False
-742,arecaceae,serenoa repens,saw palmetto,"['al', 'fl', 'ga', 'la', 'ms', 'sc', 'tx']",least concern (estimated),False
-743,fabaceae,sesbania drummondii,rattlebush,"['al', 'ar', 'fl', 'la', 'ms', 'tx']",least concern,False
-744,elaeagnaceae,shepherdia argentea,silver buffaloberry,"['az', 'ca', 'co', 'ia', 'id', 'ks', 'mi', 'mn', 'mt', 'nd', 'ne', 'nm', 'nv', 'ny', 'or', 'sd', 'ut', 'wi', 'wy']",least concern,False
-745,sapotaceae,sideroxylon alachuense,alachua bully,"['fl', 'ga']",critically endangered,False
-746,sapotaceae,sideroxylon celastrinum,coma,"['fl', 'tx']",least concern,False
+742,arecaceae,serenoa repens,saw palmetto,['al', 'fl', 'ga', 'la', 'ms', 'sc', 'tx'],least concern (estimated),False
+743,fabaceae,sesbania drummondii,rattlebush,['al', 'ar', 'fl', 'la', 'ms', 'tx'],least concern,False
+744,elaeagnaceae,shepherdia argentea,silver buffaloberry,['az', 'ca', 'co', 'ia', 'id', 'ks', 'mi', 'mn', 'mt', 'nd', 'ne', 'nm', 'nv', 'ny', 'or', 'sd', 'ut', 'wi', 'wy'],least concern,False
+745,sapotaceae,sideroxylon alachuense,alachua bully,['fl', 'ga'],critically endangered,False
+746,sapotaceae,sideroxylon celastrinum,coma,['fl', 'tx'],least concern,False
 747,sapotaceae,sideroxylon foetidissimum,false mastic,['fl'],least concern,False
-748,sapotaceae,sideroxylon lanuginosum,gum bumelia,"['al', 'ar', 'az', 'fl', 'ga', 'il', 'ks', 'la', 'mo', 'ms', 'nm', 'ok', 'sc', 'tx']",least concern,False
-749,sapotaceae,sideroxylon lycioides,buckthorn bully,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
+748,sapotaceae,sideroxylon lanuginosum,gum bumelia,['al', 'ar', 'az', 'fl', 'ga', 'il', 'ks', 'la', 'mo', 'ms', 'nm', 'ok', 'sc', 'tx'],least concern,False
+749,sapotaceae,sideroxylon lycioides,buckthorn bully,['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
 750,sapotaceae,sideroxylon salicifolium,willow bustic,['fl'],least concern,False
-751,sapotaceae,sideroxylon tenax,tough bully,"['fl', 'ga', 'nc', 'sc']",least concern (estimated),False
+751,sapotaceae,sideroxylon tenax,tough bully,['fl', 'ga', 'nc', 'sc'],least concern (estimated),False
 752,simaroubaceae,simarouba glauca,paradise tree,['fl'],least concern,False
 753,solanaceae,solanum bahamense,bahama nightshade,['fl'],least concern,False
-754,solanaceae,solanum erianthum,potato tree,"['fl', 'tx']",least concern (estimated),False
-755,fabaceae,sophora affinis,eve's necklacepod,"['ar', 'la', 'ok', 'tx']",least concern,False
+754,solanaceae,solanum erianthum,potato tree,['fl', 'tx'],least concern (estimated),False
+755,fabaceae,sophora affinis,eve's necklacepod,['ar', 'la', 'ok', 'tx'],least concern,False
 756,fabaceae,sophora leachiana,western necklace-pod,['or'],endangered (estimated),False
-757,fabaceae,sophora tomentosa,necklace pod,"['fl', 'tx']",least concern,False
-758,rosaceae,sorbus americana,american mountain-ash,"['ct', 'ga', 'il', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-759,rosaceae,sorbus decora,showy mountain-ash,"['ct', 'ia', 'il', 'in(sx)', 'ma', 'me', 'mi', 'mn', 'nh', 'ny', 'oh', 'pa', 'vt', 'wi']",least concern,False
-760,rosaceae,sorbus scopulina,greene's mountain-ash,"['ak', 'az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy']",least concern,False
-761,rosaceae,sorbus sitchensis,sitka mountain-ash,"['ak', 'ca', 'id', 'mt', 'or', 'wa']",least concern,False
+757,fabaceae,sophora tomentosa,necklace pod,['fl', 'tx'],least concern,False
+758,rosaceae,sorbus americana,american mountain-ash,['ct', 'ga', 'il', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+759,rosaceae,sorbus decora,showy mountain-ash,['ct', 'ia', 'il', 'in(sx)', 'ma', 'me', 'mi', 'mn', 'nh', 'ny', 'oh', 'pa', 'vt', 'wi'],least concern,False
+760,rosaceae,sorbus scopulina,greene's mountain-ash,['ak', 'az', 'ca', 'co', 'id', 'mt', 'nm', 'nv', 'or', 'sd', 'ut', 'wa', 'wy'],least concern,False
+761,rosaceae,sorbus sitchensis,sitka mountain-ash,['ak', 'ca', 'id', 'mt', 'or', 'wa'],least concern,False
 762,staphyleaceae,staphylea bolanderi,sierra bladdernut,['ca'],least concern,False
-763,staphyleaceae,staphylea trifolia,american bladdernut,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
+763,staphyleaceae,staphylea trifolia,american bladdernut,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'mi', 'mn', 'mo', 'ms', 'nc', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
 764,cactaceae,stenocereus thurberi,organ pipe cactus,['az'],least concern,False
-765,theaceae,stewartia malacodendron,silky camellia,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tn', 'tx', 'va']",least concern,False
-766,theaceae,stewartia ovata,mountain camellia,"['al', 'fl', 'ga', 'ky', 'ms', 'nc', 'sc', 'tn', 'va']",least concern,False
-767,styracaceae,styrax americanus,american snowbell,"['al', 'ar', 'dc', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-768,styracaceae,styrax grandifolius,bigleaf snowbell,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ms', 'nc', 'oh(sx)', 'sc', 'tn', 'tx', 'va']",least concern,False
+765,theaceae,stewartia malacodendron,silky camellia,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'tn', 'tx', 'va'],least concern,False
+766,theaceae,stewartia ovata,mountain camellia,['al', 'fl', 'ga', 'ky', 'ms', 'nc', 'sc', 'tn', 'va'],least concern,False
+767,styracaceae,styrax americanus,american snowbell,['al', 'ar', 'dc', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'mo', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+768,styracaceae,styrax grandifolius,bigleaf snowbell,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ms', 'nc', 'oh(sx)', 'sc', 'tn', 'tx', 'va'],least concern,False
 769,styracaceae,styrax platanifolius,sycamore-leaf snowbell,['tx'],near threatened,False
 770,surianaceae,suriana maritima,baycedar,['fl'],least concern,False
 771,meliaceae,swietenia mahagoni,west indian mahogany,['fl'],near threatened,False
-772,symplocaceae,symplocos tinctoria,sweetleaf,"['al', 'ar', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-773,cupressaceae,taxodium distichum,bald cypress,"['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'ok', 'pa', 'sc', 'tn', 'tx', 'va']",least concern,False
-774,taxaceae,taxus brevifolia,pacific yew,"['ak', 'ca', 'id', 'mt', 'nv', 'or', 'wa']",near threatened,True
-775,taxaceae,taxus canadensis,canada yew,"['ct', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
+772,symplocaceae,symplocos tinctoria,sweetleaf,['al', 'ar', 'de', 'fl', 'ga', 'la', 'md', 'ms', 'nc', 'nj', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+773,cupressaceae,taxodium distichum,bald cypress,['al', 'ar', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'ok', 'pa', 'sc', 'tn', 'tx', 'va'],least concern,False
+774,taxaceae,taxus brevifolia,pacific yew,['ak', 'ca', 'id', 'mt', 'nv', 'or', 'wa'],near threatened,True
+775,taxaceae,taxus canadensis,canada yew,['ct', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
 776,taxaceae,taxus floridana,florida yew,['fl'],critically endangered,False
-777,bignoniaceae,tecoma stans,yellow trumpet flower,"['az', 'fl', 'hi', 'nm', 'tx']",least concern,False
-778,melastomataceae,tetrazygia bicolor,west indian lilac,"['fl', 'hi']",least concern,False
+777,bignoniaceae,tecoma stans,yellow trumpet flower,['az', 'fl', 'hi', 'nm', 'tx'],least concern,False
+778,melastomataceae,tetrazygia bicolor,west indian lilac,['fl', 'hi'],least concern,False
 779,arecaceae,thrinax radiata,florida thatch palm,['fl'],least concern,False
-780,cupressaceae,thuja occidentalis,northern whitecedar,"['ct', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-781,cupressaceae,thuja plicata,western redcedar,"['ak', 'ca', 'id', 'mt', 'or', 'wa']",least concern,False
-782,malvaceae,tilia americana,basswood,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,True
+780,cupressaceae,thuja occidentalis,northern whitecedar,['ct', 'ia', 'il', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+781,cupressaceae,thuja plicata,western redcedar,['ak', 'ca', 'id', 'mt', 'or', 'wa'],least concern,False
+782,malvaceae,tilia americana,basswood,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,True
 783,taxaceae,torreya californica,california torreya,['ca'],vulnerable,False
-784,taxaceae,torreya taxifolia,florida torreya,"['fl', 'ga', 'nc']",critically endangered,False
-785,anacardiaceae,toxicodendron vernix,poison sumac,"['al', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
+784,taxaceae,torreya taxifolia,florida torreya,['fl', 'ga', 'nc'],critically endangered,False
+785,anacardiaceae,toxicodendron vernix,poison sumac,['al', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
 786,ulmaceae,trema lamarckiana,pain-in-the-back,['fl'],least concern,False
 787,ulmaceae,trema micrantha,nettletree,['fl'],least concern,False
 788,petiveriaceae,trichostigma octandrum,hoopvine,['fl'],least concern,False
-789,malvaceae,triumfetta semitriloba,sacramento bur,"['fl', 'ga', 'hi']",least concern,False
+789,malvaceae,triumfetta semitriloba,sacramento bur,['fl', 'ga', 'hi'],least concern,False
 790,asteraceae,trixis inula,mexican trixis,['tx'],least concern,False
-791,pinaceae,tsuga canadensis,eastern hemlock,"['al', 'ct', 'dc', 'de', 'ga', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv']",near threatened,False
-792,pinaceae,tsuga caroliniana,carolina hemlock,"['ga', 'nc', 'sc', 'tn', 'va']",near threatened,False
-793,pinaceae,tsuga heterophylla,western hemlock,"['ak', 'ca', 'id', 'mt', 'or', 'wa']",least concern,False
-794,pinaceae,tsuga mertensiana,mountain hemlock,"['ak', 'ca', 'id', 'mt', 'nv', 'or', 'wa']",least concern,False
-795,ulmaceae,ulmus alata,winged elm,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
-796,ulmaceae,ulmus americana,american elm,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy']",endangered,True
-797,ulmaceae,ulmus crassifolia,cedar elm,"['ar', 'fl', 'la', 'mo', 'ms', 'ok', 'tn', 'tx']",least concern,False
-798,ulmaceae,ulmus rubra,slippery elm,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv']",least concern,False
-799,ulmaceae,ulmus serotina,september elm,"['al', 'ar', 'ga', 'il', 'ky', 'mo', 'ms', 'nc', 'ok', 'tn']",least concern,False
-800,ulmaceae,ulmus thomasii,rock elm,"['ar', 'ct', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'mi', 'mn', 'mo', 'nd', 'ne', 'nj(sx)', 'ny', 'oh', 'pa', 'sd', 'tn', 'vt', 'wi', 'wv']",least concern,False
-801,lauraceae,umbellularia californica,california bay,"['ca', 'or']",least concern,False
-802,sapindaceae,ungnadia speciosa,mexican buckeye,"['nm', 'tx']",least concern,False
-803,ericaceae,vaccinium arboreum,sparkleberry,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va']",least concern,False
+791,pinaceae,tsuga canadensis,eastern hemlock,['al', 'ct', 'dc', 'de', 'ga', 'in', 'ky', 'ma', 'md', 'me', 'mi', 'mn', 'nc', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'va', 'vt', 'wi', 'wv'],near threatened,False
+792,pinaceae,tsuga caroliniana,carolina hemlock,['ga', 'nc', 'sc', 'tn', 'va'],near threatened,False
+793,pinaceae,tsuga heterophylla,western hemlock,['ak', 'ca', 'id', 'mt', 'or', 'wa'],least concern,False
+794,pinaceae,tsuga mertensiana,mountain hemlock,['ak', 'ca', 'id', 'mt', 'nv', 'or', 'wa'],least concern,False
+795,ulmaceae,ulmus alata,winged elm,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
+796,ulmaceae,ulmus americana,american elm,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv', 'wy'],endangered,True
+797,ulmaceae,ulmus crassifolia,cedar elm,['ar', 'fl', 'la', 'mo', 'ms', 'ok', 'tn', 'tx'],least concern,False
+798,ulmaceae,ulmus rubra,slippery elm,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'va', 'vt', 'wi', 'wv'],least concern,False
+799,ulmaceae,ulmus serotina,september elm,['al', 'ar', 'ga', 'il', 'ky', 'mo', 'ms', 'nc', 'ok', 'tn'],least concern,False
+800,ulmaceae,ulmus thomasii,rock elm,['ar', 'ct', 'ia', 'il', 'in', 'ks', 'ky', 'ma', 'mi', 'mn', 'mo', 'nd', 'ne', 'nj(sx)', 'ny', 'oh', 'pa', 'sd', 'tn', 'vt', 'wi', 'wv'],least concern,False
+801,lauraceae,umbellularia californica,california bay,['ca', 'or'],least concern,False
+802,sapindaceae,ungnadia speciosa,mexican buckeye,['nm', 'tx'],least concern,False
+803,ericaceae,vaccinium arboreum,sparkleberry,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'nc', 'ok', 'sc', 'tn', 'tx', 'va'],least concern,False
 804,fabaceae,vachellia choriophylla,cinnecord,['fl'],data deficient,False
-805,fabaceae,vachellia constricta,whitethorn acacia,"['az', 'md', 'nm', 'tx', 'va']",least concern,False
-806,fabaceae,vachellia farnesiana,sweet acacia,"['al', 'az', 'az', 'ca', 'fl', 'ga', 'ga', 'hi', 'ms', 'nm', 'tx']",least concern,False
-807,fabaceae,vachellia macracantha,porknut,"['fl', 'ga']",least concern,False
+805,fabaceae,vachellia constricta,whitethorn acacia,['az', 'md', 'nm', 'tx', 'va'],least concern,False
+806,fabaceae,vachellia farnesiana,sweet acacia,['al', 'az', 'az', 'ca', 'fl', 'ga', 'ga', 'hi', 'ms', 'nm', 'tx'],least concern,False
+807,fabaceae,vachellia macracantha,porknut,['fl', 'ga'],least concern,False
 808,fabaceae,vachellia rigidula,blackbrush acacia,['tx'],least concern,False
 809,fabaceae,vachellia tortuosa,twisted acacia,['fl'],least concern,False
 810,apocynaceae,vallesia antillana,pearlberry,['fl'],least concern (estimated),False
-811,rosaceae,vauquelinia californica,arizona rosewood,"['az', 'nm']",least concern,False
+811,rosaceae,vauquelinia californica,arizona rosewood,['az', 'nm'],least concern,False
 812,rosaceae,vauquelinia corymbosa,slimleaf rosewood,['tx'],least concern,False
-813,caprifoliaceae,viburnum alabamense,alabama arrowwood,"['al', 'ky', 'tn']",endangered,False
-814,caprifoliaceae,viburnum lentago,nannyberry,"['co', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'va', 'vt', 'wi', 'wv', 'wy']",least concern,False
-815,viburnaceae,viburnum obovatum,walter's viburnum,"['al', 'fl', 'ga', 'sc']",not evaluated,False
-816,caprifoliaceae,viburnum prunifolium,blackhaw,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wi', 'wv']",least concern,False
-817,caprifoliaceae,viburnum rufidulum,rusty blackhaw,"['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'nc', 'oh', 'ok', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,False
-818,arecaceae,washingtonia filifera,california fan palm,"['az', 'ca', 'fl', 'nv']",least concern,False
+813,caprifoliaceae,viburnum alabamense,alabama arrowwood,['al', 'ky', 'tn'],endangered,False
+814,caprifoliaceae,viburnum lentago,nannyberry,['co', 'ct', 'dc', 'de', 'ga', 'ia', 'il', 'in', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'pa', 'ri', 'sd', 'va', 'vt', 'wi', 'wv', 'wy'],least concern,False
+815,viburnaceae,viburnum obovatum,walter's viburnum,['al', 'fl', 'ga', 'sc'],not evaluated,False
+816,caprifoliaceae,viburnum prunifolium,blackhaw,['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'md', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'sc', 'tn', 'tx', 'va', 'wi', 'wv'],least concern,False
+817,caprifoliaceae,viburnum rufidulum,rusty blackhaw,['al', 'ar', 'fl', 'ga', 'il', 'in', 'ks', 'ky', 'la', 'mo', 'ms', 'nc', 'oh', 'ok', 'sc', 'tn', 'tx', 'va', 'wv'],least concern,False
+818,arecaceae,washingtonia filifera,california fan palm,['az', 'ca', 'fl', 'nv'],least concern,False
 819,olacaceae,ximenia americana,hog plum,['fl'],least concern,False
 820,salicaceae,xylosma flexuosa,brush holly,['tx'],least concern,False
-821,asparagaceae,yucca aloifolia,aloe yucca,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'va']",data deficient,False
-822,asparagaceae,yucca baccata,banana yucca,"['az', 'ca', 'co', 'nm', 'nv', 'ok', 'tx', 'ut']",least concern,False
-823,asparagaceae,yucca brevifolia,joshua tree,"['az', 'ca', 'nv', 'ut']",vulnerable,False
-824,asparagaceae,yucca elata,soaptree yucca,"['az', 'nm', 'nv', 'tx', 'ut']",least concern,False
-825,asparagaceae,yucca faxoniana,faxon yucca,"['nm', 'tx']",least concern,False
-826,asparagaceae,yucca gloriosa,moundlily yucca,"['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc']",least concern,False
+821,asparagaceae,yucca aloifolia,aloe yucca,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc', 'va'],data deficient,False
+822,asparagaceae,yucca baccata,banana yucca,['az', 'ca', 'co', 'nm', 'nv', 'ok', 'tx', 'ut'],least concern,False
+823,asparagaceae,yucca brevifolia,joshua tree,['az', 'ca', 'nv', 'ut'],vulnerable,False
+824,asparagaceae,yucca elata,soaptree yucca,['az', 'nm', 'nv', 'tx', 'ut'],least concern,False
+825,asparagaceae,yucca faxoniana,faxon yucca,['nm', 'tx'],least concern,False
+826,asparagaceae,yucca gloriosa,moundlily yucca,['al', 'fl', 'ga', 'la', 'ms', 'nc', 'sc'],least concern,False
 827,asparagaceae,yucca rostrata,beaked yucca,['tx'],least concern,False
-828,asparagaceae,yucca schidigera,mojave yucca,"['az', 'ca', 'nv', 'ut']",least concern,False
+828,asparagaceae,yucca schidigera,mojave yucca,['az', 'ca', 'nv', 'ut'],least concern,False
 829,asparagaceae,yucca thompsoniana,thompson's yucca,['tx'],least concern,False
-830,asparagaceae,yucca torreyi,torrey's yucca,"['nm', 'tx']",least concern,False
-831,asparagaceae,yucca treculeana,spanish dagger,"['nm', 'tx']",vulnerable,False
-832,rutaceae,zanthoxylum americanum,common prickly ash,"['al', 'ar', 'ct', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wi', 'wv']",least concern,False
-833,rutaceae,zanthoxylum clava-herculis,hercules' club,"['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx', 'va']",least concern,False
+830,asparagaceae,yucca torreyi,torrey's yucca,['nm', 'tx'],least concern,False
+831,asparagaceae,yucca treculeana,spanish dagger,['nm', 'tx'],vulnerable,False
+832,rutaceae,zanthoxylum americanum,common prickly ash,['al', 'ar', 'ct', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'nc', 'nd', 'ne', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'sd', 'tn', 'va', 'vt', 'wi', 'wv'],least concern,False
+833,rutaceae,zanthoxylum clava-herculis,hercules' club,['al', 'ar', 'fl', 'ga', 'la', 'ms', 'nc', 'ok', 'sc', 'tx', 'va'],least concern,False
 834,rutaceae,zanthoxylum coriaceum,biscayne prickly-ash,['fl'],vulnerable (estimated),False
-835,rutaceae,zanthoxylum fagara,lime prickly-ash,"['fl', 'tx']",least concern,False
+835,rutaceae,zanthoxylum fagara,lime prickly-ash,['fl', 'tx'],least concern,False
 836,rutaceae,zanthoxylum flavum,west indian satinwood,['fl'],vulnerable,False
 837,rhamnaceae,ziziphus celata,florida jujube,['fl'],endangered (estimated),False
-838,rhamnaceae,ziziphus obtusifolia,lotebush,"['az', 'ca', 'nm', 'nv', 'ok', 'tx', 'ut']",least concern,False
+838,rhamnaceae,ziziphus obtusifolia,lotebush,['az', 'ca', 'nm', 'nv', 'ok', 'tx', 'ut'],least concern,False
 839,rhamnaceae,ziziphus parryi,california crucillo,['ca'],least concern,False
 840,betulaceae,carpinus betulus,european hornbeam,[],least concerrn,True
 841,cercidiphyllaceae,cercidiphyllum japonicum,katsura,[],least concern,True
@@ -869,5 +869,8 @@ tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessmen
 868,simaroubaceae,ailanthus altissima,tree of heave,[],least concern,True
 869,fabaceae,maackia amurensis,amur maackia,[],least concern,True
 870,malvaceae,hibiscus syriacus,rose of sharon,[],least concern,True
-871,sapindaceae,acer platanoides,norway mpale,[],least concern,True
-872,sapindaceae,acer palmatum,japanese mpale,[],least concern,True
+871,sapindaceae,acer platanoides,norway maple,[],least concern,True
+872,sapindaceae,acer palmatum,japanese maple,[],least concern,True
+873,fabaceae,gymnocladus dioicus,kentucky coffeetree,['mi', 'wi', 'mn', 'sd', 'ne', 'ks', 'ok', 'ar', 'tn', 'mo', 'il', 'ia', 'oh', 'pa', 'ky', 'ny', 'wv'],vulnerable,True
+874,paulowniaceae,paulownia tomentosa,princess tree,[],least concern,True
+875,anacardiaceae,cotinus coggygria,european smoketree,[],least concern,True
