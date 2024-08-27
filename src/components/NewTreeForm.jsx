@@ -7,6 +7,7 @@ const formatStateDistribution = (states) => {
     .replace(/[[\]']/g, '')
     .split(',')
     .map(state => state.trim().toUpperCase())
+    .sort()
     .join(', ');
 };
 
@@ -89,6 +90,18 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
       </div>
 
       <div className="mb-4">
+        <label className="block text-sm font-medium text-gray-700">Source</label>
+        <input
+          type="text"
+          name="source"
+          value={formState.source}
+          onChange={handleInputChange}
+          className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
+        />
+      </div>
+
+      <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Coordinates</label>
         <input
           type="text"
@@ -136,12 +149,12 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
 
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Native State Distribution</label>
-        <input
+        <textarea
           type="text"
           name="state_distribution"
           value={formatStateDistribution(formState.state_distribution)}
           readOnly
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100"
+          className="mt-1 block w-full p-2 border border-gray-300 rounded-md bg-gray-100 resize-none"
         />
       </div>
 
@@ -153,18 +166,6 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
           checked={formState.is_native}
           onChange={handleInputChange}
           className="capitalize mt-1 h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
-        />
-      </div>
-
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Source</label>
-        <input
-          type="text"
-          name="source"
-          value={formState.source}
-          onChange={handleInputChange}
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          required
         />
       </div>
 
