@@ -25,6 +25,7 @@ const App = () => {
   const sourceNameRef = useRef("");
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
+  const geolocateControlRef = useRef(null);
   const tappedPopupRef = useRef(
     new mapboxgl.Popup({
       closeButton: true,
@@ -39,9 +40,11 @@ const App = () => {
   const lastTapRef = useRef({point: {x: 0, y: 0}, time: 0});
 
   const [treeLocations, setTreeLocations] = useState([]);
+  const [currentPosition, setCurrentPosition] = useState([]);
   const [visibleTrees, setVisibleTrees] = useState([]);
   const [highlightedTree, setHighlightedTree] = useState(null);
   const [isTreeListVisible, setIsTreeListVisible] = useState(false);
+  const [isSurroundingPopups, setIsSurroundingPopups] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [newTreeCoordinates, setNewTreeCoordinates] = useState([]);
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -109,6 +112,11 @@ const App = () => {
         showAccuracyCircle: false,
         showUserHeading: true,
         fitBoundsOptions: {linear: true, maxZoom: 18},
+      });
+      geolocateControlRef.current = geolocateControl;
+      geolocateControl.on('geolocate', (position) => {
+        const { longitude, latitude } = position.coords;
+        setCurrentPosition([longitude, latitude]);
       });
       map.addControl(geolocateControl, "top-right");
       document.querySelector(".mapboxgl-ctrl-top-right").appendChild(mapboxButtonsRef.current);
@@ -483,10 +491,28 @@ const App = () => {
       <div
         ref={mapboxButtonsRef}
         className={`mapboxgl-ctrl mapboxgl-ctrl-group`}
-        onClick={() => setIsTreeListVisible(!isTreeListVisible)}
       >
         <button className="relative z-30">
-           <svg fill="currentColor" className={`h-full w-full ${isTreeListVisible ? "text-[rgb(52,181,229)]" : "text-[rgb(51,51,51)]"}`} viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+           <svg
+            fill="currentColor"
+            className={`h-full w-full ${isTreeListVisible ? "text-[rgb(52,181,229)]" : "text-[rgb(51,51,51)]"}`}
+            viewBox="0 0 100 150"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setIsTreeListVisible(!isTreeListVisible)}
+          >
+            <polygon points="50,20 20,70 80,70" />
+            <polygon points="50,50 15,100 85,100" />
+            <rect x="40" y="95" width="20" height="30" />
+          </svg>
+        </button>
+        <button className="relative z-30">
+           <svg
+            fill="currentColor"
+            className={`h-full w-full ${isSurroundingPopups ? "text-[rgb(52,181,229)]" : "text-[rgb(51,51,51)]"}`}
+            viewBox="0 0 100 150"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setIsSurroundingPopups(!isSurroundingPopups)}
+          >
             <polygon points="50,20 20,70 80,70" />
             <polygon points="50,50 15,100 85,100" />
             <rect x="40" y="95" width="20" height="30" />
