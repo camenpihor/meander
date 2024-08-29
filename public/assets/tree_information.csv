@@ -420,7 +420,7 @@ tree_id,family,latin_name,common_name,state_distribution,iucn_red_list_assessmen
 419,lauraceae,licaria triandra,pepperleaf sweetwood,"['fl']",least concern,False
 420,lauraceae,lindera benzoin,northern spicebush,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nh', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'wv']",least concern,False
 421,hamamelidaceae,liquidambar styraciflua,american sweetgum,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'il', 'in', 'ky', 'la', 'ma', 'md', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'ok', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'wv']",least concern,True
-422,magnoliaceae,liriodendron tulipifera,tulip tree,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'vt', 'wi', 'wv']",least concern,True
+422,magnoliaceae,liriodendron tulipifera,tulip poplar,"['al', 'ar', 'ct', 'dc', 'de', 'fl', 'ga', 'ia', 'il', 'in', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mo', 'ms', 'nc', 'nj', 'ny', 'oh', 'pa', 'ri', 'sc', 'tn', 'tx', 'va', 'vt', 'vt', 'wi', 'wv']",least concern,True
 423,ericaceae,lyonia ferruginea,rusty staggerbush,"['fl', 'ga', 'sc']",least concern,False
 424,rosaceae,lyonothamnus floribundus,ironwood,"['ca']",endangered,False
 425,fabaceae,lysiloma latisiliquum,wild tamarind,"['fl']",least concern,False
