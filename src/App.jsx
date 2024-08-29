@@ -312,7 +312,7 @@ const App = () => {
             <h3 class="m-0 text-lg font-bold">${tree.common_name}</h3>
             <p class="text-gray-500 italic text-sm">(${tree.family} ${tree.latin_name})</p>
             <div class="my-2 pb-2">
-              <p>${locationProperties.is_native === "True" ? "Native" : "Non-Native"}</p>
+              <p>${locationProperties.is_native ? "Native" : "Non-Native"}</p>
               <p>${tree.iucn_red_list_assessment}</p>
             </div>
           </div>
