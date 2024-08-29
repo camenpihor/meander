@@ -165,7 +165,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
           name="is_native"
           checked={formState.is_native}
           onChange={handleInputChange}
-          className="capitalize mt-1 h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+          className="capitalize mt-1 h-6 w-6 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
         />
       </div>
 
