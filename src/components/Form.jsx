@@ -1,45 +1,92 @@
-import React, { useState } from 'react';
-import SearchableDropdown from './SearchableDropdown';
+import React, { useState } from "react";
 
+const SearchableDropdown = ({ options, onSelect }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const filteredOptions = options.filter((option) =>
+    option.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  return (
+    <div className="relative">
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        onFocus={() => setIsOpen(true)}
+        placeholder="Search..."
+        className="capitalize block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+      {isOpen && (
+        <ul className="absolute z-10 bg-white border border-gray-300 w-full mt-1 max-h-48 overflow-y-auto rounded-md shadow-lg">
+          {filteredOptions.map((option, index) => (
+            <li
+              key={index}
+              onClick={() => {
+                onSelect(option);
+                setIsOpen(false);
+                setSearchTerm(option);
+              }}
+              className="capitalize cursor-pointer p-2 hover:bg-indigo-500 hover:text-white"
+            >
+              {option}
+            </li>
+          ))}
+          {filteredOptions.length === 0 && <li className="p-2 text-gray-500">No options found</li>}
+        </ul>
+      )}
+    </div>
+  );
+};
 
 const formatStateDistribution = (states) => {
   return states
-    .replace(/[[\]']/g, '')
-    .split(',')
-    .map(state => state.trim().toUpperCase())
+    .replace(/[[\]']/g, "")
+    .split(",")
+    .map((state) => state.trim().toUpperCase())
     .sort()
-    .join(', ');
+    .join(", ");
 };
 
-
-const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource }) => {
-  const treeNameList = Object.keys(treeList).reduce((accumulator, tree_id) => {
-    const tree = treeList[tree_id];
-    accumulator[tree.common_name] = tree;
-    return accumulator;
-  }, {});
+const Form = ({ objects, coordinates, source, onSubmit, onCancel }) => {
   const [formState, setFormState] = useState({
-    common_name: '',
+    common_name: "",
     latitude: parseFloat(coordinates.lat),
     longitude: parseFloat(coordinates.lng),
     is_native: false,
-    tree_id: '',
-    family: '',
-    latin_name: '',
-    state_distribution: '',
-    source: defaultSource,
+    tree_id: "",
+    family: "",
+    latin_name: "",
+    state_distribution: "",
+    source: source,
   });
 
-  const handleSelectTree = (treeName) => {
-    const treeData = treeNameList[treeName] || {};
+  const objectsByName = Object.keys(objects).reduce((accumulator, tree_id) => {
+    const object = objects[tree_id];
+    accumulator[object.common_name] = object;
+    return accumulator;
+  }, {});
+
+  const resetForm = () => {
+    setFormState({
+      common_name: "",
+      latitude: parseFloat(coordinates.lat),
+      longitude: parseFloat(coordinates.lng),
+      is_native: false,
+      tree_id: "",
+      family: "",
+      latin_name: "",
+      state_distribution: "",
+      source: source,
+    });
+  };
+
+  const handleSelect = (selectedName) => {
+    const selected = objectsByName[selectedName] || {};
 
     setFormState({
       ...formState,
-      common_name: treeData.common_name,
-      tree_id: treeData.tree_id,
-      latin_name: treeData.latin_name,
-      state_distribution: treeData.state_distribution,
-      family: treeData.family,
+      ...selected,
     });
   };
 
@@ -47,7 +94,7 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
     const { name, value, type, checked } = event.target;
     setFormState({
       ...formState,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -57,36 +104,22 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
       alert("Please fill out all required fields.");
       return;
     }
-    if (onSubmit) {
-      onSubmit(formState);
-    }
+    onSubmit(formState);
   };
 
   const handleCancel = () => {
-    setFormState({
-      common_name: '',
-      latitude: null,
-      longitude: null,
-      is_native: false,
-      tree_id: '',
-      family: '',
-      latin_name: '',
-      state_distribution: '',
-      source: defaultSource,
-    });
-    if (onCancel) {
-      onCancel();
-    }
+    resetForm();
+    onCancel();
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-4 bg-white shadow-md md:rounded-lg">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full p-4 bg-white shadow-md md:rounded-lg overflow-y-auto max-h-[100vh]"
+    >
       <div className="mb-4">
         <label className="block text-sm font-medium text-gray-700">Common Name</label>
-        <SearchableDropdown
-          options={Object.keys(treeNameList).sort()}
-          onSelect={handleSelectTree}
-        />
+        <SearchableDropdown options={Object.keys(objectsByName).sort()} onSelect={handleSelect} />
       </div>
 
       <div className="mb-4">
@@ -188,4 +221,4 @@ const NewTreeForm = ({ treeList, coordinates, onSubmit, onCancel, defaultSource 
   );
 };
 
-export default NewTreeForm;
+export default Form;

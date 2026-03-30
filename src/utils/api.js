@@ -10,6 +10,7 @@ const readCSV = async (filepath) => {
 
 export const treeToFeature = (tree) => ({
   type: "Feature",
+  id: tree.location_id,
   geometry: {
     type: "Point",
     coordinates: [parseFloat(tree.longitude), parseFloat(tree.latitude)],
@@ -42,7 +43,7 @@ export const fetchTreeLocations = async () => {
   }
 };
 
-export const fetchTreeInfo = async () => {
+export const fetchTreeInformation = async () => {
   const data = await readCSV(`${process.env.PUBLIC_URL}/assets/tree_information.csv`);
   const treeInfo = data.reduce((accumulator, row) => {
       accumulator[row.tree_id] = row;

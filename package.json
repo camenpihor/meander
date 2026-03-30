@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "@turf/turf": "^7.1.0",
     "autoprefixer": "^10.4.20",
     "mapbox-gl": "^3.6.0",
     "papaparse": "^5.4.1",
@@ -38,6 +40,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.1.1"
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.3.3"
   }
 }
